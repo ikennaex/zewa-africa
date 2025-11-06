@@ -1,63 +1,167 @@
-import React from 'react'
-import { logo } from '../../imports'
-import { FaFacebook, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
-import { Link } from 'react-router'
-import { FaXTwitter } from 'react-icons/fa6'
+import React from "react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Linkedin,
+  Twitter,
+  Globe,
+  FileText,
+  ShieldCheck,
+  Cookie,
+} from "lucide-react";
 
 const Footer = () => {
-  const year = new Date().getFullYear()
-
   return (
-    <footer className="bg-gray-950 text-white">
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          {/* Logo & Description */}
-          <div>
-            <Link to="/">
-              <img className="h-14 mb-5" src={logo} alt="Boomanage logo" />
-            </Link>
-            <p className="text-sm leading-relaxed text-gray-300">
-              Boomanage Properties is a trusted indigenous firm delivering expert services in real estate development, investment consulting, dynamic marketing, and business growth strategies.
-            </p>
-          </div>
+    <footer className="bg-customGreen text-gray-200 pt-16 pb-6">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-3 gap-12">
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <ul className="text-sm space-y-2 text-gray-300">
-              <li>📍 Maryland Mall, Maryland, Lagos</li>
-              <li>📧 info@boomanageproperties.net</li>
-              <li>📞 +2348139096910, +2348123173582.</li> {/* Replace with actual number if needed */}
-            </ul>
-          </div>
+        {/* Column 1 – Contact Info */}
+        <div>
+          <h3 className="text-xl font-semibold text-white mb-4">CONTACT</h3>
+          <ul className="space-y-3 text-sm leading-relaxed">
+            <li className="flex items-start gap-2">
+              <MapPin className="w-4 h-4 text-green-400 mt-1" />
+              <span>
+                <strong>Administrative HQ:</strong> 4 Association Road, Governors
+                Road, Lagos, Nigeria.
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <MapPin className="w-4 h-4 text-green-400 mt-1" />
+              <span>
+                <strong>Regional Office Madagascar:</strong> Bat II Afriport
+                Warehouse, Forello Tanjumbato, Antananarivo.
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <MapPin className="w-4 h-4 text-green-400 mt-1" />
+              <span>
+                <strong>Regional Office Botswana:</strong> Plot 14361, Gaborone
+                West, Botswana.
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <MapPin className="w-4 h-4 text-green-400 mt-1" />
+              <span>
+                <strong>Regional Offices:</strong> Ghana, Mozambique, Tanzania,
+                Morocco.
+              </span>
+            </li>
+          </ul>
+        </div>
 
-          {/* Social Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Connect with Us</h3>
-            <div className="flex gap-5">
-              <a href="https://web.facebook.com/boomanageproperties/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <FaFacebook size={20} className="hover:text-blue-500 transition" />
+        {/* Column 2 – Communication */}
+        <div>
+          <h3 className="text-xl font-semibold text-white mb-4">
+            Get in Touch
+          </h3>
+          <ul className="space-y-3 text-sm">
+            <li className="flex items-center gap-2">
+              <Mail className="w-4 h-4 text-green-400" />
+              <a
+                href="mailto:Recyclage@zewa.africa"
+                className="hover:text-green-400 transition"
+              >
+                Recyclage@zewa.africa
               </a>
-              <a href="https://www.instagram.com/boomanageproperties/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <FaInstagram size={20} className="hover:text-pink-500 transition" />
+            </li>
+            <li className="flex items-center gap-2">
+              <Globe className="w-4 h-4 text-green-400" />
+              <a
+                href="mailto:Operations@zewa.africa"
+                className="hover:text-green-400 transition"
+              >
+                Operations@zewa.africa
               </a>
-              <a href="https://www.linkedin.com/in/boomanage-properties-2ba629138/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <FaLinkedinIn size={20} className="hover:text-blue-300 transition" />
+            </li>
+            <li className="flex items-center gap-2">
+              <Phone className="w-4 h-4 text-green-400" />
+              <a
+                href="https://wa.me/261388390349"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-green-400 transition"
+              >
+                WhatsApp: +261 388 390 349
               </a>
-              <a href="https://x.com/BoomanagePrope1" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <FaXTwitter size={20} className="hover:text-blue-300 transition" />
-              </a>
-            </div>
+            </li>
+          </ul>
+
+          {/* Social Icons */}
+          <div className="flex items-center gap-5 mt-6">
+            <a
+              href="#"
+              className="hover:text-green-400 transition"
+              aria-label="Facebook"
+            >
+              <Facebook className="w-5 h-5" />
+            </a>
+            <a
+              href="#"
+              className="hover:text-green-400 transition"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-5 h-5" />
+            </a>
+            <a
+              href="#"
+              className="hover:text-green-400 transition"
+              aria-label="Twitter"
+            >
+              <Twitter className="w-5 h-5" />
+            </a>
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-gray-800 mt-10 pt-6 text-center text-sm text-gray-400">
-          &copy; {year} Boomanage Properties. All rights reserved.
+        {/* Column 3 – Google Map Embed */}
+        <div>
+          <h3 className="text-xl font-semibold text-white mb-4">
+            Find Us on the Map
+          </h3>
+          <div className="rounded-xl overflow-hidden shadow-lg border border-green-800">
+            <iframe
+              title="ZEWA Group Location"
+              src="https://www.google.com/maps?q=4+Association+Road,+Governors+Road,+Lagos,+Nigeria&output=embed"
+              width="100%"
+              height="220"
+              allowFullScreen=""
+              loading="lazy"
+              className="rounded-xl"
+            ></iframe>
+          </div>
         </div>
       </div>
-    </footer>
-  )
-}
 
-export default Footer
+      {/* Divider */}
+      <div className="border-t border-green-900 mt-12 pt-6 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center px-6 md:px-12">
+        <div className="flex items-center gap-6">
+          <a
+            href="#"
+            className="flex items-center gap-1 hover:text-green-400 transition"
+          >
+            <FileText className="w-4 h-4" /> Terms & Conditions
+          </a>
+          <a
+            href="#"
+            className="flex items-center gap-1 hover:text-green-400 transition"
+          >
+            <Cookie className="w-4 h-4" /> Cookies Policy
+          </a>
+          <a
+            href="#"
+            className="flex items-center gap-1 hover:text-green-400 transition"
+          >
+            <ShieldCheck className="w-4 h-4" /> Data Privacy
+          </a>
+        </div>
+        <p className="mt-4 md:mt-0 text-gray-500">
+          © {new Date().getFullYear()} ZEWA Group. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

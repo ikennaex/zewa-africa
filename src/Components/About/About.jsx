@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGlobeAfrica, FaRecycle, FaHandshake, FaLeaf } from "react-icons/fa";
 import { ShieldCheck, Globe2 } from "lucide-react";
-import { img12 } from "../../imports";
+import { staffImg } from "../../imports";
 import FadeIn from "../fadein";
 
 const About = () => {
@@ -12,15 +12,15 @@ const About = () => {
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">
             <img
-              src={img12}
+              src={staffImg}
               alt="ZEWA Waste Management"
               className="w-full rounded-3xl shadow-lg object-cover h-[400px] lg:h-[500px]"
             />
           </div>
 
           <div className="lg:w-1/2">
-            <h1 className="text-4xl lg:text-5xl font-extrabold text-customGreen mb-4">
-              About ZEWA Group
+            <h1 className="text-3xl md:text-4xl  font-extrabold text-customGreen mb-4">
+              About <span className="text-black">ZEWA</span> Group
             </h1>
             <p className="text-lg text-gray-700 leading-relaxed">
               <strong>ZEWA Group (Zero E-Waste Africa)</strong> is a leading
@@ -40,7 +40,7 @@ const About = () => {
         {/* Mission Section */}
         <div className="max-w-6xl mx-auto mt-20">
           <div className="bg-customGreen/10 border border-customGreen/20 backdrop-blur-md rounded-2xl p-8 shadow-lg">
-            <h1 className="text-3xl font-bold text-customGreen mb-4">
+            <h1 className="text-3xl md:text-4xl  font-bold text-customGreen mb-4">
               What We Do
             </h1>
             <p className="text-gray-700 text-lg leading-relaxed">
@@ -56,48 +56,49 @@ const About = () => {
         <div className="max-w-6xl mx-auto mt-20">
           <div className="text-center mb-8">
             <FaGlobeAfrica size={50} className="mx-auto text-customGreen mb-3" />
-            <h2 className="text-3xl font-bold text-customGreen mb-2">
+            <h1 className="text-3xl font-bold text-customGreen mb-2">
               Our Presence in Africa
-            </h2>
+            </h1>
             <p className="text-gray-700 max-w-3xl mx-auto">
               ZEWA Group operates across multiple African nations, including:
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 text-center">
-            {[
-              "Nigeria",
-              "Ghana",
-              "Senegal",
-              "Sierra Leone",
-              "Morocco",
-              "Tunisia",
-              "Kenya",
-              "Ethiopia",
-              "Tanzania",
-              "Comoros",
-              "Madagascar",
-              "Mozambique",
-              "South Africa",
-              "Zambia",
-              "Botswana",
-              "Angola",
-              "South Sudan",
-              "Gabon",
-            ].map((country, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-xl shadow-sm border border-customGreen/20 py-4 px-2 text-gray-800 hover:bg-customGreen hover:text-white transition-all duration-300"
-              >
-                {country}
-              </div>
-            ))}
-          </div>
+<div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 text-center">
+  {[
+    { name: "Nigeria", color: "bg-green-600" },
+    { name: "Ghana", color: "bg-yellow-400" },
+    { name: "Senegal", color: "bg-green-600" },
+    { name: "Sierra Leone", color: "bg-blue-500" },
+    { name: "Morocco", color: "bg-red-700" },
+    { name: "Tunisia", color: "bg-red-600" },
+    { name: "Kenya", color: "bg-red-700" },
+    { name: "Ethiopia", color: "bg-green-700" },
+    { name: "Tanzania", color: "bg-blue-600" },
+    { name: "Comoros", color: "bg-yellow-500" },
+    { name: "Madagascar", color: "bg-green-600" },
+    { name: "Mozambique", color: "bg-red-600" },
+    { name: "South Africa", color: "bg-green-700" },
+    { name: "Zambia", color: "bg-green-700" },
+    { name: "Botswana", color: "bg-blue-400" },
+    { name: "Angola", color: "bg-red-700" },
+    { name: "South Sudan", color: "bg-blue-700" },
+    { name: "Gabon", color: "bg-green-600" },
+  ].map((country, i) => (
+    <div
+      key={i}
+      className={`${country.color} rounded-xl shadow-md py-4 px-2 text-white font-semibold hover:brightness-110 hover:scale-105 transition-all duration-300`}
+    >
+      {country.name}
+    </div>
+  ))}
+</div>
+
         </div>
 
         {/* Environmental Commitment */}
         <div className="max-w-6xl mx-auto mt-20">
-          <h1 className="text-3xl font-bold text-customGreen mb-10 text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-customGreen mb-10 text-center">
             Our Environmental Commitment & Compliance
           </h1>
 
@@ -151,7 +152,7 @@ const About = () => {
 
         {/* Closing */}
         <div className="max-w-4xl mx-auto mt-20 text-center">
-          <h1 className="text-2xl md:text-3xl font-semibold text-customGreen mb-4">
+          <h1 className="text-3xl md:text-4xl  font-semibold text-customGreen mb-4">
             Together for a Cleaner, Greener Africa
           </h1>
           <p className="text-gray-700 leading-relaxed">

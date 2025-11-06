@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa6";
 import { MdOutlineMail } from "react-icons/md";
-import { staffImg, ewasteImg, facilityImg, officeImg } from "../../imports";
+import { staffImg, ewasteImg, facilityImg, officeImg, carbonImg } from "../../imports";
 
 const slides = [
   { id: 1, image: staffImg, caption: "Our Dedicated ZEWA Team at Work" },
   { id: 2, image: ewasteImg, caption: "Responsible E-Waste Collection" },
-  { id: 3, image: facilityImg, caption: "Modern Recycling Facilities" },
-  { id: 4, image: officeImg, caption: "Efficient Operations & Management" },
+  { id: 3, image: carbonImg, caption: "Carbon Footprint" },
+  { id: 4, image: facilityImg, caption: "Modern Recycling Facilities" },
+  { id: 5, image: officeImg, caption: "Efficient Operations & Management" },
 ];
 
 const HeroSection = () => {
@@ -21,7 +22,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-[100vh] overflow-hidden">
+    <section className="relative w-full h-[100vh] overflow-hidden pt-40">
       {/* Background Slides */}
       {slides.map((slide, index) => (
         <div
@@ -47,7 +48,7 @@ const HeroSection = () => {
             Zewa Group Africa
           </p>
 
-          <h1 className="text-3xl md:text-6xl font-extrabold text-white leading-snug mb-6">
+          <h1 className="text-3xl md:text-4xl  font-extrabold text-white leading-snug mb-6">
             Building a Cleaner, Greener & Sustainable Future
           </h1>
 

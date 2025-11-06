@@ -16,11 +16,11 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-white fixed top-0 left-0 z-50 shadow-md">
+    <nav className="w-full bg-customGreen fixed top-0 left-0 z-50 shadow-md">
       <div className="flex items-center justify-between px-6 md:px-12 py-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Zewa Logo" className="h-10 md:h-14" />
+          <img src={logo} alt="Zewa Logo" className="h-10 md:h-16" />
         </Link>
 
         {/* Desktop Menu */}
@@ -30,7 +30,7 @@ const Navbar = () => {
               <a
                 key={i}
                 href={menu.link}
-                className="text-gray-700 text-[15px] font-medium hover:text-green-600 transition-all duration-200"
+                className="text-white text-[15px] font-medium hover:text-green-600 transition-all duration-200"
               >
                 {menu.name}
               </a>
@@ -38,7 +38,7 @@ const Navbar = () => {
               <Link
                 key={i}
                 to={menu.link}
-                className="text-gray-700 text-[15px] font-medium hover:text-green-600 transition-all duration-200"
+                className="text-white text-[15px] font-medium hover:text-green-600 transition-all duration-200"
               >
                 {menu.name}
               </Link>
@@ -47,7 +47,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Icon */}
-        <div className="lg:hidden cursor-pointer text-gray-700" onClick={() => setOpen(!open)}>
+        <div className="lg:hidden cursor-pointer text-white" onClick={() => setOpen(!open)}>
           {open ? <IoClose size={32} /> : <IoIosMenu size={32} />}
         </div>
       </div>

@@ -7,6 +7,13 @@ import Promise from '../../Components/Promise/Promise'
 import Appointment from '../../Components/Appointment/Appointment'
 import Counter from '../../Components/Counter/Counter'
 import Info from '../../Components/Info/Info'
+import OperationsPage from '../../Components/Operation/Operation'
+import Benefits from '../../Components/Benefits/Benefits'
+import Compliance from '../../Components/Compliance/Compliance'
+import Sustainability from '../../Components/Sustainability/Sustainability'
+import Companies from '../../Components/Companies/Companies'
+import WhyWeMatter from '../../Components/WhyWeMatter/WhyWeMatter'
+import Climate from '../../Components/Climate/Climate'
 
 const Homepage = () => {
   return (
@@ -16,8 +23,13 @@ const Homepage = () => {
         <Info />
         <About />
         <Services />
-        <Testimonials />
-        <Appointment />
+        <OperationsPage />
+        <Benefits />
+        <Compliance />
+        <Sustainability />
+        <Companies />
+        <WhyWeMatter />
+        <Climate />
     </div>
   )
 }

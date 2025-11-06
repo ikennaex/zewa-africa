@@ -1,13 +1,29 @@
 import React from "react";
-import { FaRecycle, FaTruck, FaShieldAlt, FaCertificate, FaLeaf, FaUsers, FaTools } from "react-icons/fa";
-import { GiBatteryPackAlt, GiProcessor, GiFactory, GiServerRack } from "react-icons/gi";
-import { MdDevices, MdOutlineLightbulb, MdOutlineSecurity } from "react-icons/md";
+import {
+  FaRecycle,
+  FaTruck,
+  FaShieldAlt,
+  FaCertificate,
+  FaLeaf,
+  FaUsers,
+  FaTools,
+} from "react-icons/fa";
+import {
+  GiBatteryPackAlt,
+  GiProcessor,
+  GiFactory,
+  GiServerRack,
+} from "react-icons/gi";
+import {
+  MdDevices,
+  MdOutlineLightbulb,
+  MdOutlineSecurity,
+} from "react-icons/md";
 import { BsBuildings } from "react-icons/bs";
 import FadeIn from "../fadein";
 
 const services = [
   {
-    // Icon color is now derived from the parent div's hover state for a modern look
     icon: <FaTruck className="text-4xl" />,
     title: "Collection & Logistics",
     desc: "We offer on-site pickup, secure transport, and community drop-off points to ensure safe and efficient e-waste collection.",
@@ -50,9 +66,23 @@ const services = [
 ];
 
 const industries = [
-  "Telecom", "Finance", "Government", "Energy", "Media", "Healthcare", "Education",
-  "Manufacturing", "Retail", "NGOs", "Hospitality", "Logistics", "Shipping", "Aviation",
-  "Public Utilities", "Real Estate", "IT & Software"
+  "Telecom",
+  "Finance",
+  "Government",
+  "Energy",
+  "Media",
+  "Healthcare",
+  "Education",
+  "Manufacturing",
+  "Retail",
+  "NGOs",
+  "Hospitality",
+  "Logistics",
+  "Shipping",
+  "Aviation",
+  "Public Utilities",
+  "Real Estate",
+  "IT & Software",
 ];
 
 const categories = [
@@ -70,30 +100,32 @@ const Services = () => {
   return (
     <FadeIn>
       <section className="py-20 px-6 lg:px-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto text-center">
-          {/* Main Title: Added customYellow accent for emphasis */}
-          <h2 className="text-4xl lg:text-5xl font-extrabold mb-3 text-gray-800">
-            Our <span className="text-customGreen">Sustainable</span> Solutions
-          </h2>
-          <p className="text-customYellow font-semibold uppercase tracking-widest mb-6">
-            Comprehensive E-Waste Management
-          </p>
-          <p className="text-gray-600 max-w-4xl mx-auto mb-16 text-lg">
-            At ZEWA Group (Zero E-Waste Africa), we provide sustainable, compliant, and circular e-waste management
-            solutions — from collection to recycling and beyond.
-          </p>
+        <div className="max-w-7xl mx-auto text-center space-y-16">
 
-          {/* Industries - Use a lighter, cleaner background and subtle shadow */}
-          <div className="bg-white shadow-xl border border-gray-100 rounded-3xl p-8 mb-16">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center justify-center">
-              <span className="text-customGreen mr-3 text-3xl">🌎</span> Industries We Serve
+          {/* ===================== Header Section ===================== */}
+          <div>
+            <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-gray-800">
+              Our <span className="text-customGreen">Sustainable</span> Solutions
+            </h1>
+            <p className="text-customYellow font-semibold uppercase tracking-widest mb-4">
+              Comprehensive E-Waste Management
+            </p>
+            <p className="text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed">
+              At ZEWA Group (Zero E-Waste Africa), we provide sustainable, compliant, and circular e-waste management
+              solutions — from collection to recycling and beyond.
+            </p>
+          </div>
+
+          {/* ===================== Industries Section ===================== */}
+          <div className="bg-white shadow-lg border border-gray-100 rounded-3xl p-10">
+            <h3 className="text-2xl font-bold text-gray-800 mb-8">
+              Industries We Serve
             </h3>
-            <div className="flex flex-wrap justify-center gap-2 md:gap-3 text-gray-700">
+            <div className="flex flex-wrap justify-center gap-2 md:gap-3">
               {industries.map((ind, i) => (
                 <span
                   key={i}
-                  // Tag style update: Softer green, rounded-xl, and a clear hover state
-                  className="px-4 py-1.5 bg-customGreen/5 text-customGreen rounded-xl text-sm font-medium hover:bg-customGreen hover:text-white transition-all duration-200 cursor-pointer"
+                  className="px-4 py-2 bg-customGreen/5 text-customGreen rounded-full text-sm font-medium hover:bg-customGreen hover:text-white transition-all duration-200 cursor-pointer"
                 >
                   {ind}
                 </span>
@@ -101,55 +133,61 @@ const Services = () => {
             </div>
           </div>
 
-          {/* What We Accept - Use an accented section for clear visual break */}
-          <div className="bg-customGreen/10 shadow-2xl rounded-3xl p-8 mb-16 border-l-4 border-customGreen">
-            <h3 className="text-2xl font-bold text-customGreen mb-8">What We Accept</h3>
+          {/* ===================== What We Accept ===================== */}
+          <div className="bg-customGreen/10 shadow-2xl rounded-3xl p-10 border-l-4 border-customGreen">
+            <h3 className="text-2xl font-bold text-customGreen mb-8">
+              What We Accept
+            </h3>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {categories.map((cat, i) => (
                 <div
                   key={i}
-                  // Card style update: Center-aligned, clean white background, distinct green border on hover
-                  className="flex flex-col items-center text-center p-6 rounded-2xl bg-white shadow-md border-b-4 border-transparent hover:border-customGreen transition-all duration-300 transform hover:-translate-y-1"
+                  className="flex flex-col items-center text-center p-6 rounded-2xl bg-white shadow-md border-b-4 border-transparent hover:border-customGreen hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
                 >
-                  {/* Icon: Use the customGreen color */}
-                  <div className="text-3xl mb-3 text-customGreen">{cat.icon}</div>
+                  <div className="text-4xl mb-3 text-customGreen">{cat.icon}</div>
                   <p className="font-semibold text-gray-800">{cat.label}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Core Services - Refined grid layout for consistency */}
-          <h3 className="text-3xl font-bold text-gray-800 mb-10 mt-16">Our Core E-Waste Services</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                // Card style update: Clean white background, prominent shadow, better padding, and a color swap on hover
-                className="bg-white p-6 rounded-3xl shadow-lg border border-gray-100 text-left hover:bg-customGreen group transition-all duration-300 transform hover:-translate-y-1"
-              >
-                {/* Icon Container: Use a circle background for the icon */}
-                <div className="mb-4 inline-flex p-3 rounded-full bg-customGreen/10 group-hover:bg-white text-customGreen group-hover:text-customGreen transition-all">
+          {/* ===================== Core Services ===================== */}
+          <div>
+            <h3 className="text-3xl font-bold text-gray-800 mb-10">
+              Our Core E-Waste Services
+            </h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-8 rounded-3xl shadow-md border border-gray-100 text-left hover:bg-customGreen group transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                >
+                  <div className="mb-4 inline-flex p-4 rounded-full bg-customGreen/10 group-hover:bg-white text-customGreen transition-all duration-300">
                     {service.icon}
+                  </div>
+                  <h4 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-white transition-colors">
+                    {service.title}
+                  </h4>
+                  <p className="text-gray-600 group-hover:text-white/90 leading-relaxed">
+                    {service.desc}
+                  </p>
                 </div>
-                {/* Title: Darker initial color, swaps to white on hover */}
-                <h4 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-white transition-colors">{service.title}</h4>
-                {/* Description: Better line height, lighter initial color, swaps to off-white on hover */}
-                <p className="text-gray-600 group-hover:text-white/90 leading-relaxed text-base">{service.desc}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
-          {/* Value-Added Services - Darker, more premium background and bullet points */}
-          <div className="mt-20 text-left bg-gray-800 text-white p-12 rounded-3xl shadow-2xl border-b-8 border-customGreen">
-            <h3 className="text-3xl font-extrabold mb-6 text-customYellow">Value-Driven Solutions</h3>
-            <ul className="space-y-4 text-gray-200 leading-relaxed grid md:grid-cols-2 gap-4">
-              <li><span className="text-customGreen mr-2 font-extrabold">✓</span> <strong>Recycling & Treatment:</strong> Responsible recovery of e-waste, batteries, metals, and more — ensuring full compliance.</li>
-              <li><span className="text-customGreen mr-2 font-extrabold">✓</span> <strong>Repurposing & Upcycling:</strong> Extending the life of devices through refurbishing and creative reuse.</li>
-              <li><span className="text-customGreen mr-2 font-extrabold">✓</span> <strong>Decommissioning & Disassembly:</strong> Safe dismantling of data centers, telecom sites, and industrial equipment.</li>
-              <li><span className="text-customGreen mr-2 font-extrabold">✓</span> <strong>Data & Brand Protection:</strong> Certified data destruction to safeguard brand integrity and IP rights.</li>
-              <li><span className="text-customGreen mr-2 font-extrabold">✓</span> <strong>Logistics & Borderless Collection:</strong> Efficient cross-border collection and transportation of e-waste across Africa.</li>
-              <li><span className="text-customGreen mr-2 font-extrabold">✓</span> <strong>Consulting & CSR Initiatives:</strong> Environmental audits, CSR programs, and training for sustainable operations.</li>
+          {/* ===================== Value-Added Services ===================== */}
+          <div className="bg-gray-900 text-white p-12 rounded-3xl shadow-2xl border-t-8 border-customGreen text-left">
+            <h3 className="text-3xl font-extrabold mb-6 text-customYellow">
+              Value-Driven Solutions
+            </h3>
+            <ul className="grid md:grid-cols-2 gap-5 text-gray-300 leading-relaxed">
+              <li><span className="text-customGreen font-extrabold">✓</span> <strong>Recycling & Treatment:</strong> Responsible recovery of e-waste, batteries, metals, and more — ensuring full compliance.</li>
+              <li><span className="text-customGreen font-extrabold">✓</span> <strong>Repurposing & Upcycling:</strong> Extending the life of devices through refurbishing and creative reuse.</li>
+              <li><span className="text-customGreen font-extrabold">✓</span> <strong>Decommissioning & Disassembly:</strong> Safe dismantling of data centers, telecom sites, and industrial equipment.</li>
+              <li><span className="text-customGreen font-extrabold">✓</span> <strong>Data & Brand Protection:</strong> Certified data destruction to safeguard brand integrity and IP rights.</li>
+              <li><span className="text-customGreen font-extrabold">✓</span> <strong>Logistics & Borderless Collection:</strong> Efficient cross-border collection and transportation of e-waste across Africa.</li>
+              <li><span className="text-customGreen font-extrabold">✓</span> <strong>Consulting & CSR Initiatives:</strong> Environmental audits, CSR programs, and training for sustainable operations.</li>
             </ul>
           </div>
         </div>
