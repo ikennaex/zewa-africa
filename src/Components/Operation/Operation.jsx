@@ -58,7 +58,7 @@ const OperationsPage = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-bold text-center text-white mb-6"
         >
-          How We Operate – <span className="text-gray-900">Turning Waste into Sustainable Value</span>
+          How We Operate – <span className="text-customYellow">Turning Waste into Sustainable Value</span>
         </motion.h1>
 
         <motion.p

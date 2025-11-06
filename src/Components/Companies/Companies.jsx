@@ -3,7 +3,6 @@ import Marquee from "react-fast-marquee";
 
 // Import your images (place them in /src/assets/logos)
 import {
-  epr,
   hp,
   birger,
   ltc,
@@ -20,7 +19,6 @@ import {
 } from "../../imports";
 const Companies = () => {
   const logos = [
-    { src: epr, alt: "EPR" },
     { src: hp, alt: "HP" },
     { src: birger, alt: "Birger" },
     { src: ltc, alt: "LTC" },
