@@ -75,7 +75,7 @@ const Climate = () => {
         </motion.div>
 
         {/* Key Ways ZEWA Supports Climate Action Grid */}
-        <h1 className={`text-3xl md:text-4xl  font-bold ${PRIMARY_COLOR} mb-12 text-center`}>
+        <h1 className={`text-3xl md:text-4xl  font-bold text-gray-900  mb-12 text-center`}>
           Our Pillars of Climate Mitigation
         </h1>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">

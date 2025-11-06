@@ -122,7 +122,7 @@ const Sustainability = () => {
       </div>
 
       {/* Closing Section */}
-      <div className="bg-customGreen py-16 text-center text-white px-6">
+      <div className="bg-gray-950 py-16 text-center text-white px-6">
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

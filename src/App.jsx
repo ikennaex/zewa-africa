@@ -9,6 +9,9 @@ import Contact from './Pages/Contact/Contact'
 import Ceo from './Pages/Ceo/Ceo'
 import ScrollToTop from './Components/ScrollToTop'
 import Loader from './Components/Loader/Loader'
+import ServicesPage from './Pages/Services/Services'
+import ClimatePage from './Pages/ClimatePage/ClimatePage'
+import ContactPage from './Pages/Contact/Contact'
 
 const App = () => {
   const [loading, setLoading] = useState(true)
@@ -33,9 +36,9 @@ const App = () => {
       <Routes>
         <Route path = "/"  element = {<Homepage />}/>
         <Route path = "/about"  element = {<About />}/>
-        <Route path = "/services"  element = {<Services />}/>
-        {/* <Route path = "/advantages"  element = {<Advantages />}/> */}
-        <Route path = "/contact"  element = {<Contact />}/>
+        <Route path = "/services"  element = {<ServicesPage />}/>
+        <Route path = "/climate-change"  element = {<ClimatePage />}/>
+        <Route path = "/contact"  element = {<ContactPage />}/>
         <Route path = "/aboutthecro"  element = {<Ceo />}/>
         <Route path = "*"  element={<p>Nothing to show</p>} />
       </Routes>

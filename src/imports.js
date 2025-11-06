@@ -18,6 +18,7 @@ import facilityImg from "./assets/facilityImg.jpg"
 import ewasteImg from "./assets/ewasteImg.jpg"
 import staffImg from "./assets/staffImg.jpg"
 import carbonImg from "./assets/carbonImg.jpg"
+import zewarecycle from "./assets/zewarecycle.png"
 import epr from "./assets/epr.mp4"
 import protectEnv from "./assets/protectEnv.mp4"
 import carbonEmit from "./assets/carbonEmit.mp4"
@@ -47,5 +48,5 @@ import ltc from "./assets/logos/ltc.png"
 
 
 export {
-    logo, ceo, img1, img2, img3, img4, img5, img6, img7, img8,img9, img10,img12,img13, agent, officeImg, facilityImg, ewasteImg, staffImg, carbonImg, training, wasteManage, carbonEmit, protectEnv, epr, hp, birger, ltc, wfp, unep, gassytour, ingedata, canal, epa, vodafone, bankofafrica, multichoice, samsung, 
+    logo, ceo, img1, img2, img3, img4, img5, img6, img7, img8,img9, img10,img12,img13, agent, officeImg, facilityImg, ewasteImg, staffImg, carbonImg, training, wasteManage, carbonEmit, protectEnv, epr, hp, birger, ltc, wfp, unep, gassytour, ingedata, canal, epa, vodafone, bankofafrica, multichoice, samsung, zewarecycle
 }

@@ -1,119 +1,121 @@
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import React from "react";
+import { Mail, Phone, MapPin, Globe } from "lucide-react";
 
-const Contact = () => {
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm('service_kf80s0g', 'template_waassmf', form.current, {
-        publicKey: 'nK6b5sNutEBmb4Jfn',
-      })
-      .then(
-        () => {
-          alert("Your message has been sent successfully. We’ll get back to you shortly.");
-          setFullName("");
-          setEmail("");
-          setMessage("");
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        }
-      );
-  };
-
+const ContactPage = () => {
   return (
-    <section className="bg-[#f9fafb] py-20 px-4 md:px-8 lg:px-16">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-extrabold text-center text-customGreen mb-6">
-          Contact Boomanage Properties
-        </h2>
-        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
-          Reach out to our team of seasoned professionals for real estate consultations, project discussions, or general inquiries.
-        </p>
+    <section className="min-h-screen py-16 px-6 flex items-center justify-center mt-20">
+      <div className="w-full max-w-5xl bg-white rounded-2xl shadow-2xl overflow-hidden grid md:grid-cols-2">
+        {/* Left Section - Info */}
+        <div className="bg-gradient-to-br from-green-800 to-customGreen text-white p-10 flex flex-col justify-center">
+          <h1 className="text-3xl font-bold mb-4">Get in Touch with ZEWA Group</h1>
+          <p className="text-gray-100 mb-8">
+            We’re here to support sustainable development across Africa. Reach out
+            for inquiries, partnerships, or collaborations towards a greener future.
+          </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* Contact Information */}
-          <div className="bg-white rounded-3xl shadow-lg p-8 space-y-6">
-            <h3 className="text-2xl font-bold text-customGreen">Let’s Talk</h3>
-            <p className="text-gray-700">
-              Connect with us today and let our experts guide you through your real estate journey.
-            </p>
+          <div className="space-y-4">
+            <div className="flex items-start gap-3">
+              <MapPin className="w-5 h-5 text-white mt-1" />
+              <span>
+                <strong>Administrative HQ:</strong> 4 Association Road, Governors Road, Lagos, Nigeria.
+                <br />
+                <strong>Regional Office Madagascar:</strong> ZEWA Group Collection & Recycling Center –
+                Bat II Afriport Warehouse, Forello Tanjumbato, Antananarivo, Madagascar.
+                <br />
+                <strong>Regional Office Botswana:</strong> Plot 14361 Gaborone West, Botswana.
+                <br />
+                <strong>Regional Office Ghana:</strong> (Coming Soon)
+                <br />
+                <strong>Regional Office Mozambique:</strong> (Coming Soon)
+                <br />
+                <strong>Regional Office Tanzania:</strong> (Coming Soon)
+                <br />
+                <strong>Regional Office Morocco:</strong> (Coming Soon)
+              </span>
+            </div>
 
-            <div className="space-y-4 text-gray-800 text-[15px]">
-              <div className="flex items-center gap-3">
-                <FaMapMarkerAlt className="text-customYellow text-xl" />
-                <span>Maryland Mall, Maryland, Lagos</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <FaEnvelope className="text-customYellow text-xl" />
-                <span>info@boomanageproperties.net</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <FaPhoneAlt className="text-customYellow text-xl" />
-                <span>+2348139096910, +2348123173582</span>
-              </div>
+            <div className="flex items-center gap-3">
+              <Mail className="w-5 h-5 text-white" />
+              <span>Recyclage@zewa.africa</span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Mail className="w-5 h-5 text-white" />
+              <span>Operations@zewa.africa (For Global Partnerships)</span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Phone className="w-5 h-5 text-white" />
+              <span>WhatsApp: +261 388 390 349</span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Globe className="w-5 h-5 text-white" />
+              <span>Facebook • LinkedIn • X</span>
             </div>
           </div>
+        </div>
 
-          {/* Contact Form */}
-          <div className="bg-white rounded-3xl shadow-lg p-8">
-            <form ref={form} onSubmit={sendEmail} className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                <input
-                  type="text"
-                  name="user_name"
-                  value={fullName}
-                  onChange={(e) => setFullName(e.target.value)}
-                  placeholder="John Doe"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-customYellow"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                <input
-                  type="email"
-                  name="user_email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="you@example.com"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-customYellow"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                <textarea
-                  name="message"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  rows="5"
-                  placeholder="Tell us what you need help with..."
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-customYellow"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="bg-customGreen text-white font-semibold px-6 py-3 rounded-xl hover:bg-[#033042] transition-all w-full"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
+        {/* Right Section - Contact Form */}
+        <div className="p-10">
+          <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+            Send us a message
+          </h3>
+          <form className="space-y-5">
+            {/* Name */}
+            <div>
+              <label className="block text-gray-700 font-medium mb-1">
+                Full Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your full name"
+                className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600"
+                required
+              />
+            </div>
+
+            {/* Email */}
+            <div>
+              <label className="block text-gray-700 font-medium mb-1">
+                Email Address
+              </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600"
+                required
+              />
+            </div>
+
+            {/* Message */}
+            <div>
+              <label className="block text-gray-700 font-medium mb-1">
+                Message
+              </label>
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Type your message here..."
+                className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600"
+                required
+              ></textarea>
+            </div>
+
+            {/* Submit */}
+            <button
+              type="submit"
+              className="w-full bg-green-700 text-white font-semibold py-3 rounded-lg hover:bg-green-800 transition duration-200"
+            >
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
     </section>
   );
 };
 
-export default Contact;
+export default ContactPage;

@@ -7,6 +7,7 @@ import {
   Handshake,
   FileCheck,
 } from "lucide-react";
+import { zewarecycle } from "../../imports";
 
 const Compliance = () => {
   const items = [
@@ -39,7 +40,8 @@ const Compliance = () => {
   return (
     <section className="bg-gray-50">
       {/* Hero Section */}
-      <div className="relative w-full min-h-[60vh] flex flex-col justify-center items-center text-center bg-gradient-to-br from-customGreen to-green-950 text-white px-6">
+      <div className="relative w-full min-h-[60vh] flex flex-col justify-center items-center text-center bg-gradient-to-br from-customGreen to-green-950 text-white px-6 py-10">
+        <img className="h-80 pb-6" src= {zewarecycle} alt="" />
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}

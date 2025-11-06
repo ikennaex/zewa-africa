@@ -38,7 +38,7 @@ const Companies = () => {
 
   return (
     <div className="bg-white py-16">
-      <h1 className="text-center text-customGreen text-3xl md:text-4xl font-semibold mb-6">
+      <h1 className="text-center text-gray-900  text-3xl md:text-4xl font-semibold mb-6">
         Our Trusted Clients & Partners
       </h1>
       <Marquee

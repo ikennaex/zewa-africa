@@ -8,7 +8,7 @@ const Navbar = () => {
   const menuItems = [
     { name: "About Us", link: "/about" },
     { name: "Our Services", link: "/services" },
-    { name: "Climate Change", link: "/aboutthecro" },
+    { name: "Climate Change", link: "/climate-change" },
     { name: "News & Events", link: "/news" },
     { name: "Contact", link: "/contact" },
   ];

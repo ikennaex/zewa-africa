@@ -14,7 +14,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-customGreen text-gray-200 pt-16 pb-6">
+    <footer className="bg-gray-900 text-gray-200 pt-16 pb-6">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-3 gap-12">
 
         {/* Column 1 – Contact Info */}

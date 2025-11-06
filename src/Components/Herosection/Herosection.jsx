@@ -48,7 +48,7 @@ const HeroSection = () => {
             Zewa Group Africa
           </p>
 
-          <h1 className="text-3xl md:text-4xl  font-extrabold text-white leading-snug mb-6">
+          <h1 className="text-3xl md:text-6xl  font-extrabold text-white leading-snug mb-6">
             Building a Cleaner, Greener & Sustainable Future
           </h1>
 
@@ -60,7 +60,7 @@ const HeroSection = () => {
 
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fadeInUp delay-200">
             <a
-              href="https://wa.me/2348139096910"
+              href="https://wa.me/+261388390349"
               target="_blank"
               rel="noopener noreferrer"
             >

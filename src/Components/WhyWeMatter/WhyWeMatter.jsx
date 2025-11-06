@@ -33,7 +33,7 @@ const WhyWeMatter = () => {
   return (
     <section className="bg-gray-50 py-20 px-6 md:px-20">
       <div className="max-w-6xl mx-auto text-center mb-14">
-        <h1 className="text-3xl md:text-4xl font-bold text-customGreen mb-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900  mb-4">
           Why Do We Matter?
         </h1>
         <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
