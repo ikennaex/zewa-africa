@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: rgb(255, 246, 234);
+}
+
+h1 {
+  font-family: "DM Sans", sans-serif;
+}
+
+h2 {
+    font-family: "Playfair Display", serif;
+}
+
+.header-text {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+}
+
+.testimonials {
+    overflow: auto; /* Ensures scrolling is possible if needed */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+.testimonials::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in WebKit browsers */
+}
+
+.fade-in-bottom {
+	-webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+@-webkit-keyframes fade-in-bottom {
+    0% {
+      -webkit-transform: translateY(50px);
+              transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-bottom {
+    0% {
+      -webkit-transform: translateY(50px);
+              transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+/* CSS BACKGROUND  */
+.background-polka {
+    background-color: #ffffff;
+    opacity: 0.8;
+    background-image: radial-gradient(#2bbcff 0.5px, #ffffff 0.5px);
+    background-size: 10px 10px;
+}
