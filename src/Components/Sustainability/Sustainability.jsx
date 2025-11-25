@@ -1,13 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  Leaf,
-  Globe2,
-  Recycle,
-  Users,
-  Building2,
-  Sprout,
-} from "lucide-react";
+import { Leaf, Globe2, Recycle, Users, Building2, Sprout } from "lucide-react";
+import sdgImage from "/images/sustainable.png";
 
 const Sustainability = () => {
   const partners = [
@@ -34,47 +28,53 @@ const Sustainability = () => {
   return (
     <section className="bg-gray-50">
       {/* Hero Section */}
-      <div className="relative w-full min-h-[60vh] flex flex-col justify-center items-center text-center bg-gradient-to-br from-customGreen to-green-950 text-white px-6 py-20">
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-3xl md:text-4xl  font-bold mb-4"
+      <div className="relative w-full min-h-[80vh] flex flex-col justify-center items-center text-left px-6 md:px-20">
+        {/* Video Background */}
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          autoPlay
+          loop
+          muted
         >
-          Our Sustainability Goal
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="max-w-2xl text-gray-200 text-lg"
-        >
-          “By 2030, ZEWA Madagascar aims to reduce its operational carbon
-          emissions by <span className="font-semibold text-white">65%</span> through optimized waste collection, renewable
-          energy adoption, and active participation in reforestation initiatives.”
-        </motion.p>
-      </div>
+          <source src="/videos/forest.mp4" type="video/mp4" />
+        </video>
 
-      {/* Watchword Section */}
-      <div className="max-w-5xl mx-auto py-20 px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="bg-white rounded-2xl shadow-md p-10"
-        >
-          <div className="flex justify-center mb-6">
-            <Sprout className="w-10 h-10 text-green-700" />
-          </div>
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-            Our Watch Word
-          </h1>
-          <p className="text-gray-600 leading-relaxed text-lg max-w-3xl mx-auto">
-            A cleaner, safer, and more sustainable Africa where waste is
-            transformed into opportunity and environmental stewardship is
-            embedded in every sector of society.
-          </p>
-        </motion.div>
+        {/* Overlay */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10"></div>
+
+        {/* Content */}
+        <div className="relative z-20 flex flex-col lg:flex-row items-center justify-between w-full">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="lg:w-1/2 text-white"
+          >
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+              Our Sustainability Goal
+            </h1>
+            <p className="text-lg md:text-xl mb-2">
+              “By 2030, ZEWA Madagascar aims to reduce its operational carbon
+              emissions by <span className="font-semibold text-white">65%</span>{" "}
+              through optimized waste collection, renewable energy adoption, and
+              active participation in reforestation initiatives.”
+            </p>
+          </motion.div>
+
+          {/* Circular SDG Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="lg:w-1/2 flex justify-center mt-8 lg:mt-0"
+          >
+            <img
+              src={sdgImage}
+              alt="Sustainable Development Goals"
+              className="w-80 md:w-[400px]"
+            />
+          </motion.div>
+        </div>
       </div>
 
       {/* Partnerships Section */}
@@ -119,23 +119,6 @@ const Sustainability = () => {
             ))}
           </div>
         </div>
-      </div>
-
-      {/* Closing Section */}
-      <div className="bg-gray-950 py-16 text-center text-white px-6">
-        <motion.h3
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-2xl md:text-3xl font-semibold mb-4"
-        >
-          Together, We Build a Sustainable Future for Africa
-        </motion.h3>
-        <p className="text-gray-200 max-w-2xl mx-auto">
-          ZEWA’s sustainability initiatives empower businesses, communities, and
-          governments to make impactful environmental choices today — for a
-          cleaner tomorrow.
-        </p>
       </div>
     </section>
   );

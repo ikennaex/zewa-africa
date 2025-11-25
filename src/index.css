@@ -74,3 +74,20 @@ h2 {
     background-image: radial-gradient(#2bbcff 0.5px, #ffffff 0.5px);
     background-size: 10px 10px;
 }
+
+
+
+/* swiper js css  */
+.swiper-pagination {
+  bottom: 0px !important;
+  text-align: center !important;
+}
+
+.swiper-pagination-bullet {
+  background: #16a34a !important; /* customGreen */
+  opacity: 0.4;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}

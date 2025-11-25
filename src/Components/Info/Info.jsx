@@ -8,7 +8,7 @@ const infoData = [
     text: "At ZEWA Group, we promote a sustainable waste management model built on the principles of: Repair → Refurbish → Reuse → Recycle.",
   },
   {
-    video: protectEnv,
+    img: protectEnv,
     title: "Protecting the Environment",
     text: "We are dedicated to protecting the environment through responsible waste management, reducing pollution, and fostering a circular economy for a cleaner, more sustainable future.",
   },
@@ -34,7 +34,7 @@ const Info = () => {
     <section className="relative bg-gradient-to-b from-white to-gray-100 py-20 px-6">
       {/* Header */}
       <div className="max-w-4xl mx-auto text-center mb-16">
-        <h1 className="text-3xl md:text-4xl  font-extrabold text-customGreen mb-4">
+        <h1 className="text-3xl md:text-4xl font-extrabold text-customGreen mb-4">
           Our Commitment to a Greener Future
         </h1>
         <p className="text-gray-700 text-lg leading-relaxed">
@@ -53,14 +53,25 @@ const Info = () => {
           >
             <div className="flex flex-col items-center text-center">
               <div className="relative w-full overflow-hidden rounded-xl mb-5 group">
-                <video
-                  src={item.video}
-                  className="w-full h-56 object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                />
+                
+                {/* FIXED MEDIA LOGIC */}
+                {item.video ? (
+                  <video
+                    src={item.video}
+                    className="w-full h-56 object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
+                ) : (
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-56 object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+                  />
+                )}
+
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all duration-300"></div>
               </div>
 

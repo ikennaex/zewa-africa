@@ -29,7 +29,7 @@ const Homepage = () => {
         <Sustainability />
         <Companies />
         <WhyWeMatter />
-        <Climate />
+        {/* <Climate /> */}
     </div>
   )
 }

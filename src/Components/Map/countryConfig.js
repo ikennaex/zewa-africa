@@ -1,0 +1,21 @@
+// countryConfig.js
+export const HIGHLIGHTED_COUNTRIES = {
+  NGA: { link: "https://en.wikipedia.org/wiki/Nigeria", name: "Nigeria" },
+  GHA: { link: "https://en.wikipedia.org/wiki/Ghana", name: "Ghana" },
+  SEN: { link: "https://en.wikipedia.org/wiki/Senegal", name: "Senegal" },
+  SLE: { link: "https://en.wikipedia.org/wiki/Sierra_Leone", name: "Sierra Leone" },
+  MAR: { link: "https://en.wikipedia.org/wiki/Morocco", name: "Morocco" },
+  TUN: { link: "https://en.wikipedia.org/wiki/Tunisia", name: "Tunisia" },
+  KEN: { link: "https://en.wikipedia.org/wiki/Kenya", name: "Kenya" },
+  ETH: { link: "https://en.wikipedia.org/wiki/Ethiopia", name: "Ethiopia" },
+  TZA: { link: "https://en.wikipedia.org/wiki/Tanzania", name: "Tanzania" },
+  COM: { link: "https://en.wikipedia.org/wiki/Comoros", name: "Comoros" },
+  MDG: { link: "https://en.wikipedia.org/wiki/Madagascar", name: "Madagascar" },
+  MOZ: { link: "https://en.wikipedia.org/wiki/Mozambique", name: "Mozambique" },
+  ZAF: { link: "https://en.wikipedia.org/wiki/South_Africa", name: "South Africa" },
+  ZMB: { link: "https://en.wikipedia.org/wiki/Zambia", name: "Zambia" },
+  BWA: { link: "https://en.wikipedia.org/wiki/Botswana", name: "Botswana" },
+  AGO: { link: "https://en.wikipedia.org/wiki/Angola", name: "Angola" },
+  GAB: { link: "https://en.wikipedia.org/wiki/Gabon", name: "Gabon" },
+  SSD: { link: "https://en.wikipedia.org/wiki/South_Sudan", name: "South Sudan" },
+};

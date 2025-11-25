@@ -37,19 +37,22 @@ const WhyWeMatter = () => {
           Why Do We Matter?
         </h1>
         <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Electronic waste is one of the fastest-growing waste streams globally. Across Africa,
-          where informal disposal is common, ZEWA’s presence makes a vital difference.
+          Electronic waste is one of the fastest-growing waste streams globally.
+          Across Africa, where informal disposal is common, ZEWA’s presence
+          makes a vital difference.
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto place-items-center justify-items-center">
         {reasons.map((item, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 p-8 text-center"
+            className="w-fit bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 p-8 text-center"
           >
             <div className="flex justify-center mb-4">{item.icon}</div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">{item.title}</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              {item.title}
+            </h3>
             <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}

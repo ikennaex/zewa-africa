@@ -13,17 +13,20 @@ import img10 from "./assets/img10.jpg"
 import img12 from "./assets/img12.jpg"
 import img13 from "./assets/img13.jpg"
 
+import map from "./assets/map.png"
 import officeImg from "./assets/officeImg.jpg"
+import zewastaff from "./assets/zewa-staff.jpg"
 import facilityImg from "./assets/facilityImg.jpg"
 import ewasteImg from "./assets/ewasteImg.jpg"
 import staffImg from "./assets/staffImg.jpg"
 import carbonImg from "./assets/carbonImg.jpg"
-import zewarecycle from "./assets/zewarecycle.png"
+import zewawarehouse from "./assets/zewawarehouse.jpg"
 import epr from "./assets/epr.mp4"
-import protectEnv from "./assets/protectEnv.mp4"
+import protectEnv from "./assets/protectEnv.jpg"
 import carbonEmit from "./assets/carbonEmit.mp4"
 import wasteManage from "./assets/wasteManage.mp4"
 import training from "./assets/training.mp4"
+import herovideo from "./assets/herovideo.mp4"
 
 import agent from "./assets/agent.png"
 
@@ -48,5 +51,5 @@ import ltc from "./assets/logos/ltc.png"
 
 
 export {
-    logo, ceo, img1, img2, img3, img4, img5, img6, img7, img8,img9, img10,img12,img13, agent, officeImg, facilityImg, ewasteImg, staffImg, carbonImg, training, wasteManage, carbonEmit, protectEnv, epr, hp, birger, ltc, wfp, unep, gassytour, ingedata, canal, epa, vodafone, bankofafrica, multichoice, samsung, zewarecycle
+    logo, ceo, img1, img2, img3, img4, img5, img6, img7, img8,img9, img10,img12,img13, agent, officeImg, facilityImg, ewasteImg, staffImg, carbonImg, training, wasteManage, carbonEmit, protectEnv, epr, hp, birger, ltc, wfp, unep, gassytour, ingedata, canal, epa, vodafone, bankofafrica, multichoice, samsung, zewawarehouse, herovideo, map, zewastaff
 }

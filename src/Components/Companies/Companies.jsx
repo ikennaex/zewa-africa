@@ -1,7 +1,7 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 
-// Import your images (place them in /src/assets/logos)
+// Import your images
 import {
   hp,
   birger,
@@ -17,6 +17,7 @@ import {
   multichoice,
   samsung,
 } from "../../imports";
+
 const Companies = () => {
   const logos = [
     { src: hp, alt: "HP" },
@@ -34,23 +35,48 @@ const Companies = () => {
     { src: samsung, alt: "Samsung" },
   ];
 
+  // Split logos into two halves
+  const half = Math.ceil(logos.length / 2);
+  const firstHalf = logos.slice(0, half);
+  const secondHalf = logos.slice(half);
+
   return (
     <div className="bg-white py-16">
-      <h1 className="text-center text-gray-900  text-3xl md:text-4xl font-semibold mb-6">
-        Our Trusted Clients & Partners
+      <h1 className="text-center text-gray-900 text-3xl md:text-4xl font-semibold mb-6">
+        Our Trusted Clients
       </h1>
+
+      {/* First row: first half of logos */}
       <Marquee
         gradient={false}
         speed={40}
         pauseOnHover={true}
-        className="flex items-center"
+        className="mb-6"
       >
-        {logos.map((logo, index) => (
+        {firstHalf.map((logo, index) => (
           <div key={index} className="mx-10 flex items-center justify-center">
             <img
               src={logo.src}
               alt={logo.alt}
-              className="h-14 md:h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300"
+              className="h-14 md:h-24 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300"
+            />
+          </div>
+        ))}
+      </Marquee>
+
+      {/* Second row: second half of logos, opposite direction */}
+      <Marquee
+        gradient={false}
+        speed={40}
+        pauseOnHover={true}
+        direction="right"
+      >
+        {secondHalf.map((logo, index) => (
+          <div key={index} className="mx-10 flex items-center justify-center">
+            <img
+              src={logo.src}
+              alt={logo.alt}
+              className="h-14 md:h-24 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300"
             />
           </div>
         ))}

@@ -39,7 +39,7 @@ const Compliance = () => {
 
   return (
     <section className="bg-gray-50">
-      {/* Hero Section */}
+      {/* Hero Section
       <div className="relative w-full min-h-[60vh] flex flex-col justify-center items-center text-center bg-gradient-to-br from-customGreen to-green-950 text-white px-6 py-10">
         <img className="h-80 pb-6" src= {zewarecycle} alt="" />
         <motion.h1
@@ -60,7 +60,7 @@ const Compliance = () => {
           health, and regulatory compliance — ensuring that our impact benefits
           both people and the planet.
         </motion.p>
-      </div>
+      </div> */}
 
       {/* Content Section */}
       <div className="max-w-6xl mx-auto py-20 px-6">
