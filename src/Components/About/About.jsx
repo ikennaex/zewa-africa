@@ -9,7 +9,7 @@ import AfricaMap from "../Map/AfricaMap";
 const About = () => {
   return (
     <FadeIn duration={100}>
-      <section className=" py-20 px-6 lg:px-20 text-gray-800">
+      <section className=" py-20 px-6 lg:px-20 text-gray-800 bg-[#54F7DB]/10">
         {/* Header Section */}
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">
@@ -142,7 +142,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="w-full ">
+        <div className="w-full">
           <AfricaMap />
         </div>
 

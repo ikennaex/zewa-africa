@@ -26,9 +26,10 @@ import {
 } from "react-icons/md";
 import { BsBuildings } from "react-icons/bs";
 import FadeIn from "../fadein";
+import { Link } from "react-router";
 
 const services = [
-    {
+  {
     icon: <MdDevices className="text-4xl" />,
     title: "After Sales Service & Device Bulk Upgrade",
     desc: "We provide expert after-sales service and large-scale upgrade solutions to extend the life of IT and electronic assets.",
@@ -59,7 +60,7 @@ const services = [
     title: "Extended Services",
     desc: "Includes device refurbishment, buy-back programs, and producer responsibility partnerships under EPR schemes.",
   },
-    {
+  {
     icon: <FaTruck className="text-4xl" />,
     title: "Collection & Logistics",
     desc: "We offer on-site pickup, secure transport, and community drop-off points to ensure safe and efficient e-waste collection.",
@@ -69,7 +70,6 @@ const services = [
     title: "Awareness & Community Engagement",
     desc: "Educational campaigns to promote responsible recycling and reduce the dangers of informal e-waste disposal.",
   },
-
 ];
 
 const industries = [
@@ -148,8 +148,8 @@ const Services = () => {
           </div>
 
           {/* ===================== What We Accept ===================== */}
-          <div className="bg-gray-50 shadow-sm rounded-2xl p-10 border border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-10">
+          <div className="bg-gray-50 shadow-sm rounded-2xl p-14 border border-gray-200">
+            <h3 className="text-3xl font-bold text-gray-900 mb-12">
               What We Accept
             </h3>
 
@@ -157,23 +157,23 @@ const Services = () => {
               modules={[Pagination, Autoplay]}
               pagination={{ clickable: true }}
               autoplay={{ delay: 2500, disableOnInteraction: false }}
-              spaceBetween={30}
+              spaceBetween={40}
               breakpoints={{
                 640: { slidesPerView: 2 },
                 768: { slidesPerView: 3 },
                 1024: { slidesPerView: 4 },
               }}
-              className="pb-12"
+              className="pb-16"
             >
               {categories.map((cat, i) => (
                 <SwiperSlide key={i}>
-                  <div className="flex flex-col items-center text-center p-6 rounded-xl bg-white border border-gray-200 shadow-sm transition-all duration-200 hover:shadow-md">
+                  <div className="flex flex-col items-center text-center p-10 rounded-2xl bg-white border border-gray-200 shadow-md transition-all duration-300 hover:shadow-lg h-[260px]">
                     <img
                       src={cat.image}
                       alt={cat.label}
-                      className="h-20 w-full object-contain mb-4"
+                      className="h-32 w-full object-contain mb-6"
                     />
-                    <p className="font-semibold text-gray-800 text-sm">
+                    <p className="font-semibold text-gray-800 text-lg">
                       {cat.label}
                     </p>
                   </div>
@@ -189,20 +189,26 @@ const Services = () => {
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-8 rounded-3xl shadow-md border border-gray-100 text-left hover:bg-customGreen group transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                <a
+                  href="https://wa.me/261388390349?text=Hello%20Zewa%20I%20am%20interested%20in%20your%20services"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <div className="mb-4 inline-flex p-4 rounded-full bg-customGreen/10 group-hover:bg-white text-customGreen transition-all duration-300">
-                    {service.icon}
+                  <div
+                    key={index}
+                    className="bg-white p-8 rounded-3xl shadow-md border border-gray-100 text-left hover:bg-customGreen group transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                  >
+                    <div className="mb-4 inline-flex p-4 rounded-full bg-customGreen/10 group-hover:bg-white text-customGreen transition-all duration-300">
+                      {service.icon}
+                    </div>
+                    <h4 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-white transition-colors">
+                      {service.title}
+                    </h4>
+                    <p className="text-gray-600 group-hover:text-white/90 leading-relaxed">
+                      {service.desc}
+                    </p>
                   </div>
-                  <h4 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-white transition-colors">
-                    {service.title}
-                  </h4>
-                  <p className="text-gray-600 group-hover:text-white/90 leading-relaxed">
-                    {service.desc}
-                  </p>
-                </div>
+                </a>
               ))}
             </div>
           </div>

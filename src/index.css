@@ -91,3 +91,21 @@ h2 {
 .swiper-pagination-bullet-active {
   opacity: 1 !important;
 }
+
+
+
+/* // Google Translate Customization */
+
+#google_translate_element select {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.goog-te-gadget img {
+  display: none !important; /* remove globe icon */
+}

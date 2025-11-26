@@ -1,36 +1,27 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Phone, Truck, Recycle, ClipboardCheck, Settings2 } from "lucide-react";
+import { logo } from "../../imports";
 
 const steps = [
   {
     title: "Connect with Us",
-    description:
-      "Clients can easily reach us via email, WhatsApp, website contact forms, or through our public collection campaigns and adverts. Our responsive team promptly schedules a collection that fits your convenience and location.",
     icon: <Phone className="w-6 h-6 text-customGreen" />,
   },
   {
     title: "Scheduled E-Waste Collection",
-    description:
-      "We arrange for the secure pickup of recyclable electronic materials — including computers, mobile phones, IT equipment, office electronics, batteries, and cables — directly from clients’ premises or designated drop-off points.",
     icon: <ClipboardCheck className="w-6 h-6 text-customGreen" />,
   },
   {
     title: "Safe Transportation",
-    description:
-      "All collected items are safely transported to our licensed regional recycling and pre-processing facilities, following strict environmental and logistics standards for hazardous and non-hazardous materials.",
     icon: <Truck className="w-6 h-6 text-customGreen" />,
   },
   {
     title: "Pre-Processing and Material Recovery",
-    description:
-      "Upon arrival, items undergo pre-processing, dismantling, and segregation to identify components suitable for refurbishment, reuse, or material recycling. Each stage is carefully documented to ensure traceability and compliance.",
     icon: <Settings2 className="w-6 h-6 text-customGreen" />,
   },
   {
     title: "Reporting and Certification",
-    description:
-      "After processing, clients receive comprehensive documentation, including Recycling Certificates, Waste Traceability Reports, and Audit Summaries, providing transparent proof of responsible recycling and positive environmental impact.",
     icon: <Recycle className="w-6 h-6 text-customGreen" />,
   },
 ];
@@ -72,10 +63,17 @@ const OperationsPage = () => {
 
       {/* Circular Steps */}
       <div className="relative w-[500px] h-[500px]">
+        {/* Central Logo */}
+        <div className="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-black flex items-center justify-center shadow-lg">
+          <img src={logo} alt="Logo" className="w-16 h-16 object-contain" />
+        </div>
+
+        {/* Steps around the circle */}
         {steps.map((step, index) => {
           const angle = (index / steps.length) * 2 * Math.PI - Math.PI / 2; // start from top
           const x = center + radius * Math.cos(angle) - 40; // adjust for icon size
           const y = center + radius * Math.sin(angle) - 40;
+
           return (
             <motion.div
               key={index}
@@ -90,7 +88,9 @@ const OperationsPage = () => {
               <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center ring-4 ring-gray-100 mb-2">
                 {step.icon}
               </div>
-              <h3 className="text-[10px] font-semibold text-[#54F7DB]">{index + 1}. {step.title}</h3>
+              <h3 className="text-[10px] font-semibold text-[#54F7DB] text-center">
+                {index + 1}. {step.title}
+              </h3>
             </motion.div>
           );
         })}

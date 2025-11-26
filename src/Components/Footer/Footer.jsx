@@ -11,12 +11,12 @@ import {
   ShieldCheck,
   Cookie,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-200 pt-16 pb-6">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-3 gap-12">
-
         {/* Column 1 – Contact Info */}
         <div>
           <h3 className="text-xl font-semibold text-white mb-4">CONTACT</h3>
@@ -24,29 +24,8 @@ const Footer = () => {
             <li className="flex items-start gap-2">
               <MapPin className="w-4 h-4 text-green-400 mt-1" />
               <span>
-                <strong>Administrative HQ:</strong> 4 Association Road, Governors
-                Road, Lagos, Nigeria.
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <MapPin className="w-4 h-4 text-green-400 mt-1" />
-              <span>
-                <strong>Regional Office Madagascar:</strong> Bat II Afriport
-                Warehouse, Forello Tanjumbato, Antananarivo.
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <MapPin className="w-4 h-4 text-green-400 mt-1" />
-              <span>
-                <strong>Regional Office Botswana:</strong> Plot 14361, Gaborone
-                West, Botswana.
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <MapPin className="w-4 h-4 text-green-400 mt-1" />
-              <span>
-                <strong>Regional Offices:</strong> Ghana, Mozambique, Tanzania,
-                Morocco.
+                <strong>Administrative HQ:</strong> 4 Association Road,
+                Governors Road, Lagos, Nigeria.
               </span>
             </li>
           </ul>
@@ -65,15 +44,6 @@ const Footer = () => {
                 className="hover:text-green-400 transition"
               >
                 Recyclage@zewa.africa
-              </a>
-            </li>
-            <li className="flex items-center gap-2">
-              <Globe className="w-4 h-4 text-green-400" />
-              <a
-                href="mailto:Operations@zewa.africa"
-                className="hover:text-green-400 transition"
-              >
-                Operations@zewa.africa
               </a>
             </li>
             <li className="flex items-center gap-2">
@@ -133,6 +103,16 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/261388390349"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 z-50"
+      >
+        <FaWhatsapp className="w-6 h-6" />
+      </a>
 
       {/* Divider */}
       <div className="border-t border-green-900 mt-12 pt-6 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center px-6 md:px-12">

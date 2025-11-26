@@ -8,13 +8,13 @@ import { wasteManage } from "../../imports";
 const Benefits = () => {
   const benefits = [
     {
-      image: "https://img.freepik.com/free-photo/african-american-woman-recycling-better-environment_23-2148999419.jpg?t=st=1762445048~exp=1762448648~hmac=2cc5a0933e759f10d3527bb3a5ac673d33a0085103daa4aefaa1f4bfd18f7838&w=1480",
+      image: "https://dreamewaste.com/wp-content/uploads/2024/06/crushed-hard-drives-image-free-data-destruction-min-1.jpg",
       title: "Convenience",
       description:
         "No need to deliver or invest in an in-house recycling system. ZEWA handles collection and processing for you.",
     },
     {
-      image: "https://img.freepik.com/free-photo/people-taking-community-action_23-2149232510.jpg?t=st=1762445164~exp=1762448764~hmac=9ba7a823cd90dfdb8153c883aaf59d3c762246ffb9059d060344e297a508ac07&w=1480",
+      image: "https://ewasterecyclehub.com/wp-content/uploads/2025/08/ewaste-epr-rule.png",
       title: "Compliance",
       description:
         "Ensures full adherence to local and international environmental regulations.",

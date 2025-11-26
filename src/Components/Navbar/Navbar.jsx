@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { IoIosMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
@@ -14,17 +14,49 @@ const Navbar = () => {
   ];
 
   const [open, setOpen] = useState(false);
+  const [lang, setLang] = useState("en");
+
+  // Load Google Translate element (once)
+  useEffect(() => {
+    if (window.googleTranslateElementInit) return;
+
+    window.googleTranslateElementInit = () => {
+      new window.google.translate.TranslateElement(
+        { pageLanguage: "en", includedLanguages: "en,fr" },
+        "google_translate_element"
+      );
+    };
+
+    const script = document.createElement("script");
+    script.src =
+      "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
+  // Language toggle with retry if select doesn't exist yet
+  const toggleLanguage = () => {
+    const select = document.querySelector(".goog-te-combo");
+    if (!select) {
+      setTimeout(toggleLanguage, 100); // retry in 100ms
+      return;
+    }
+    const newLang = lang === "en" ? "fr" : "en";
+    select.value = newLang;
+    select.dispatchEvent(new Event("change"));
+    setLang(newLang);
+  };
 
   return (
-    <nav className="w-full bg-customGreen fixed top-0 left-0 z-50 shadow-md">
+    <nav className="w-full bg-customGreen/80 backdrop-blur-sm fixed top-0 left-0 z-50 shadow-md">
       <div className="flex items-center justify-between px-6 md:px-12 py-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="Zewa Logo" className="h-10 md:h-16" />
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-10">
+        {/* Desktop Menu + Language Toggle */}
+        <div className="hidden lg:flex items-center gap-6">
           {menuItems.map((menu, i) =>
             menu.link.includes("#") ? (
               <a
@@ -44,10 +76,21 @@ const Navbar = () => {
               </Link>
             )
           )}
+
+          {/* Custom EN/FR toggle */}
+          <button
+            onClick={toggleLanguage}
+            className="text-white font-semibold border border-white px-3 py-1 rounded-lg hover:bg-green-700 transition"
+          >
+            {lang === "en" ? "FR" : "EN"}
+          </button>
         </div>
 
         {/* Mobile Menu Icon */}
-        <div className="lg:hidden cursor-pointer text-white" onClick={() => setOpen(!open)}>
+        <div
+          className="lg:hidden cursor-pointer text-white"
+          onClick={() => setOpen(!open)}
+        >
           {open ? <IoClose size={32} /> : <IoIosMenu size={32} />}
         </div>
       </div>
@@ -76,8 +119,19 @@ const Navbar = () => {
               </Link>
             )
           )}
+
+          {/* Mobile EN/FR toggle */}
+          <button
+            onClick={toggleLanguage}
+            className="text-gray-700 font-semibold border border-gray-400 px-3 py-1 rounded-lg hover:bg-gray-200 transition mt-2"
+          >
+            {lang === "en" ? "FR" : "EN"}
+          </button>
         </div>
       )}
+
+      {/* Invisible Google Translate element */}
+      <div id="google_translate_element" className="hidden"></div>
     </nav>
   );
 };

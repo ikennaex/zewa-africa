@@ -7,7 +7,7 @@ import {
   Handshake,
   FileCheck,
 } from "lucide-react";
-import { zewarecycle } from "../../imports";
+
 
 const Compliance = () => {
   const items = [

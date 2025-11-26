@@ -18,30 +18,12 @@ const ContactPage = () => {
               <MapPin className="w-5 h-5 text-white mt-1" />
               <span>
                 <strong>Administrative HQ:</strong> 4 Association Road, Governors Road, Lagos, Nigeria.
-                <br />
-                <strong>Regional Office Madagascar:</strong> ZEWA Group Collection & Recycling Center –
-                Bat II Afriport Warehouse, Forello Tanjumbato, Antananarivo, Madagascar.
-                <br />
-                <strong>Regional Office Botswana:</strong> Plot 14361 Gaborone West, Botswana.
-                <br />
-                <strong>Regional Office Ghana:</strong> (Coming Soon)
-                <br />
-                <strong>Regional Office Mozambique:</strong> (Coming Soon)
-                <br />
-                <strong>Regional Office Tanzania:</strong> (Coming Soon)
-                <br />
-                <strong>Regional Office Morocco:</strong> (Coming Soon)
               </span>
             </div>
 
             <div className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-white" />
               <span>Recyclage@zewa.africa</span>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <Mail className="w-5 h-5 text-white" />
-              <span>Operations@zewa.africa (For Global Partnerships)</span>
             </div>
 
             <div className="flex items-center gap-3">
@@ -107,7 +89,7 @@ const ContactPage = () => {
             {/* Submit */}
             <button
               type="submit"
-              className="w-full bg-green-700 text-white font-semibold py-3 rounded-lg hover:bg-green-800 transition duration-200"
+              className="w-full bg-customGreen text-white font-semibold py-3 rounded-lg hover:bg-green-800 transition duration-200"
             >
               Send Message
             </button>

@@ -3,7 +3,7 @@ import { logo } from "../../imports";
 
 const Loader = () => {
   return (
-    <div className="flex items-center justify-center h-screen bg-customGreen">
+    <div className="flex items-center justify-center h-screen bg-customGreen/90">
       {/* Centered Container */}
       <div className="flex flex-col items-center justify-center space-y-6">
         
