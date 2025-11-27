@@ -54,7 +54,7 @@ const Sustainability = () => {
               Our Sustainability Goal
             </h1>
             <p className="text-lg md:text-xl mb-2">
-              “By 2030, ZEWA Madagascar aims to reduce its operational carbon
+              “By 2030, ZEWA Group aims to reduce its operational carbon
               emissions by <span className="font-semibold text-white">65%</span>{" "}
               through optimized waste collection, renewable energy adoption, and
               active participation in reforestation initiatives.”
