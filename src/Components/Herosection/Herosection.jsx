@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa6";
-import { MdOutlineMail } from "react-icons/md";
+import { MdEmail, MdOutlineMail } from "react-icons/md";
 import {
   staffImg,
-  ewasteImg,
   facilityImg,
   officeImg,
   carbonImg,
@@ -21,11 +20,6 @@ const slides = [
     id: 2,
     image: staffImg,
     caption: "ZEWA STAFF & TEAM",
-  },
-  {
-    id: 3,
-    image: ewasteImg,
-    caption: "E-WASTE PHOTES",
   },
   {
     id: 4,
@@ -50,7 +44,7 @@ const HeroSection = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(timer);
   }, []);
@@ -94,37 +88,30 @@ const HeroSection = () => {
       <div className="relative z-10 flex flex-col justify-center h-full px-6 md:px-16 lg:px-32 text-center lg:text-left">
         <div className="mx-auto lg:mx-0 animate-fadeInUp">
           <div className="max-w-3xl ">
-          <h1 className="text-3xl md:text-6xl font-extrabold text-white leading-snug mb-6">
-            Building a Cleaner, Greener & Sustainable Future
-          </h1>
+            <h1 className="text-3xl md:text-6xl font-extrabold text-white leading-snug mb-6">
+              Building a Cleaner, Greener & Sustainable Future
+            </h1>
 
-          <p className="text-gray-200 text-base md:text-lg leading-relaxed mb-10">
-            We are dedicated to responsible recycling, effective waste disposal,
-            and sustainable environmental management for communities and
-            industries.
-          </p>
+            <p className="text-gray-200 text-base md:text-lg leading-relaxed mb-10">
+              We are dedicated to responsible recycling, effective waste
+              disposal, and sustainable environmental management for communities
+              and industries.
+            </p>
           </div>
 
-<div className="flex items-center justify-between w-full mt-6">
-
-  {/* Left: Button */}
-  <a
-    href="https://wa.me/+261388390349"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <button className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-7 py-3 rounded-full font-semibold transition-all shadow-md hover:shadow-lg">
-      <FaWhatsapp size={22} />
-      Recycle your E-Waste today
-    </button>
-  </a>
-
-  {/* Right: Caption */}
-  <p className="text-gray-300 italic text-sm md:text-base">
-    {slides[current].caption}
-  </p>
-</div>
-
+          <div className="flex items-center justify-between w-full mt-6">
+            {/* Left: Button */}
+            <a
+              href="mailto:recyclage@zewa.africa"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-7 py-3 rounded-full font-semibold transition-all shadow-md hover:shadow-lg">
+                <MdEmail size={22} />
+                Do you want to Recycle today ?
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </section>

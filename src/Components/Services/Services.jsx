@@ -117,8 +117,8 @@ const Services = () => {
           {/* ===================== Header Section ===================== */}
           <div>
             <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-gray-800">
-              Our <span className="text-customGreen">Sustainable</span>{" "}
-              Solutions
+              Our Core <span className="text-customGreen">Solutions</span> &{" "}
+              Services
             </h1>
             <p className="text-customGreen font-semibold uppercase tracking-widest mb-4">
               Comprehensive E-Waste Management

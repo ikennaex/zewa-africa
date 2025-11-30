@@ -8,7 +8,7 @@ const infoData = [
     text: "At ZEWA Group, we promote a sustainable waste management model built on the principles of: Repair → Refurbish → Reuse → Recycle.",
   },
   {
-    img: protectEnv,
+    video: "/videos/trees.mp4",
     title: "Protecting the Environment",
     text: "We are dedicated to protecting the environment through responsible waste management, reducing pollution, and fostering a circular economy for a cleaner, more sustainable future.",
   },

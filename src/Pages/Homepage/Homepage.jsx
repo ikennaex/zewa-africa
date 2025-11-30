@@ -19,9 +19,9 @@ const Homepage = () => {
   return (
     <div>
         <Herosection />
+        <About />
         <Counter />
         <Info />
-        <About />
         <Services />
         <OperationsPage />
         <Benefits />

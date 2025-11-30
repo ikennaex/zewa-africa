@@ -46,25 +46,14 @@ const About = () => {
                   Our mission is to reduce environmental harm, promote
                   responsible recycling, and recover valuable materials from
                   discarded electronics through innovative, compliant, and
-                  eco-efficient waste management practices.
+                  eco-efficient waste management practices. We proudly support
+                  local and international corporate organizations across Africa
+                  by providing seamless collection, pre-processing, and safe
+                  disposal of obsolete, damaged, or end-of-life office and
+                  household electronic equipment.
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Mission Section */}
-        <div className="max-w-6xl mx-auto mt-20">
-          <div className="bg-customGreen/10 border border-customGreen/20 backdrop-blur-md rounded-2xl p-8 shadow-lg">
-            <h1 className="text-3xl md:text-4xl  font-bold text-customGreen mb-4">
-              What We Do
-            </h1>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              We proudly support local and international corporate organizations
-              across Africa by providing seamless collection, pre-processing,
-              and safe disposal of obsolete, damaged, or end-of-life office and
-              household electronic equipment.
-            </p>
           </div>
         </div>
 
@@ -124,7 +113,9 @@ const About = () => {
             </div>
 
             <div className="items-center justify-center flex mt-12">
-            <button className="bg-customGreen rounded-lg p-2 text-white ">Learn More</button>
+              <button className="bg-customGreen rounded-lg p-2 text-white ">
+                Learn More
+              </button>
             </div>
           </div>
 
@@ -144,18 +135,6 @@ const About = () => {
 
         <div className="w-full">
           <AfricaMap />
-        </div>
-
-        {/* Closing */}
-        <div className="max-w-4xl mx-auto mt-20 text-center">
-          <h1 className="text-3xl md:text-4xl  font-semibold text-customGreen mb-4">
-            Together for a Cleaner, Greener Africa
-          </h1>
-          <p className="text-gray-700 leading-relaxed">
-            ZEWA Group remains steadfast in its mission to transform electronic
-            waste challenges into environmental and economic opportunities for
-            businesses, communities, and the planet.
-          </p>
         </div>
       </section>
     </FadeIn>

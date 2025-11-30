@@ -28,7 +28,7 @@ const Sustainability = () => {
   return (
     <section className="bg-gray-50">
       {/* Hero Section */}
-      <div className="relative w-full min-h-[80vh] flex flex-col justify-center items-center text-left px-6 md:px-20">
+      <div className="relative w-full min-h-[60vh] flex flex-col justify-center items-center text-left px-6 md:px-20">
         {/* Video Background */}
         <video
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
