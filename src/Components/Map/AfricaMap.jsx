@@ -10,11 +10,9 @@ import { useTranslation } from "react-i18next";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
-// Blue and Pink countries
 const blueCountries = ["Nigeria", "Ghana", "Botswana", "Madagascar", "Togo", "Namibia", "South Africa", "Comoros"];
 const pinkCountries = ["Mozambique", "Morocco", "Algeria", "DRC", "Gabon", "Ethiopia", "Uganda", "South Sudan", "Tanzania", "Angola", "Egypt", "Zambia", "Senegal", "Sierra Leone", "Kenya"];
 
-// All countries with coordinates and optional links
 const countries = [
   { name: "Nigeria", coords: [8.6753, 9.082], site: "" },
   { name: "Ghana", coords: [-1.0232, 7.9465], site: "" },
@@ -55,36 +53,32 @@ export default function AfricaMap() {
   };
 
   return (
-    <div className="relative w-full py-16 flex flex-col items-center">
-      <div className="w-full max-w-4xl px-6 mb-8 relative">
+    <div className="w-full py-16 flex flex-col items-center">
+      <div className="w-full max-w-4xl px-4 mb-8 flex flex-col items-center">
+        {/* Map */}
         <ComposableMap
           projection="geoMercator"
-          projectionConfig={{ scale: 550, center: [20, -5] }}
-          width={1200}
-          height={900}
+          projectionConfig={{ scale: 390, center: [20, -5] }}
+          width={800}
+          height={600}
           style={{ width: "100%", height: "auto" }}
+          viewBox="0 0 800 600"
         >
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geo) => {
                 const countryName = geo.properties.name;
-                const fillColor = getCountryColor(countryName);
                 return (
                   <Geography
                     key={geo.rsmKey}
                     geography={geo}
-                    fill={fillColor}
+                    fill={getCountryColor(countryName)}
                     stroke="#0F5132"
                     style={{
                       default: { outline: "none" },
                       hover: { fill: "#1B6B41", outline: "none" },
                     }}
-                    onClick={() => {
-                      const countryObj = countries.find(
-                        (c) => c.name === countryName
-                      );
-                      handleClick(countryObj);
-                    }}
+                    onClick={() => handleClick(countries.find(c => c.name === countryName))}
                   />
                 );
               })
@@ -95,8 +89,8 @@ export default function AfricaMap() {
             <Marker key={country.name} coordinates={country.coords}>
               <motion.text
                 textAnchor="middle"
-                y={-12}
-                className="font-semibold text-xs sm:text-sm"
+                y={-10}
+                className="font-semibold text-[8px] sm:text-xs md:text-sm"
                 fill="#000"
                 whileHover={{ scale: 1.1 }}
               >
@@ -106,17 +100,17 @@ export default function AfricaMap() {
           ))}
         </ComposableMap>
 
-        {/* Bottom-Left Legend */}
-        <div className="absolute bottom-4 left-4 bg-white shadow-lg rounded-lg border border-gray-200 p-4 w-64">
-          <h4 className="font-semibold text-gray-800 mb-3">{t("africaMap.legendTitle")}</h4>
-          <div className="flex flex-col gap-2">
+        {/* Legend */}
+        <div className="mt-6 sm:mt-0 sm:absolute sm:bottom-4 sm:left-4 bg-white shadow-lg rounded-lg border border-gray-200 p-3 w-full sm:w-56 md:w-64 text-xs sm:text-sm">
+          <h4 className="font-semibold text-gray-800 mb-2">{t("africaMap.legendTitle")}</h4>
+          <div className="flex flex-col gap-1">
             <div className="flex items-center gap-2">
-              <span className="w-4 h-4 bg-blue-700 rounded-full"></span>
-              <span className="text-gray-700 text-sm">{t("africaMap.offices")}</span>
+              <span className="w-3 h-3 sm:w-4 sm:h-4 bg-blue-700 rounded-full"></span>
+              <span className="text-gray-700">{t("africaMap.offices")}</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-4 h-4 bg-pink-500 rounded-full"></span>
-              <span className="text-gray-700 text-sm">{t("africaMap.franchise")}</span>
+              <span className="w-3 h-3 sm:w-4 sm:h-4 bg-pink-500 rounded-full"></span>
+              <span className="text-gray-700">{t("africaMap.franchise")}</span>
             </div>
           </div>
         </div>
