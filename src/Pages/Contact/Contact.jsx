@@ -1,39 +1,39 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Mail, Phone, MapPin, Instagram } from "lucide-react";
 import { Facebook, Linkedin, Twitter } from "lucide-react";
 
 const ContactPage = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="min-h-screen py-16 px-6 flex items-center justify-center mt-20">
       <div className="w-full max-w-5xl bg-white rounded-2xl shadow-2xl overflow-hidden grid md:grid-cols-2">
         {/* Left Section - Info */}
         <div className="bg-gradient-to-br from-green-800 to-customGreen text-white p-10 flex flex-col justify-center">
           <h1 className="text-3xl font-bold mb-4">
-            Get in Touch with ZEWA Group
+            {t("contact.title")}
           </h1>
           <p className="text-gray-100 mb-8">
-            We’re here to support sustainable development across Africa. Reach
-            out for inquiries, partnerships, or collaborations towards a greener
-            future.
+            {t("contact.description")}
           </p>
 
           <div className="space-y-4">
             <div className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-white mt-1" />
               <span>
-                <strong>Administrative HQ:</strong> 4 Association Road,
-                Governors Road, Lagos, Nigeria.
+                <strong>{t("contact.hqLabel")}:</strong> {t("contact.hqAddress")}
               </span>
             </div>
 
             <div className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-white" />
-              <span>Recyclage@zewa.africa</span>
+              <span>{t("contact.email")}</span>
             </div>
 
             <div className="flex items-center gap-3">
               <Phone className="w-5 h-5 text-white" />
-              <span>WhatsApp: +261 38 36 965 27</span>
+              <span>{t("contact.whatsapp")}</span>
             </div>
 
             <div className="flex items-center gap-4 text-white">
@@ -53,18 +53,18 @@ const ContactPage = () => {
         {/* Right Section - Contact Form */}
         <div className="p-10">
           <h3 className="text-2xl font-semibold text-gray-800 mb-6">
-            Send us a message
+            {t("contact.formTitle")}
           </h3>
           <form className="space-y-5">
             {/* Name */}
             <div>
               <label className="block text-gray-700 font-medium mb-1">
-                Full Name
+                {t("contact.form.nameLabel")}
               </label>
               <input
                 type="text"
                 name="name"
-                placeholder="Enter your full name"
+                placeholder={t("contact.form.namePlaceholder")}
                 className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600"
                 required
               />
@@ -73,12 +73,12 @@ const ContactPage = () => {
             {/* Email */}
             <div>
               <label className="block text-gray-700 font-medium mb-1">
-                Email Address
+                {t("contact.form.emailLabel")}
               </label>
               <input
                 type="email"
                 name="email"
-                placeholder="Enter your email"
+                placeholder={t("contact.form.emailPlaceholder")}
                 className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600"
                 required
               />
@@ -87,12 +87,12 @@ const ContactPage = () => {
             {/* Message */}
             <div>
               <label className="block text-gray-700 font-medium mb-1">
-                Message
+                {t("contact.form.messageLabel")}
               </label>
               <textarea
                 name="message"
                 rows="4"
-                placeholder="Type your message here..."
+                placeholder={t("contact.form.messagePlaceholder")}
                 className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-600"
                 required
               ></textarea>
@@ -103,7 +103,7 @@ const ContactPage = () => {
               type="submit"
               className="w-full bg-customGreen text-white font-semibold py-3 rounded-lg hover:bg-green-800 transition duration-200"
             >
-              Send Message
+              {t("contact.form.submitButton")}
             </button>
           </form>
         </div>

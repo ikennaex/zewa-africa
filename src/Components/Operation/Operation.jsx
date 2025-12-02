@@ -1,35 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  Phone,
-  Truck,
-  Recycle,
-  ClipboardCheck,
-  Settings2,
-} from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { Phone, Truck, Recycle, ClipboardCheck, Settings2 } from "lucide-react";
 
-const steps = [
-  {
-    title: "Connect with Us",
-    icon: Phone,
-  },
-  {
-    title: "Scheduled E-Waste Collection",
-    icon: ClipboardCheck,
-  },
-  {
-    title: "Safe Transportation",
-    icon: Truck,
-  },
-  {
-    title: "Pre-Processing and Material Recovery",
-    icon: Settings2,
-  },
-  {
-    title: "Reporting and Certification",
-    icon: Recycle,
-  },
-];
+const stepsIcons = [Phone, ClipboardCheck, Truck, Settings2, Recycle];
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -37,6 +11,8 @@ const fadeIn = {
 };
 
 const OperationsPage = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative overflow-hidden bg-customGreen py-20">
       {/* GRADIENT OVERLAY */}
@@ -44,7 +20,6 @@ const OperationsPage = () => {
 
       {/* CONTENT CONTAINER */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 flex flex-col items-center">
-
         {/* TITLE */}
         <motion.h1
           variants={fadeIn}
@@ -52,11 +27,11 @@ const OperationsPage = () => {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center font-bold text-4xl md:text-5xl text-customGreen mb-6 leading-tight"
+          className="text-center font-bold text-3xl md:text-4xl text-customGreen mb-6 leading-tight"
         >
-          How We Operate
+          {t("operations.heading")}
           <span className="block text-customGreen">
-            Turning Waste into Sustainable Value
+            {t("operations.subheading")}
           </span>
         </motion.h1>
 
@@ -69,10 +44,7 @@ const OperationsPage = () => {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="text-center text-black max-w-2xl text-lg mb-16"
         >
-          At ZEWA Group, we focus on efficiency, transparency, and
-          environmental responsibility. Every stage ensures electronic
-          waste is collected, processed, and transformed safely, traceably,
-          and in full compliance with regulatory standards.
+          {t("operations.description")}
         </motion.p>
 
         {/* OPERATION IMAGE */}
@@ -86,26 +58,7 @@ const OperationsPage = () => {
           className="w-full max-w-xl mb-16"
         />
 
-        {/* STEPS */}
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 mt-6">
-          {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.15 }}
-              viewport={{ once: true }}
-              className="flex flex-col items-center text-center"
-            >
-              <div className="bg-white shadow-xl rounded-full p-5 mb-4">
-                <step.icon className="w-8 h-8 text-customGreen" />
-              </div>
-              <h3 className="text-white font-semibold text-lg">
-                {step.title}
-              </h3>
-            </motion.div>
-          ))}
-        </div> */}
+
       </div>
     </section>
   );

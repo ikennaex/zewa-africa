@@ -2,41 +2,18 @@ import React from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { Handshake, Recycle, MapPin, CloudHail } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const stats = [
-  {
-    number: 177201,
-    suffix: "+",
-    label: "Kg of E-waste Diverted From Landfill",
-    icon: Recycle,
-  },
-  {
-    number: 163,
-    suffix: "+",
-    label: "Happy Clients & Partners",
-    icon: Handshake,
-  },
-  {
-    number: 34,
-    suffix: "+",
-    label: "Projects Executed in 15 African Countries",
-    icon: MapPin,
-  },
-  {
-    number: 0.25,
-    decimals: 2,
-    label: "Tons of CO2 Emissions Reduced",
-    icon: CloudHail,
-  },
-  {
-    number: 1.5,
-    decimals: 1,
-    label: "Metric Tons of E-waste Processed Weekly",
-    icon: Recycle,
-  },
+  { number: 177201, suffix: "+", icon: Recycle },
+  { number: 163, suffix: "+", icon: Handshake },
+  { number: 34, suffix: "+", icon: MapPin },
+  { number: 0.25, decimals: 2, icon: CloudHail },
+  { number: 1.5, decimals: 1, icon: Recycle },
 ];
 
 const Counter = () => {
+  const { t } = useTranslation();
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
@@ -49,10 +26,10 @@ const Counter = () => {
     >
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">
-          Our Impact and Capacity
+          {t("counter.heading")}
         </h1>
         <p className="text-gray-200 mt-2 text-sm sm:text-base md:text-lg max-w-3xl mx-auto">
-          Trusted by clients, driven by innovation, and powered by sustainability.
+          {t("counter.subheading")}
         </p>
       </div>
 
@@ -81,7 +58,7 @@ const Counter = () => {
                   )}
                 </h3>
                 <p className="text-xs sm:text-sm md:text-base font-medium text-black text-center">
-                  {stat.label}
+                  {t(`counter.stats.${index}.label`)}
                 </p>
               </div>
             </div>

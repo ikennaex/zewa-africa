@@ -14,6 +14,8 @@ import ClimatePage from './Pages/ClimatePage/ClimatePage'
 import ContactPage from './Pages/Contact/Contact'
 import News from './Pages/News/News'
 import Certifications from './Components/Certifications/Certifications'
+import "./i18n";
+
 
 const App = () => {
   const [loading, setLoading] = useState(true)

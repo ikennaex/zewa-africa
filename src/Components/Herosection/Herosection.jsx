@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { FaWhatsapp } from "react-icons/fa6";
-import { MdEmail, MdOutlineMail } from "react-icons/md";
+import { MdEmail } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 import {
   staffImg,
   facilityImg,
@@ -10,42 +10,22 @@ import {
 } from "../../imports";
 
 const slides = [
-  {
-    id: 1,
-    image: herovideo,
-    caption: "ZEWA STAFF & TEAM",
-    isVideo: true,
-  },
-  {
-    id: 2,
-    image: staffImg,
-    caption: "ZEWA STAFF & TEAM",
-  },
-  {
-    id: 4,
-    image: carbonImg,
-    caption: "CARBON FOOTPRINT",
-  },
-  {
-    id: 5,
-    image: facilityImg,
-    caption: "RECYCLING FACILITY",
-  },
-  {
-    id: 6,
-    image: officeImg,
-    caption: "OFFICE &WAREHOUSE",
-  },
+  { id: 1, image: herovideo, caption: "ZEWA STAFF & TEAM", isVideo: true },
+  { id: 2, image: staffImg, caption: "ZEWA STAFF & TEAM" },
+  { id: 4, image: carbonImg, caption: "CARBON FOOTPRINT" },
+  { id: 5, image: facilityImg, caption: "RECYCLING FACILITY" },
+  { id: 6, image: officeImg, caption: "OFFICE & WAREHOUSE" },
 ];
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   const [current, setCurrent] = useState(0);
 
+  // Slide auto-rotation
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 8000);
-
     return () => clearInterval(timer);
   }, []);
 
@@ -87,20 +67,17 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center h-full px-6 md:px-16 lg:px-32 text-center lg:text-left">
         <div className="mx-auto lg:mx-0 animate-fadeInUp">
-          <div className="max-w-3xl ">
+          <div className="max-w-3xl">
             <h1 className="slide-in-left text-3xl md:text-6xl font-extrabold text-white leading-snug mb-6">
-              Building a Cleaner, Greener & Sustainable Future
+              {t("hero.heading")}
             </h1>
 
             <p className="text-gray-200 text-base md:text-lg leading-relaxed mb-10">
-              We are dedicated to responsible recycling, effective waste
-              disposal, and sustainable environmental management for communities
-              and industries.
+              {t("hero.description")}
             </p>
           </div>
 
-          <div className="flex items-center justify-between w-full mt-6">
-            {/* Left: Button */}
+          <div className="flex items-center justify-center lg:justify-start w-full mt-6">
             <a
               href="mailto:recyclage@zewa.africa"
               target="_blank"
@@ -108,7 +85,7 @@ const HeroSection = () => {
             >
               <button className="slide-in-bottom flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-7 py-3 rounded-full font-semibold transition-all shadow-md hover:shadow-lg">
                 <MdEmail size={22} />
-                Do you want to Recycle today ?
+                {t("hero.button")}
               </button>
             </a>
           </div>

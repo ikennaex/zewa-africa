@@ -6,40 +6,15 @@ import {
   Marker,
 } from "react-simple-maps";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
-// Define country groups
-const blueCountries = [
-  "Nigeria",
-  "Ghana",
-  "Botswana",
-  "Madagascar",
-  "Togo",
-  "Namibia",
-  "South Africa",
-  "Comoros",
-];
+// Blue and Pink countries
+const blueCountries = ["Nigeria", "Ghana", "Botswana", "Madagascar", "Togo", "Namibia", "South Africa", "Comoros"];
+const pinkCountries = ["Mozambique", "Morocco", "Algeria", "DRC", "Gabon", "Ethiopia", "Uganda", "South Sudan", "Tanzania", "Angola", "Egypt", "Zambia", "Senegal", "Sierra Leone", "Kenya"];
 
-const pinkCountries = [
-  "Mozambique",
-  "Morocco",
-  "Algeria",
-  "Dem. Rep. Congo",
-  "Gabon",
-  "Ethiopia",
-  "Uganda",
-  "South Sudan",
-  "Tanzania",
-  "Angola",
-  "Egypt",
-  "Zambia",
-  "Senegal",
-  "Sierra Leone",
-  "Kenya",
-];
-
-// All countries with coordinates and optional site links
+// All countries with coordinates and optional links
 const countries = [
   { name: "Nigeria", coords: [8.6753, 9.082], site: "" },
   { name: "Ghana", coords: [-1.0232, 7.9465], site: "" },
@@ -67,31 +42,21 @@ const countries = [
 ];
 
 export default function AfricaMap() {
+  const { t } = useTranslation();
+
   const handleClick = (country) => {
     if (country.site) window.open(country.site, "_blank");
   };
 
   const getCountryColor = (name) => {
-    if (blueCountries.includes(name)) return "#1D4ED8"; // blue
-    if (pinkCountries.includes(name)) return "#EC4899"; // pink
-    return "#E8F5E9"; // default light green
+    if (blueCountries.includes(name)) return "#1D4ED8";
+    if (pinkCountries.includes(name)) return "#EC4899";
+    return "#E8F5E9";
   };
 
   return (
-    <div className="w-full py-16 flex flex-col items-center">
-      <div className="w-full max-w-4xl px-6 mb-8">
-        {/* Legend */}
-        <div className="flex justify-center gap-8 text-gray-700 mb-6">
-          <div className="flex items-center gap-2">
-            <span className="w-4 h-4 bg-blue-700 rounded-full"></span>
-            Blue Countries
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="w-4 h-4 bg-pink-500 rounded-full"></span>
-            Pink Countries
-          </div>
-        </div>
-
+    <div className="relative w-full py-16 flex flex-col items-center">
+      <div className="w-full max-w-4xl px-6 mb-8 relative">
         <ComposableMap
           projection="geoMercator"
           projectionConfig={{ scale: 550, center: [20, -5] }}
@@ -104,7 +69,6 @@ export default function AfricaMap() {
               geographies.map((geo) => {
                 const countryName = geo.properties.name;
                 const fillColor = getCountryColor(countryName);
-                // console.log(countryName)
                 return (
                   <Geography
                     key={geo.rsmKey}
@@ -114,7 +78,6 @@ export default function AfricaMap() {
                     style={{
                       default: { outline: "none" },
                       hover: { fill: "#1B6B41", outline: "none" },
-                      // pressed: { fill: "#0F5132", outline: "none" },
                     }}
                     onClick={() => {
                       const countryObj = countries.find(
@@ -130,20 +93,11 @@ export default function AfricaMap() {
 
           {countries.map((country) => (
             <Marker key={country.name} coordinates={country.coords}>
-              {/* <motion.circle
-                cx="0"
-                cy="0"
-                r={6}
-                fill={blueCountries.includes(country.name) ? "#3B82F6" : pinkCountries.includes(country.name) ? "#EC4899" : "#F97316"}
-                className="cursor-pointer"
-                whileHover={{ scale: 1.3 }}
-                onClick={() => handleClick(country)}
-              /> */}
               <motion.text
                 textAnchor="middle"
                 y={-12}
                 className="font-semibold text-xs sm:text-sm"
-                fill="#00000"
+                fill="#000"
                 whileHover={{ scale: 1.1 }}
               >
                 {country.name}
@@ -151,6 +105,21 @@ export default function AfricaMap() {
             </Marker>
           ))}
         </ComposableMap>
+
+        {/* Bottom-Left Legend */}
+        <div className="absolute bottom-4 left-4 bg-white shadow-lg rounded-lg border border-gray-200 p-4 w-64">
+          <h4 className="font-semibold text-gray-800 mb-3">{t("africaMap.legendTitle")}</h4>
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2">
+              <span className="w-4 h-4 bg-blue-700 rounded-full"></span>
+              <span className="text-gray-700 text-sm">{t("africaMap.offices")}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-4 h-4 bg-pink-500 rounded-full"></span>
+              <span className="text-gray-700 text-sm">{t("africaMap.franchise")}</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

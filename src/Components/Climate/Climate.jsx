@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import {
   Leaf,
@@ -17,10 +18,47 @@ const ACCENT_COLOR = "text-customGreen";
 const ACCENT_BG = "bg-customGreen/10";
 
 const Climate = () => {
+  const { t } = useTranslation();
+
   const cardVariants = {
     initial: { opacity: 0, y: 30, scale: 0.95 },
     animate: { opacity: 1, y: 0, scale: 1 },
   };
+
+  const pillars = [
+    {
+      icon: Recycle,
+      title: t("climate.pillars.0.title"),
+      desc: t("climate.pillars.0.description"),
+    },
+    {
+      icon: Leaf,
+      title: t("climate.pillars.1.title"),
+      desc: t("climate.pillars.1.description"),
+    },
+    {
+      icon: Factory,
+      title: t("climate.pillars.2.title"),
+      desc: t("climate.pillars.2.description"),
+    },
+    {
+      icon: GraduationCap,
+      title: t("climate.pillars.3.title"),
+      desc: t("climate.pillars.3.description"),
+    },
+    {
+      icon: ShieldCheck,
+      title: t("climate.pillars.4.title"),
+      desc: t("climate.pillars.4.description"),
+    },
+    {
+      icon: Handshake,
+      title: t("climate.pillars.5.title"),
+      desc: t("climate.pillars.5.description"),
+    },
+  ];
+
+  const longTermPoints = t("climate.longTerm.points", { returnObjects: true });
 
   return (
     <section className="bg-gray-50 text-gray-800">
@@ -29,7 +67,7 @@ const Climate = () => {
       <div className="relative h-[450px] w-full overflow-hidden">
         <img
           src="/images/garden.jpg"
-          alt="Climate impact overview"
+          alt={t("climate.hero.title")}
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50"></div>
@@ -41,13 +79,13 @@ const Climate = () => {
           className="relative z-10 flex flex-col justify-center items-center h-full text-center px-6"
         >
           <p className="text-sm font-bold uppercase tracking-widest text-white">
-            Environmental Impact
+            {t("climate.hero.subtitle")}
           </p>
           <h1 className="text-4xl md:text-5xl font-extrabold text-white max-w-4xl mt-4 leading-tight">
-            ZEWA Group’s Contribution to Climate Action
+            {t("climate.hero.title")}
           </h1>
           <p className="text-gray-200 max-w-3xl mt-6 text-lg">
-            ZEWA Group is dedicated to reducing greenhouse gas emissions through sustainable electronic waste management and circular economy practices.
+            {t("climate.hero.description")}
           </p>
         </motion.div>
       </div>
@@ -65,52 +103,21 @@ const Climate = () => {
         >
           <h3 className={`text-3xl font-bold ${PRIMARY_COLOR} mb-4 flex items-center gap-3`}>
             <Globe className={`w-8 h-8 ${ACCENT_COLOR}`} />
-            Our Environmental Commitment
+            {t("climate.commitmentCard.title")}
           </h3>
           <p className="text-gray-700 text-lg leading-relaxed">
-            ZEWA Group supports the global fight against climate change by reducing the carbon footprint associated with electronic waste. Our model focuses on minimizing environmental impact while enabling organizations to achieve sustainability goals.
+            {t("climate.commitmentCard.description")}
           </p>
         </motion.div>
 
         {/* SECTION TITLE */}
         <h1 className="text-4xl font-bold text-gray-900 text-center mb-16">
-          Our Pillars of Climate Mitigation
+          {t("climate.sectionTitle")}
         </h1>
 
         {/* GRID CARDS */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-24">
-          {[
-            {
-              icon: Recycle,
-              title: "Sustainable Waste Management",
-              desc: "Recycling and reuse prevent e-waste from producing toxic gases and greenhouse emissions.",
-            },
-            {
-              icon: Leaf,
-              title: "Circular Economy Principles",
-              desc: "Refurbishment reduces the need for new manufacturing, conserving energy and resources.",
-            },
-            {
-              icon: Factory,
-              title: "Low-Emission Operations",
-              desc: "Energy-efficient equipment and route optimization reduce operational emissions.",
-            },
-            {
-              icon: GraduationCap,
-              title: "Carbon Education",
-              desc: "We provide guidance that helps organizations integrate sustainability into operations.",
-            },
-            {
-              icon: ShieldCheck,
-              title: "Carbon-Neutral Support",
-              desc: "Our recycling pathways help businesses meet carbon offsetting obligations.",
-            },
-            {
-              icon: Handshake,
-              title: "Ethical Partnership",
-              desc: "We align partners with environmental governance and compliance standards.",
-            },
-          ].map((item, index) => (
+          {pillars.map((item, index) => (
             <motion.div
               key={index}
               variants={cardVariants}
@@ -139,12 +146,12 @@ const Climate = () => {
         >
           <h3 className={`text-3xl font-bold ${PRIMARY_COLOR} mb-6 flex items-center gap-3`}>
             <Rocket className={`w-8 h-8 ${ACCENT_COLOR}`} />
-            Our Long-Term Commitment
+            {t("climate.longTerm.title")}
           </h3>
           <ul className="space-y-4 text-gray-700 text-lg leading-relaxed">
-            <li>Investment in green and renewable systems.</li>
-            <li>Expansion of recycling networks across Africa.</li>
-            <li>Support for environmental policies and carbon standards.</li>
+            {longTermPoints.map((point, idx) => (
+              <li key={idx}>{point}</li>
+            ))}
           </ul>
         </motion.div>
 
@@ -159,19 +166,19 @@ const Climate = () => {
           <div className="w-full md:w-1/2">
             <img
               src={ewasteImg}
-              alt="E-waste recycling"
+              alt={t("climate.partnershipCTA.title")}
               className="w-full rounded-2xl shadow-lg object-cover"
             />
           </div>
 
           <div className="w-full md:w-1/2">
             <Handshake className="w-14 h-14 text-white mb-6" />
-            <h3 className="text-3xl font-bold mb-4">Partnering for a Cleaner Future</h3>
+            <h3 className="text-3xl font-bold mb-4">{t("climate.partnershipCTA.title")}</h3>
             <p className="text-gray-200 leading-relaxed text-lg mb-6">
-              Organizations that work with ZEWA contribute to a continental effort to reduce emissions and conserve resources.
+              {t("climate.partnershipCTA.description")}
             </p>
             <p className="text-white font-bold text-xl">
-              Together, we build a circular and low-carbon Africa.
+              {t("climate.partnershipCTA.highlight")}
             </p>
           </div>
         </motion.div>

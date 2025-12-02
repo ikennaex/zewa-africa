@@ -1,5 +1,6 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
+import { useTranslation } from "react-i18next";
 
 // Import your images
 import {
@@ -19,6 +20,8 @@ import {
 } from "../../imports";
 
 const Companies = () => {
+  const { t } = useTranslation();
+
   const logos = [
     { src: hp, alt: "HP" },
     { src: birger, alt: "Birger" },
@@ -43,16 +46,11 @@ const Companies = () => {
   return (
     <div className="bg-white py-16">
       <h1 className="text-center text-gray-900 text-3xl md:text-4xl font-semibold mb-6">
-        They Trust Us
+        {t("companies.heading")}
       </h1>
 
       {/* First row: first half of logos */}
-      <Marquee
-        gradient={false}
-        speed={40}
-        pauseOnHover={true}
-        className="mb-6"
-      >
+      <Marquee gradient={false} speed={40} pauseOnHover={true} className="mb-6">
         {firstHalf.map((logo, index) => (
           <div key={index} className="mx-10 flex items-center justify-center">
             <img
@@ -65,12 +63,7 @@ const Companies = () => {
       </Marquee>
 
       {/* Second row: second half of logos, opposite direction */}
-      <Marquee
-        gradient={false}
-        speed={40}
-        pauseOnHover={true}
-        direction="right"
-      >
+      <Marquee gradient={false} speed={40} pauseOnHover={true} direction="right">
         {secondHalf.map((logo, index) => (
           <div key={index} className="mx-10 flex items-center justify-center">
             <img
