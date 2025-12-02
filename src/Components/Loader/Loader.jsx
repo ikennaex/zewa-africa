@@ -41,16 +41,16 @@ const Loader = () => {
         }
 
         .animate-spin-slow {
-          animation: spin-slow 8s linear infinite;
+          animation: spin-slow 4s linear infinite;
         }
         .animate-spin-fast {
-          animation: spin-fast 4s linear infinite;
+          animation: spin-fast 2s linear infinite;
         }
         .animate-fade-in {
-          animation: fade-in 1.2s ease-out forwards;
+          animation: fade-in 0.6s ease-out forwards;
         }
         .animate-fade-in-delay {
-          animation: fade-in-delay 1.5s ease-out forwards;
+          animation: fade-in-delay 0.7s ease-out forwards;
         }
       `}</style>
     </div>

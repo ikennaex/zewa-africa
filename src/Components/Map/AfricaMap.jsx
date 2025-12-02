@@ -25,7 +25,7 @@ const pinkCountries = [
   "Mozambique",
   "Morocco",
   "Algeria",
-  "DRC",
+  "Dem. Rep. Congo",
   "Gabon",
   "Ethiopia",
   "Uganda",
@@ -72,7 +72,7 @@ export default function AfricaMap() {
   };
 
   const getCountryColor = (name) => {
-    if (blueCountries.includes(name)) return "#3B82F6"; // blue
+    if (blueCountries.includes(name)) return "#1D4ED8"; // blue
     if (pinkCountries.includes(name)) return "#EC4899"; // pink
     return "#E8F5E9"; // default light green
   };
@@ -83,7 +83,7 @@ export default function AfricaMap() {
         {/* Legend */}
         <div className="flex justify-center gap-8 text-gray-700 mb-6">
           <div className="flex items-center gap-2">
-            <span className="w-4 h-4 bg-blue-500 rounded-full"></span>
+            <span className="w-4 h-4 bg-blue-700 rounded-full"></span>
             Blue Countries
           </div>
           <div className="flex items-center gap-2">
@@ -102,8 +102,9 @@ export default function AfricaMap() {
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geo) => {
-                const countryName = geo.properties.NAME;
+                const countryName = geo.properties.name;
                 const fillColor = getCountryColor(countryName);
+                // console.log(countryName)
                 return (
                   <Geography
                     key={geo.rsmKey}
@@ -112,8 +113,14 @@ export default function AfricaMap() {
                     stroke="#0F5132"
                     style={{
                       default: { outline: "none" },
-                      hover: { fill: "#1B6B43", outline: "none" },
-                      pressed: { fill: "#0F5132", outline: "none" },
+                      hover: { fill: "#1B6B41", outline: "none" },
+                      // pressed: { fill: "#0F5132", outline: "none" },
+                    }}
+                    onClick={() => {
+                      const countryObj = countries.find(
+                        (c) => c.name === countryName
+                      );
+                      handleClick(countryObj);
                     }}
                   />
                 );
@@ -123,7 +130,7 @@ export default function AfricaMap() {
 
           {countries.map((country) => (
             <Marker key={country.name} coordinates={country.coords}>
-              <motion.circle
+              {/* <motion.circle
                 cx="0"
                 cy="0"
                 r={6}
@@ -131,12 +138,12 @@ export default function AfricaMap() {
                 className="cursor-pointer"
                 whileHover={{ scale: 1.3 }}
                 onClick={() => handleClick(country)}
-              />
+              /> */}
               <motion.text
                 textAnchor="middle"
                 y={-12}
                 className="font-semibold text-xs sm:text-sm"
-                fill="#0A2C1A"
+                fill="#00000"
                 whileHover={{ scale: 1.1 }}
               >
                 {country.name}

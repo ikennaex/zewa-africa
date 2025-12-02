@@ -1,99 +1,111 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Phone, Truck, Recycle, ClipboardCheck, Settings2 } from "lucide-react";
-import { logo } from "../../imports";
+import {
+  Phone,
+  Truck,
+  Recycle,
+  ClipboardCheck,
+  Settings2,
+} from "lucide-react";
 
 const steps = [
   {
     title: "Connect with Us",
-    icon: <Phone className="w-6 h-6 text-customGreen" />,
+    icon: Phone,
   },
   {
     title: "Scheduled E-Waste Collection",
-    icon: <ClipboardCheck className="w-6 h-6 text-customGreen" />,
+    icon: ClipboardCheck,
   },
   {
     title: "Safe Transportation",
-    icon: <Truck className="w-6 h-6 text-customGreen" />,
+    icon: Truck,
   },
   {
     title: "Pre-Processing and Material Recovery",
-    icon: <Settings2 className="w-6 h-6 text-customGreen" />,
+    icon: Settings2,
   },
   {
     title: "Reporting and Certification",
-    icon: <Recycle className="w-6 h-6 text-customGreen" />,
+    icon: Recycle,
   },
 ];
 
 const fadeIn = {
-  hidden: { opacity: 0, scale: 0.5 },
-  visible: { opacity: 1, scale: 1 },
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
 };
 
 const OperationsPage = () => {
-  const radius = 200; // radius of the circle
-  const center = 250; // center point for positioning
-
   return (
-    <section className="bg-customGreen py-16 px-6 flex flex-col items-center">
-      {/* Header */}
-      <motion.h1
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
-        className="text-3xl md:text-4xl font-bold text-center text-white mb-6 max-w-4xl"
-      >
-        How We Operate – <span className="text-[#54F7DB]">Turning Waste into Sustainable Value</span>
-      </motion.h1>
+    <section className="relative overflow-hidden bg-customGreen py-20">
+      {/* GRADIENT OVERLAY */}
+      <div className="absolute inset-0 bg-white"></div>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.8 }}
-        viewport={{ once: true }}
-        className="text-center text-white mb-12 max-w-3xl"
-      >
-        At ZEWA Group, our operations are built around efficiency,
-        transparency, and environmental responsibility. Every step of our
-        process ensures that electronic waste is collected, processed, and
-        recovered in a safe, traceable, and compliant manner.
-      </motion.p>
+      {/* CONTENT CONTAINER */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 flex flex-col items-center">
 
-      {/* Circular Steps */}
-      <div className="relative w-[500px] h-[500px]">
-        {/* Central Logo */}
-        <div className="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-black flex items-center justify-center shadow-lg">
-          <img src={logo} alt="Logo" className="w-16 h-16 object-contain" />
-        </div>
+        {/* TITLE */}
+        <motion.h1
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="text-center font-bold text-4xl md:text-5xl text-customGreen mb-6 leading-tight"
+        >
+          How We Operate
+          <span className="block text-customGreen">
+            Turning Waste into Sustainable Value
+          </span>
+        </motion.h1>
 
-        {/* Steps around the circle */}
-        {steps.map((step, index) => {
-          const angle = (index / steps.length) * 2 * Math.PI - Math.PI / 2; // start from top
-          const x = center + radius * Math.cos(angle) - 40; // adjust for icon size
-          const y = center + radius * Math.sin(angle) - 40;
+        {/* DESCRIPTION */}
+        <motion.p
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          className="text-center text-black max-w-2xl text-lg mb-16"
+        >
+          At ZEWA Group, we focus on efficiency, transparency, and
+          environmental responsibility. Every stage ensures electronic
+          waste is collected, processed, and transformed safely, traceably,
+          and in full compliance with regulatory standards.
+        </motion.p>
 
-          return (
+        {/* OPERATION IMAGE */}
+        <motion.img
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          src="/images/operation.png"
+          alt="Operations"
+          className="w-full max-w-xl mb-16"
+        />
+
+        {/* STEPS */}
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 mt-6">
+          {steps.map((step, index) => (
             <motion.div
               key={index}
-              className="absolute w-28 h-20 flex flex-col items-center text-center"
-              style={{ top: y, left: x }}
-              variants={fadeIn}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.15 }}
               viewport={{ once: true }}
+              className="flex flex-col items-center text-center"
             >
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center ring-4 ring-gray-100 mb-2">
-                {step.icon}
+              <div className="bg-white shadow-xl rounded-full p-5 mb-4">
+                <step.icon className="w-8 h-8 text-customGreen" />
               </div>
-              <h3 className="text-[10px] font-semibold text-[#54F7DB] text-center">
-                {index + 1}. {step.title}
+              <h3 className="text-white font-semibold text-lg">
+                {step.title}
               </h3>
             </motion.div>
-          );
-        })}
+          ))}
+        </div> */}
       </div>
     </section>
   );

@@ -13,6 +13,7 @@ import ServicesPage from './Pages/Services/Services'
 import ClimatePage from './Pages/ClimatePage/ClimatePage'
 import ContactPage from './Pages/Contact/Contact'
 import News from './Pages/News/News'
+import Certifications from './Components/Certifications/Certifications'
 
 const App = () => {
   const [loading, setLoading] = useState(true)
@@ -42,6 +43,7 @@ const App = () => {
         <Route path = "/contact"  element = {<ContactPage />}/>
         <Route path = "/news"  element = {<News />}/>
         <Route path = "/aboutthecro"  element = {<Ceo />}/>
+        <Route path = "/certification"  element = {<Certifications />}/>
         <Route path = "*"  element={<p>Nothing to show</p>} />
       </Routes>
       <Footer />

@@ -31,7 +31,7 @@ const WhyWeMatter = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-20 px-6 md:px-20">
+    <section className="bg-gray-200 py-20 px-6 md:px-20 rounded-l-3xl">
       <div className="max-w-6xl mx-auto text-center mb-14">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900  mb-4">
           Why Do We Matter?
@@ -43,7 +43,7 @@ const WhyWeMatter = () => {
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto place-items-center justify-items-center">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-10 max-w-6xl mx-auto place-items-center justify-items-center">
         {reasons.map((item, index) => (
           <div
             key={index}

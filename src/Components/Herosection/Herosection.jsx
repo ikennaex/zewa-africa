@@ -88,7 +88,7 @@ const HeroSection = () => {
       <div className="relative z-10 flex flex-col justify-center h-full px-6 md:px-16 lg:px-32 text-center lg:text-left">
         <div className="mx-auto lg:mx-0 animate-fadeInUp">
           <div className="max-w-3xl ">
-            <h1 className="text-3xl md:text-6xl font-extrabold text-white leading-snug mb-6">
+            <h1 className="slide-in-left text-3xl md:text-6xl font-extrabold text-white leading-snug mb-6">
               Building a Cleaner, Greener & Sustainable Future
             </h1>
 
@@ -106,7 +106,7 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-7 py-3 rounded-full font-semibold transition-all shadow-md hover:shadow-lg">
+              <button className="slide-in-bottom flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-7 py-3 rounded-full font-semibold transition-all shadow-md hover:shadow-lg">
                 <MdEmail size={22} />
                 Do you want to Recycle today ?
               </button>

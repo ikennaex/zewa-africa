@@ -1,5 +1,6 @@
 import React from "react";
-import { Mail, Phone, MapPin, Globe } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram } from "lucide-react";
+import { Facebook, Linkedin, Twitter } from "lucide-react";
 
 const ContactPage = () => {
   return (
@@ -7,17 +8,21 @@ const ContactPage = () => {
       <div className="w-full max-w-5xl bg-white rounded-2xl shadow-2xl overflow-hidden grid md:grid-cols-2">
         {/* Left Section - Info */}
         <div className="bg-gradient-to-br from-green-800 to-customGreen text-white p-10 flex flex-col justify-center">
-          <h1 className="text-3xl font-bold mb-4">Get in Touch with ZEWA Group</h1>
+          <h1 className="text-3xl font-bold mb-4">
+            Get in Touch with ZEWA Group
+          </h1>
           <p className="text-gray-100 mb-8">
-            We’re here to support sustainable development across Africa. Reach out
-            for inquiries, partnerships, or collaborations towards a greener future.
+            We’re here to support sustainable development across Africa. Reach
+            out for inquiries, partnerships, or collaborations towards a greener
+            future.
           </p>
 
           <div className="space-y-4">
             <div className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-white mt-1" />
               <span>
-                <strong>Administrative HQ:</strong> 4 Association Road, Governors Road, Lagos, Nigeria.
+                <strong>Administrative HQ:</strong> 4 Association Road,
+                Governors Road, Lagos, Nigeria.
               </span>
             </div>
 
@@ -28,12 +33,19 @@ const ContactPage = () => {
 
             <div className="flex items-center gap-3">
               <Phone className="w-5 h-5 text-white" />
-              <span>WhatsApp: +261 388 390 349</span>
+              <span>WhatsApp: +261 38 36 965 27</span>
             </div>
 
-            <div className="flex items-center gap-3">
-              <Globe className="w-5 h-5 text-white" />
-              <span>Facebook • LinkedIn • X</span>
+            <div className="flex items-center gap-4 text-white">
+              <a target="_blank" href="https://www.facebook.com/share/1ChCCtGkQk/">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a target="_blank" href="https://www.linkedin.com/company/zewa-zero-e-wastes-africa/">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a target="_blank" href="https://www.instagram.com/zewa.261?utm_source=qr&igsh=cjR0NnR5Zzl0eXpj">
+                <Instagram className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>

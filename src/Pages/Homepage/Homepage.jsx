@@ -24,11 +24,11 @@ const Homepage = () => {
         <Info />
         <Services />
         <OperationsPage />
-        <Benefits />
-        <Compliance />
+        <WhyWeMatter />
+        {/* <Benefits /> */}
+        {/* <Compliance /> */}
         <Sustainability />
         <Companies />
-        <WhyWeMatter />
         {/* <Climate /> */}
     </div>
   )

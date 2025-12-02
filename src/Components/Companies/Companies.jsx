@@ -43,7 +43,7 @@ const Companies = () => {
   return (
     <div className="bg-white py-16">
       <h1 className="text-center text-gray-900 text-3xl md:text-4xl font-semibold mb-6">
-        Our Trusted Clients
+        They Trust Us
       </h1>
 
       {/* First row: first half of logos */}
@@ -58,7 +58,7 @@ const Companies = () => {
             <img
               src={logo.src}
               alt={logo.alt}
-              className="h-14 md:h-24 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300"
+              className="h-14 md:h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300"
             />
           </div>
         ))}
@@ -76,7 +76,7 @@ const Companies = () => {
             <img
               src={logo.src}
               alt={logo.alt}
-              className="h-14 md:h-24 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300"
+              className="h-14 md:h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300"
             />
           </div>
         ))}
