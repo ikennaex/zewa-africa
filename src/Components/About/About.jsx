@@ -25,7 +25,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <img
-              src={zewastaff}
+              src= "/images/staff.jpg"
               alt="ZEWA Waste Management"
               className="rounded-3xl shadow-xl w-full object-cover h-[420px] lg:h-[520px] border border-gray-100"
             />
