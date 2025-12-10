@@ -13,33 +13,32 @@
     "button": "Do you want to Recycle today?"
   }, 
   "about": {
-    "title": "About ZEWA Group",
-    "historyTitle": "Our History",
+    "title": "About Us",
+    "historyTitle": "Our Story",
     "historyText1": "ZEWA Group began with a simple vision: to protect Africa’s environment by transforming the way electronic waste is managed. What started as a small initiative grew into a national movement for responsible recycling. Today, ZEWA partners with leading companies to recover, process, and recycle e-waste safely and transparently. Each piece of discarded equipment becomes an opportunity to create value, not pollution. Driven by innovation and environmental commitment, we work to build a circular, sustainable future for all.",
-    "historyText2": "ZEWA Group (Zero E-Waste Africa) is a leading Waste Electrical and Electronic Equipment (WEEE) management company dedicated to advancing a sustainable circular economy for electronic waste across Africa.",
-    "mission": "Our mission is to reduce environmental harm, promote responsible recycling, and recover valuable materials from discarded electronics through innovative, compliant, and eco-efficient waste management practices. We support corporate organizations across Africa with seamless collection, pre-processing, and safe disposal of obsolete, damaged, or end-of-life electronics.",
-    "complianceTitle": "Environmental Compliance and Commitment",
-    "complianceText": "Our operations align with globally recognized environmental laws and sustainability frameworks.",
+    "historyText2": "ZEWA Group (Zero E-Waste Africa) is a leading Waste Electrical and Electronic Equipment (WEEE) management company dedicated to advancing a sustainable circular economy for electronic waste across Africa. Sin inception our mission is to reduce environmental harm, promote responsible recycling and recover valuable materials from discarded electronics through innovative, compliant, and eco-efficient waste management practices. We support SMEs, corporate and government organizations across Africa with seamless collection, pre-processing, and safe disposal of obsolete, damaged, or end-of-life electronics to improve circular economy",
+    "complianceTitle": "Our Compliance & Commitment",
+    "complianceText": "Our operations align with globally recognized environmental laws and sustainability frameworks, which environmental protection, public health, and regulatory compliance form the foundation of our group commitment and our activities are also aligned with:",
     "presenceTitle": "Our Presence in Africa",
     "presenceText": "We operate across multiple African nations.",
-    "learnMore": "Learn More"
+    "learnMore": "...More"
   },
   "complianceItems": {
     "basel": {
       "title": "The Basel Convention",
-      "text": "We ensure all hazardous and electronic waste is collected, handled, and processed responsibly, safely, and legally."
+      "text": "We adhere to the Control of Transboundary Movements of Hazardous & E-Waste Disposal, a global treaty adopted to ensure all hazardous & electronic waste is collected, handled, and processed responsibly, safely, and legally."
     },
     "partnerships": {
-      "title": "Sustainability Partnerships",
-      "text": "We collaborate with governments, NGOs, and private organizations to promote refurbishment, reuse, and public awareness initiatives."
+      "title": "Sustainability & Partnerships",
+      "text": "We collaborate with governments, NGOs, and private organizations to promote circular economy through refurbishment, reuse, & recycle by also creating public awareness initiatives."
     },
     "standards": {
       "title": "Local and Global Standards",
       "text": "We comply fully with national and international environmental regulations, aligning with best practices such as the EU WEEE Directive."
     },
     "iso": {
-      "title": "ISO 14001 Certification",
-      "text": "Our Environmental Management System follows ISO 14001 standards for sustainability performance."
+      "title": "Certification & Global Standard",
+      "text": "Our Environmental Management System align with standard sustainability performance, which allow us to comply fully with national and international environmental law & regulations, aligning with best practices of WEEE Directive."
     },
     "circular": {
       "title": "Circular Economy Vision",
@@ -48,7 +47,7 @@
   },
   "counter": {
     "heading": "Our Impact and Capacity",
-    "subheading": "Trusted by clients, driven by innovation, and powered by sustainability.",
+    "subheading": "ZEWA Group delivers sustainable, innovative, and reliable solutions across 5R - Repair, Refurbish, Remarketing, Reuse & Recycling, and resource management. We create measurable environmental and economic impact while strengthening local technical capacity. Our team brings strong expertise, certified processes, and scalable infrastructure to every project. We are trusted by clients, driven by innovation, and powered by sustainability.",
     "stats": [
       {
         "label": "Kg of E-waste Diverted From Landfill",
@@ -73,35 +72,45 @@
     ]
   },
   "info": {
-    "heading": "Our Commitment to a Greener Future",
-    "subheading": "ZEWA Group is driving Africa’s transition toward a cleaner, circular, and sustainable environment through innovation, education, and responsible waste management practices.",
+    "heading": "Our Commitment Toward Environmental Sustainability",
+    "subheading": "We committed to protecting the environment through responsible and sustainable practices, while championing Africa’s shift toward a cleaner and more circular economy with our work focuses on innovation that reduces waste and preserves natural resources through education and awareness and empowering communities to adopt greener habits.",
     "cards": [
       {
         "title": "Sustainable Waste Management",
-        "text": "At ZEWA Group, we promote a sustainable waste management model built on the principles of: Repair → Refurbish → Reuse → Recycle."
+        "text": "At ZEWA Group, we promote a sustainable waste management model built on the principles of: Repair → Refurbish → Reuse → Recycle.",
+        "more": ""
       },
       {
         "title": "Protecting the Environment",
-        "text": "We are dedicated to protecting the environment through responsible waste management, reducing pollution, and fostering a circular economy for a cleaner, more sustainable future."
+        "text": "We are dedicated to protecting the environment through responsible waste management, reducing pollution, and fostering a circular economy for a cleaner, more sustainable future.",
+        "more": ""
       },
       {
         "title": "Reducing Carbon Emissions",
-        "text": "ZEWA is committed to reducing carbon emissions through sustainable recycling, energy-efficient operations, and green initiatives, helping organizations achieve their low-carbon goals across Africa."
+        "text": "ZEWA is committed to reducing carbon emissions through sustainable recycling, energy-efficient operations, and green initiatives, helping organizations achieve their low-carbon goals across Africa.",
+        "more": ""
       },
       {
         "title": "Extended Producer Responsibility (EPR)",
-        "text": "We uphold Extended Producer Responsibility (EPR) by ensuring responsible collection, recycling, and management of electronic waste, helping organizations and partners meet environmental and regulatory standards."
+        "text": "We uphold Extended Producer Responsibility (EPR) by ensuring responsible collection, recycling, and management of electronic waste, helping organizations and partners meet environmental and regulatory standards.",
+        "more": ""
       },
       {
         "title": "Training & Awareness",
-        "text": "Through our expert waste management programs, we help organizations adopt sustainable operations by providing training and awareness that promote e-waste management and eco-friendly practices."
+        "text": "Through our expert waste management programs, we help organizations adopt sustainable operations by providing training and awareness that promote e-waste management and eco-friendly practices.",
+        "more": ""
+      },
+      {
+        "title": "Promote Circular Economy",
+        "text": "We supports Africa’s transition to a circular economy by promoting responsible resource recovery & sustainable manufacturing. We align with global circular economy principles through innovation, 5R culture, and waste reduction systems.",
+        "more": "Our focus is creating long-term environmental and economic value by keeping materials in use and minimizing ecological impact."
       }
     ]
   },
   "services": {
     "heading": "Our Core Solutions & Services",
     "subheading": "Comprehensive E-Waste Management",
-    "description": "At ZEWA Group (Zero E-Waste Africa), we provide sustainable, compliant, and circular e-waste management solutions from collection to recycling and beyond.",
+    "description": "We are compelling to delivers sustainable, compliant, and circular e-waste management solutions across the full lifecycle of our operation from collection to recycling and recovery, we help organizations manage electronic waste responsibly and efficiently.",
     "industriesTitle": "Industries We Serve",
     "industries": [
       "Telecom", "Finance", "Government", "Energy", "Media", "Healthcare", "Education",
@@ -206,12 +215,8 @@
         "desc": "Our operations create sustainable employment opportunities and promote economic independence."
       },
       {
-        "title": "Climate Action & SDGs",
-        "desc": "We actively contribute to Sustainable Development Goals, especially SDG 12 on responsible consumption and production."
-      },
-      {
-        "title": "Carbon Footprint Reduction",
-        "desc": "We encourage repairs, refurbishing, and reuse before recycling to minimize environmental impact."
+        "title": "Carbon Reduction & Climate Action",
+        "desc": "We actively contribute to Sustainable Development Goals, we encourage repairs, refurbishing, and reuse before recycling to minimize environmental impact."
       }
     ]
   },
@@ -301,14 +306,18 @@
   },
   "certifications": {
     "title": "Certifications",
-    "description": "Our recognized certifications for quality and compliance",
+    "description": "Zewa Group operates with full regulatory compliance, supported by certified management systems and officially approved waste-handling permits. Our company’s certifications reflect its commitment to quality, safety, and environmental responsibility, while its permits authorize the lawful collection, transport, and processing of waste. Together, these approvals demonstrate Zewa Group’s dedication to delivering dependable and sustainable waste-management services.",
     "items": {
       "iso9001": "ISO 9001",
       "iso14001": "ISO 14001",
       "ohsas18001": "OHSAS 18001",
       "ceWasa": "CE Certified (e-Wasa)",
       "ceCertus": "CE Certified (Certus)",
-      "ceGoGreen": "CE Certified (GoGreen)"
+      "ceGoGreen": "CE Certified (GoGreen)",
+      "lasepa": "LASEPA",
+      "one": "Madagascar Environmental Permit Issued by ONE",
+      "nesrea": "Nigeria Environmental Permit Issued by NASERA",
+      "epa": "Ghana Environmental Permit Issue by EPA"
     }},
     "compliance": {
     "title": "Upholding the Highest Standards",
@@ -336,8 +345,15 @@
     "title": "Get in Touch with ZEWA Group",
     "description": "We’re here to support sustainable development across Africa. Reach out for inquiries, partnerships, or collaborations towards a greener future.",
     "hqLabel": "Administrative HQ",
+    "madagascar": "Madagascar",
+    "ghana": "Ghana",
+    "botswana": "Botswana",
     "hqAddress": "4 Association Road, Governors Road, Lagos, Nigeria",
-    "email": "Recyclage@zewa.africa",
+    "botswanaAddress": "Plot 14361 Gaborone West, Gaborone Botswana",
+    "madagascarAddress": "Lot II Antohomadinika, Behind Apipa Antananarivo Madagascar",
+    "ghanaAddress": "CW -9107 Awutu Breku Road, Accra Ghana",
+    "enquiriesemail": "Recyclage@zewa.africa",
+    "partnershipsemail": "Partners@Zewa.africa",
     "whatsapp": "WhatsApp: +261 38 36 965 27",
     "formTitle": "Send us a message",
     "form": {

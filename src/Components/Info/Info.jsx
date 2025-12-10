@@ -8,7 +8,30 @@ const infoData = [
   { video: carbonEmit, key: 2 },
   { video: epr, key: 3 },
   { video: training, key: 4 },
+  { video: training, key: 5 },
 ];
+
+// Expandable text component
+const ExpandableText = ({ text, moreText }) => {
+  const [showMore, setShowMore] = React.useState(false);
+
+  return (
+    <div className="text-gray-600 text-sm leading-relaxed ">
+      <p>{text}</p>
+
+      {!showMore && moreText && (
+        <p
+          onClick={() => setShowMore(true)}
+          className="text-customGreen inline font-medium mt-2"
+        >
+          ...More
+        </p>
+      )}
+
+      {showMore && <p className="mt-2">{moreText}</p>}
+    </div>
+  );
+};
 
 const Info = () => {
   const { t } = useTranslation();
@@ -48,9 +71,11 @@ const Info = () => {
               <h3 className="text-xl font-semibold mb-3 text-customGreen">
                 {t(`info.cards.${item.key}.title`)}
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {t(`info.cards.${item.key}.text`)}
-              </p>
+
+              <ExpandableText
+                text={t(`info.cards.${item.key}.text`)}
+                moreText={t(`info.cards.${item.key}.more`)}
+              />
             </div>
           </div>
         ))}

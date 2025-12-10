@@ -17,23 +17,63 @@ const Footer = () => {
   const { t } = useTranslation();
   const year = new Date().getFullYear();
 
+  const locations = [
+    {
+      label: t("contact.hqLabel"),
+      value: t("contact.hqAddress"),
+    },
+    {
+      label: t("contact.botswana"),
+      value: t("contact.botswanaAddress"),
+    },
+    {
+      label: t("contact.madagascar"),
+      value: t("contact.madagascarAddress"),
+    },
+    {
+      label: t("contact.ghana"),
+      value: t("contact.ghanaAddress"),
+    },
+  ];
+
+  const socialLinks = [
+    { href: "https://web.facebook.com/Ewrpm", label: "Facebook", Icon: Facebook },
+    {
+      href: "https://www.linkedin.com/company/zewa-zero-e-wastes-africa/",
+      label: "LinkedIn",
+      Icon: Linkedin,
+    },
+    { href: "https://www.instagram.com/zewa.261/", label: "Instagram", Icon: Instagram },
+    // Add X and YouTube as needed; placeholders used if empty
+    { href: "#", label: "X", Icon: Facebook }, // replace Icon & href if you have X icon/link
+    { href: "#", label: "YouTube", Icon: Facebook }, // replace Icon & href if you have YouTube icon/link
+  ];
+
   return (
     <footer className="relative bg-gray-950 text-gray-300 pt-20 pb-10 border-t border-gray-800">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-gray-950 opacity-95" />
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-3 gap-14 z-10">
-        {/* Column 1 – Contact Info */}
+        {/* Column 1 – Contact Info & Locations */}
         <div>
           <h3 className="text-lg font-semibold text-white tracking-wide mb-5">
             {t("footer.contact")}
           </h3>
-          <ul className="space-y-4 text-sm leading-relaxed">
-            <li className="flex items-start gap-3">
-              <MapPin className="w-5 h-5 text-customOrange mt-1" />
-              <span>{t("footer.administrative_hq")}</span>
-            </li>
-          </ul>
+
+          <div className="space-y-4 text-sm leading-relaxed">
+            {locations.map((loc, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <div className="w-6 h-6 flex items-center justify-center rounded-full bg-customOrange/10 shrink-0">
+                  <MapPin className="w-4 h-4 text-customOrange" />
+                </div>
+                <div>
+                  <div className="font-medium text-white text-sm">{loc.label}</div>
+                  <div className="text-gray-300 text-sm">{loc.value}</div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Column 2 – Get in Touch */}
@@ -41,61 +81,63 @@ const Footer = () => {
           <h3 className="text-lg font-semibold text-white tracking-wide mb-5">
             {t("footer.get_in_touch")}
           </h3>
+
           <ul className="space-y-4 text-sm">
             <li className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-customOrange" />
               <a
-                href={`mailto:${t("footer.email")}`}
+                href={`mailto:${t("contact.enquiriesemail")}`}
                 className="hover:text-customOrange transition-colors"
               >
-                {t("footer.email")}
+                {t("contact.enquiriesemail")}
               </a>
             </li>
+
+            <li className="flex items-center gap-3">
+              <Mail className="w-5 h-5 text-customOrange" />
+              <a
+                href={`mailto:${t("contact.partnershipsemail")}`}
+                className="hover:text-customOrange transition-colors"
+              >
+                {t("contact.partnershipsemail")}
+              </a>
+            </li>
+
             <li className="flex items-center gap-3">
               <Phone className="w-5 h-5 text-customOrange" />
               <a
-                href="https://wa.me/261388390349"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`tel:${t("contact.whatsapp")}`}
                 className="hover:text-customOrange transition-colors"
               >
-                {t("footer.whatsapp")}
+                {t("contact.whatsapp")}
               </a>
             </li>
           </ul>
 
           {/* Social Icons */}
-          <div className="flex items-center gap-6 mt-8">
-            <a
-              href="https://web.facebook.com/Ewrpm"
-              className="hover:text-customOrange transition-colors"
-              aria-label="Facebook"
-            >
-              <Facebook className="w-5 h-5" />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/zewa-zero-e-wastes-africa/"
-              className="hover:text-customOrange transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a
-              href="https://www.instagram.com/zewa.261/"
-              className="hover:text-customOrange transition-colors"
-              aria-label="Instagram"
-            >
-              <Instagram className="w-5 h-5" />
-            </a>
+          <div className="flex items-center gap-4 mt-8">
+            {socialLinks.map((s, idx) => (
+              <a
+                key={idx}
+                href={s.href || "#"}
+                className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.label}
+              >
+                <s.Icon className="w-4 h-4 text-gray-200" />
+              </a>
+            ))}
           </div>
         </div>
 
-        {/* Column 3 – Map */}
+        {/* Column 3 – Map & Quick Links */}
         <div>
           <h3 className="text-lg font-semibold text-white tracking-wide mb-5">
             {t("footer.find_us")}
           </h3>
-          <div className="rounded-xl overflow-hidden shadow-xl border border-customOrange/40 hover:border-customOrange transition-all">
+
+          <div className="rounded-xl overflow-hidden shadow-xl border border-customOrange/30 hover:border-customOrange transition-all">
             <iframe
               title="ZEWA Group Location"
               src="https://www.google.com/maps?q=4+Association+Road,+Governors+Road,+Lagos,+Nigeria&output=embed"
@@ -105,15 +147,37 @@ const Footer = () => {
               className="rounded-xl"
             ></iframe>
           </div>
+
+          <div className="mt-6 text-sm space-y-3">
+            <a
+              href="#"
+              className="flex items-center gap-2 hover:text-customOrange transition-colors"
+            >
+              <FileText className="w-4 h-4" /> {t("footer.terms")}
+            </a>
+            <a
+              href="#"
+              className="flex items-center gap-2 hover:text-customOrange transition-colors"
+            >
+              <Cookie className="w-4 h-4" /> {t("footer.cookies")}
+            </a>
+            <a
+              href="#"
+              className="flex items-center gap-2 hover:text-customOrange transition-colors"
+            >
+              <ShieldCheck className="w-4 h-4" /> {t("footer.privacy")}
+            </a>
+          </div>
         </div>
       </div>
 
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/+261383696527"
+        href={`https://wa.me/${t("contact.whatsapp").replace(/\D/g, "")}`}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 z-50"
+        aria-label="WhatsApp"
       >
         <FaWhatsapp className="w-6 h-6" />
       </a>

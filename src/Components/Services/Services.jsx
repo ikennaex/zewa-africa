@@ -6,7 +6,11 @@ import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
 import {
   FaRecycle, FaTruck, FaShieldAlt, FaCertificate, FaLeaf, FaUsers,
-  FaTools, FaSyncAlt, FaCogs, FaHandsHelping
+  FaTools, FaSyncAlt, FaCogs, FaHandsHelping, FaPlane, FaBuilding,
+  FaShip,
+  FaMonero,
+  FaMoneyBill,
+  FaSchool
 } from "react-icons/fa";
 import { MdDevices } from "react-icons/md";
 import FadeIn from "../fadein";
@@ -60,14 +64,37 @@ const Services = () => {
               {t("services.industriesTitle")}
             </h3>
             <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-              {t("services.industries", { returnObjects: true }).map((ind, i) => (
-                <span
-                  key={i}
-                  className="px-4 py-2 bg-customGreen/5 text-customGreen rounded-full text-sm font-medium hover:bg-customGreen hover:text-white transition-all duration-200 cursor-pointer"
-                >
-                  {ind}
-                </span>
-              ))}
+              {t("services.industries", { returnObjects: true }).map((ind, i) => {
+                const industryIcons = [
+                  MdDevices,       // Telecom
+                  FaMoneyBill,   // Finance
+                  FaShieldAlt,     // Government
+                  FaLeaf,          // Energy
+                  FaUsers,         // Media
+                  FaHandsHelping,  // Healthcare
+                  FaSchool,         // Education
+                  FaCogs,          // Manufacturing
+                  FaTruck,         // Retail
+                  FaHandsHelping,       // NGOs
+                  FaUsers,         // Hospitality
+                  FaTruck,         // Logistics
+                  FaShip,         // Shipping
+                  FaPlane,         // Aviation
+                  FaCogs,          // Public Utilities
+                  FaBuilding,      // Real Estate
+                  MdDevices        // IT & Software
+                ];
+                const Icon = industryIcons[i];
+                return (
+                  <span
+                    key={i}
+                    className="flex items-center gap-2 px-4 py-2 bg-customGreen/5 text-customGreen rounded-full text-sm font-medium hover:bg-customGreen hover:text-white transition-all duration-200 cursor-pointer"
+                  >
+                    <Icon className="text-lg" />
+                    {ind}
+                  </span>
+                );
+              })}
             </div>
           </div>
 

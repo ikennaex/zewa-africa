@@ -14,6 +14,7 @@ import Sustainability from '../../Components/Sustainability/Sustainability'
 import Companies from '../../Components/Companies/Companies'
 import WhyWeMatter from '../../Components/WhyWeMatter/WhyWeMatter'
 import Climate from '../../Components/Climate/Climate'
+import Programme from '../../Components/Programme/Programme'
 
 const Homepage = () => {
   return (
@@ -23,6 +24,7 @@ const Homepage = () => {
         <Counter />
         <Info />
         <Services />
+        <Programme />
         <OperationsPage />
         <WhyWeMatter />
         {/* <Benefits /> */}

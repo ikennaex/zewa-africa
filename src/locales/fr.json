@@ -16,10 +16,10 @@
     "title": "À propos du groupe ZEWA",
     "historyTitle": "Notre Histoire",
     "historyText1": "Le groupe ZEWA a commencé avec une vision simple : protéger l'environnement de l'Afrique en transformant la gestion des déchets électroniques. Ce qui a commencé comme une petite initiative est devenu un mouvement national pour le recyclage responsable. Aujourd'hui, ZEWA collabore avec des entreprises de premier plan pour récupérer, traiter et recycler les déchets électroniques de manière sûre et transparente. Chaque équipement mis au rebut devient une opportunité de créer de la valeur, et non de la pollution. Animés par l'innovation et l'engagement environnemental, nous travaillons à construire un avenir circulaire et durable pour tous.",
-    "historyText2": "ZEWA Group (Zero E-Waste Africa) est une entreprise de gestion des déchets électriques et électroniques (WEEE) de premier plan, dédiée à la promotion d'une économie circulaire durable pour les déchets électroniques à travers l'Afrique.",
+    "historyText2": "Groupe ZEWA (Zero E-Waste Africa) est une entreprise leader dans la gestion des Déchets d Équipements Électriques et Électroniques (DEEE), dédiée à la promotion d une économie circulaire durable pour les déchets électroniques en Afrique. Depuis sa création, notre mission est de réduire les dommages environnementaux, de promouvoir un recyclage responsable et de récupérer des matériaux précieux à partir des équipements électroniques mis au rebut, grâce à des pratiques innovantes, conformes et éco-efficaces de gestion des déchets. Nous accompagnons les PME, les entreprises et les organisations gouvernementales à travers l Afrique en proposant des solutions fluides de collecte, de prétraitement et d élimination sécurisée des équipements électroniques obsolètes, endommagés ou en fin de vie, afin de renforcer l économie circulaire.",
     "mission": "Notre mission est de réduire les dommages environnementaux, promouvoir le recyclage responsable et récupérer des matériaux précieux à partir d'équipements électroniques mis au rebut grâce à des pratiques de gestion des déchets innovantes, conformes et écologiquement efficaces. Nous accompagnons les organisations d'entreprise à travers l'Afrique dans la collecte, le pré-traitement et l'élimination sûre des équipements obsolètes, endommagés ou en fin de vie.",
-    "complianceTitle": "Conformité et engagement environnemental",
-    "complianceText": "Nos opérations sont conformes aux lois environnementales et aux cadres de durabilité reconnus mondialement.",
+    "complianceTitle": "Notre conformité et notre engagement",
+    "complianceText": "Nos opérations sont conformes aux lois environnementales reconnues au niveau mondial ainsi qu’aux cadres de durabilité, pour lesquels la protection de l’environnement, la santé publique et la conformité réglementaire constituent le fondement de l’engagement de notre groupe. Nos activités sont également alignées avec :",
     "presenceTitle": "Notre présence en Afrique",
     "presenceText": "Nous opérons dans plusieurs pays africains.",
     "learnMore": "En savoir plus"
@@ -27,19 +27,19 @@
   "complianceItems": {
     "basel": {
       "title": "La Convention de Bâle",
-      "text": "Nous nous assurons que tous les déchets dangereux et électroniques sont collectés, traités et recyclés de manière responsable et légale."
+      "text": "Nous respectons la Convention sur le contrôle des mouvements transfrontaliers des déchets dangereux et des déchets électroniques et leur élimination, un traité mondial adopté pour garantir que tous les déchets dangereux et électroniques sont collectés, manipulés et traités de manière responsable, sûre et légale."
     },
     "partnerships": {
-      "title": "Partenariats durables",
-      "text": "Nous collaborons avec les gouvernements, les ONG et les organisations privées pour promouvoir la remise à neuf, la réutilisation et la sensibilisation du public."
+      "title": "Durabilité et Partenariats",
+      "text": "Nous collaborons avec les gouvernements, les ONG et les organisations privées afin de promouvoir l économie circulaire à travers la remise à neuf, la réutilisation et le recyclage, tout en mettant en place des initiatives de sensibilisation du public."
     },
     "standards": {
       "title": "Normes locales et internationales",
       "text": "Nous respectons pleinement les réglementations environnementales nationales et internationales, en nous alignant sur les meilleures pratiques telles que la directive européenne WEEE."
     },
     "iso": {
-      "title": "Certification ISO 14001",
-      "text": "Notre système de management environnemental suit les normes ISO 14001 pour la performance en matière de durabilité."
+      "title": "Certifications et Normes Mondiales",
+      "text": "Notre système de management environnemental est conforme aux standards de performance en matière de durabilité, ce qui nous permet de respecter pleinement les lois et réglementations environnementales nationales et internationales, conformément aux meilleures pratiques de la directive DEEE (WEEE)."
     },
     "circular": {
       "title": "Vision de l'économie circulaire",
@@ -48,7 +48,7 @@
   },
   "counter": {
     "heading": "Notre impact et notre capacité",
-    "subheading": "Fiables pour nos clients, animés par l'innovation et guidés par la durabilité",
+    "subheading": "Le Groupe ZEWA fournit des solutions durables, innovantes et fiables à travers les 5R — Réparation, Remise à neuf, Recommercialisation, Réutilisation et Recyclage — ainsi que la gestion des ressources. Nous créons un impact environnemental et économique mesurable tout en renforçant les capacités techniques locales. Notre équipe apporte une solide expertise, des processus certifiés et une infrastructure évolutive à chaque projet. Nous sommes dignes de confiance aux yeux de nos clients, portés par l’innovation et guidés par la durabilité.",
     "stats": [
       {
         "label": "Kg de déchets électroniques détournés des décharges",
@@ -73,8 +73,8 @@
     ]
   },
   "info": {
-    "heading": "Notre engagement pour un avenir plus vert",
-    "subheading": "ZEWA Group conduit la transition de l'Afrique vers un environnement plus propre, circulaire et durable grâce à l'innovation, à l'éducation et à des pratiques responsables de gestion des déchets.",
+    "heading": "Notre engagement envers la durabilité environnementale",
+    "subheading": "Nous nous engageons à protéger l’environnement grâce à des pratiques responsables et durables, tout en accompagnant la transition de l’Afrique vers une économie plus propre et plus circulaire. Notre travail est axé sur l’innovation qui réduit les déchets et préserve les ressources naturelles, à travers l’éducation, la sensibilisation et l’autonomisation des communautés afin qu’elles adoptent des habitudes plus écologiques.",
     "cards": [
       {
         "title": "Gestion durable des déchets",
@@ -95,24 +95,53 @@
       {
         "title": "Formation & Sensibilisation",
         "text": "Grâce à nos programmes experts de gestion des déchets, nous aidons les organisations à adopter des opérations durables en fournissant formation et sensibilisation pour promouvoir la gestion des déchets électroniques et les pratiques écologiques."
+      },
+      {
+        "title": "Promouvoir l’économie circulaire",
+        "text": "Nous soutenons la transition de l’Afrique vers une économie circulaire en favorisant la récupération responsable des ressources et une production durable. Nous nous alignons sur les principes mondiaux de l’économie circulaire grâce à l’innovation, à la culture des 5R et à des systèmes de réduction des déchets. Plus encore, notre objectif est de créer une valeur environnementale et économique à long terme en maintenant les matériaux en circulation et en minimisant l’impact écologique."
       }
     ]
   },
   "services": {
     "heading": "Nos Solutions et Services Clés",
     "subheading": "Gestion Complète des Déchets Électroniques",
-    "description": "Chez ZEWA Group (Zero E-Waste Africa), nous fournissons des solutions durables, conformes et circulaires pour la gestion des déchets électroniques, de la collecte au recyclage et au-delà.",
+    "description": "Nous nous engageons à fournir des solutions de gestion des déchets électroniques durables, conformes et circulaires, couvrant l’ensemble du cycle de vie de nos opérations, de la collecte au recyclage et à la valorisation. Nous aidons les organisations à gérer les déchets électroniques de manière responsable et efficace.",
     "industriesTitle": "Secteurs que Nous Servons",
     "industries": [
-      "Télécom", "Finance", "Gouvernement", "Énergie", "Médias", "Santé", "Éducation",
-      "Fabrication", "Commerce de détail", "ONG", "Hôtellerie", "Logistique", "Expédition",
-      "Aviation", "Services Publics", "Immobilier", "Informatique & Logiciel"
+      "Télécom",
+      "Finance",
+      "Gouvernement",
+      "Énergie",
+      "Médias",
+      "Santé",
+      "Éducation",
+      "Fabrication",
+      "Commerce de détail",
+      "ONG",
+      "Hôtellerie",
+      "Logistique",
+      "Expédition",
+      "Aviation",
+      "Services Publics",
+      "Immobilier",
+      "Informatique & Logiciel"
     ],
     "categoriesTitle": "Ce que Nous Acceptons",
     "categories": [
-      "Téléphone mobile", "Ordinateur", "Routeur/Switch", "Câbles", "Scanner",
-      "TV", "Radio", "Générateur", "Batteries", "Ampoule", "Ventilateur", "Rack réseau",
-      "Antenne", "Équipements médicaux"
+      "Téléphone mobile",
+      "Ordinateur",
+      "Routeur/Switch",
+      "Câbles",
+      "Scanner",
+      "TV",
+      "Radio",
+      "Générateur",
+      "Batteries",
+      "Ampoule",
+      "Ventilateur",
+      "Rack réseau",
+      "Antenne",
+      "Équipements médicaux"
     ],
     "coreServicesTitle": "Nos Services Clés de Gestion des Déchets Électroniques",
     "servicesList": [
@@ -206,12 +235,8 @@
         "desc": "Nos opérations créent des opportunités d’emploi durables et favorisent l’indépendance économique."
       },
       {
-        "title": "Action Climatique & ODD",
-        "desc": "Nous contribuons activement aux Objectifs de Développement Durable, notamment l’ODD 12 sur la consommation et la production responsables."
-      },
-      {
-        "title": "Réduction de l’Empreinte Carbone",
-        "desc": "Nous encourageons les réparations, la remise à neuf et la réutilisation avant le recyclage pour minimiser l’impact environnemental."
+        "title": "Réduction du Carbone & Action Climatique",
+        "desc": "Nous contribuons activement aux Objectifs de Développement Durable et encourageons la réparation, la remise à neuf et la réutilisation avant le recyclage afin de minimiser l'impact environnemental."
       }
     ]
   },
@@ -299,16 +324,20 @@
       "highlight": "Ensemble, nous construisons une Afrique circulaire et à faible émission de carbone."
     }
   },
-   "certifications": {
+  "certifications": {
     "title": "Certifications",
-    "description": "Nos certifications reconnues pour la qualité et la conformité",
+    "description": "Zewa Group opère en totale conformité réglementaire, soutenu par des systèmes de gestion certifiés et des permis officiels pour la gestion des déchets. Les certifications de notre entreprise témoignent de notre engagement envers la qualité, la sécurité et la responsabilité environnementale, tandis que nos permis autorisent la collecte, le transport et le traitement des déchets en toute légalité. Ensemble, ces autorisations démontrent l’engagement de Zewa Group à fournir des services de gestion des déchets fiables et durables.",
     "items": {
       "iso9001": "ISO 9001",
       "iso14001": "ISO 14001",
       "ohsas18001": "OHSAS 18001",
       "ceWasa": "Certifié CE (e-Wasa)",
       "ceCertus": "Certifié CE (Certus)",
-      "ceGoGreen": "Certifié CE (GoGreen)"
+      "ceGoGreen": "Certifié CE (GoGreen)",
+      "lasepa": "LASEPA",
+      "one": "Permis environnemental de Madagascar délivré par l’ONE",
+      "nesrea": "Permis environnemental du Nigeria délivré par la NESREA",
+      "epa": "Permis environnemental du Ghana délivré par l’EPA"
     }
   },
   "compliance": {

@@ -35,7 +35,9 @@ const Companies = () => {
     { src: vodafone, alt: "Vodafone" },
     { src: bankofafrica, alt: "Bank of Africa" },
     { src: multichoice, alt: "Multichoice" },
-    { src: samsung, alt: "Samsung" },
+    { src: "images/zte.png", alt: "ZTE" },
+    { src: "images/transcontinent.png", alt: "transcontinent" },
+    { src: "images/firstimmo.png", alt: "firstimmo" },
   ];
 
   // Split logos into two halves
@@ -52,24 +54,35 @@ const Companies = () => {
       {/* First row: first half of logos */}
       <Marquee gradient={false} speed={40} pauseOnHover={true} className="mb-6">
         {firstHalf.map((logo, index) => (
-          <div key={index} className="mx-10 flex items-center justify-center">
+          <div
+            key={index}
+            className="mx-10 flex items-center justify-center h-14 md:h-14"
+          >
             <img
               src={logo.src}
               alt={logo.alt}
-              className="h-14 md:h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300"
+              className="h-full w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300"
             />
           </div>
         ))}
       </Marquee>
 
       {/* Second row: second half of logos, opposite direction */}
-      <Marquee gradient={false} speed={40} pauseOnHover={true} direction="right">
+      <Marquee
+        gradient={false}
+        speed={40}
+        pauseOnHover={true}
+        direction="right"
+      >
         {secondHalf.map((logo, index) => (
-          <div key={index} className="mx-10 flex items-center justify-center">
+          <div
+            key={index}
+            className="mx-10 flex items-center justify-center h-14 md:h-14"
+          >
             <img
               src={logo.src}
               alt={logo.alt}
-              className="h-14 md:h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300"
+              className="h-full w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300"
             />
           </div>
         ))}
