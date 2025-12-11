@@ -30,9 +30,9 @@ const Companies = () => {
     { src: unep, alt: "UNEP" },
     { src: gassytour, alt: "GassyTour" },
     { src: ingedata, alt: "Ingedata" },
-    { src: canal, alt: "Canal" },
     { src: epa, alt: "EPA" },
     { src: vodafone, alt: "Vodafone" },
+    { src: canal, alt: "Canal" },
     { src: bankofafrica, alt: "Bank of Africa" },
     { src: multichoice, alt: "Multichoice" },
     { src: "images/zte.png", alt: "ZTE" },
@@ -41,7 +41,6 @@ const Companies = () => {
     { src: "images/minstere.jpg", alt: "minstere" },
   ];
 
-  // Split logos into two halves
   const half = Math.ceil(logos.length / 2);
   const firstHalf = logos.slice(0, half);
   const secondHalf = logos.slice(half);
@@ -52,38 +51,31 @@ const Companies = () => {
         {t("companies.heading")}
       </h1>
 
-      {/* First row: first half of logos */}
       <Marquee gradient={false} speed={40} pauseOnHover={true} className="mb-6">
         {firstHalf.map((logo, index) => (
           <div
             key={index}
-            className="mx-10 flex items-center justify-center h-14 md:h-14"
+            className="mx-6 flex items-center justify-center w-32 h-20"
           >
             <img
               src={logo.src}
               alt={logo.alt}
-              className="h-full w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300"
+              className="max-w-full max-h-full object-contain opacity-90 hover:opacity-100 transition-all duration-300"
             />
           </div>
         ))}
       </Marquee>
 
-      {/* Second row: second half of logos, opposite direction */}
-      <Marquee
-        gradient={false}
-        speed={40}
-        pauseOnHover={true}
-        direction="right"
-      >
+      <Marquee gradient={false} speed={40} pauseOnHover={true} direction="right">
         {secondHalf.map((logo, index) => (
           <div
             key={index}
-            className="mx-10 flex items-center justify-center h-14 md:h-14"
+            className="mx-6 flex items-center justify-center w-32 h-20"
           >
             <img
               src={logo.src}
               alt={logo.alt}
-              className="h-full w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300"
+              className="max-w-full max-h-full object-contain opacity-90 hover:opacity-100 transition-all duration-300"
             />
           </div>
         ))}

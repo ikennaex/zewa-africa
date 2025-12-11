@@ -19,10 +19,10 @@ const About = () => {
       icon: <FaHandshake size={40} className="text-customGreen" />,
       key: "partnerships",
     },
-    {
-      icon: <Globe2 size={40} className="text-customGreen" />,
-      key: "standards",
-    },
+    // {
+    //   icon: <Globe2 size={40} className="text-customGreen" />,
+    //   key: "standards",
+    // },
     { icon: <FaLeaf size={40} className="text-customGreen" />, key: "iso" },
     {
       icon: <FaRecycle size={40} className="text-customGreen" />,
@@ -86,7 +86,7 @@ const About = () => {
           </p>
 
           {/* Flex wrapper to center boxes */}
-          <div className="flex flex-wrap justify-center gap-10 mt-14">
+          <div className="flex flex-wrap justify-center gap-4 mt-14">
             {complianceItems.map((item, index) => (
               <a
                 href="mailto:recyclage@zewa.africa"

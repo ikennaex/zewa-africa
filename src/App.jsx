@@ -15,6 +15,9 @@ import ContactPage from './Pages/Contact/Contact'
 import News from './Pages/News/News'
 import Certifications from './Components/Certifications/Certifications'
 import "./i18n";
+import TermsandConditions from './Pages/Terms&Conditions/TermsandConditions'
+import CookiePolicy from './Pages/CookiePolicy/CookiePolicy'
+import DataPolicy from './Pages/DataPolicy/DataPolicy'
 
 
 const App = () => {
@@ -46,6 +49,9 @@ const App = () => {
         <Route path = "/news"  element = {<News />}/>
         <Route path = "/aboutthecro"  element = {<Ceo />}/>
         <Route path = "/certification"  element = {<Certifications />}/>
+        <Route path = "/terms&conditions"  element = {<TermsandConditions />}/>
+        <Route path = "/cookiepolicy"  element = {<CookiePolicy />}/>
+        <Route path = "datapolicy"  element = {<DataPolicy />}/>
         <Route path = "*"  element={<p>Nothing to show</p>} />
       </Routes>
       <Footer />

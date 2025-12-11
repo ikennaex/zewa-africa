@@ -14,6 +14,7 @@ import {
 import { FaWhatsapp } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -149,7 +150,7 @@ const Footer = () => {
               className="rounded-xl"
             ></iframe>
           </div>
-
+{/* 
           <div className="mt-6 text-sm space-y-3">
             <a
               href="#"
@@ -169,7 +170,7 @@ const Footer = () => {
             >
               <ShieldCheck className="w-4 h-4" /> {t("footer.privacy")}
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -187,13 +188,13 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="relative border-t border-gray-800 mt-16 pt-6 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center px-6 md:px-12 z-10">
         <div className="flex items-center gap-6">
-          <a href="#" className="flex items-center gap-2 hover:text-customOrange">
+          <Link to ="/terms&conditions" className="flex items-center gap-2 hover:text-customOrange">
             <FileText className="w-4 h-4" /> {t("footer.terms")}
-          </a>
-          <a href="#" className="flex items-center gap-2 hover:text-customOrange">
+          </Link>
+          <a href="cookiepolicy" className="flex items-center gap-2 hover:text-customOrange">
             <Cookie className="w-4 h-4" /> {t("footer.cookies")}
           </a>
-          <a href="#" className="flex items-center gap-2 hover:text-customOrange">
+          <a href="datapolicy" className="flex items-center gap-2 hover:text-customOrange">
             <ShieldCheck className="w-4 h-4" /> {t("footer.privacy")}
           </a>
         </div>

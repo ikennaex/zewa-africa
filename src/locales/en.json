@@ -4,7 +4,7 @@
     "services": "Our Services",
     "climate": "Climate Change",
     "certifications": "Certifications",
-    "news": "News & Events",
+    "news": "News & Updates",
     "contact": "Contact"
   },
   "hero": {
@@ -32,10 +32,6 @@
     "partnerships": {
       "title": "Sustainability & Partnerships",
       "text": "We collaborate with governments, NGOs, and private organizations to promote circular economy through refurbishment, reuse, & recycle by also creating public awareness initiatives."
-    },
-    "standards": {
-      "title": "Local and Global Standards",
-      "text": "We comply fully with national and international environmental regulations, aligning with best practices such as the EU WEEE Directive."
     },
     "iso": {
       "title": "Certification & Global Standard",

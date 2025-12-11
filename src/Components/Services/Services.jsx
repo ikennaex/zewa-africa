@@ -165,7 +165,7 @@ const Services = () => {
           </div>
 
           {/* Value-Added Services */}
-          <div className="bg-gray-900 text-white p-12 rounded-3xl text-left">
+          {/* <div className="bg-gray-900 text-white p-12 rounded-3xl text-left">
             <h3 className="text-3xl font-extrabold mb-8">
               {t("services.valueSolutionsTitle")}
             </h3>
@@ -183,7 +183,7 @@ const Services = () => {
                 );
               })}
             </ul>
-          </div>
+          </div> */}
         </div>
       </section>
     </FadeIn>
