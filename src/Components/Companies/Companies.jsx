@@ -38,6 +38,7 @@ const Companies = () => {
     { src: "images/zte.png", alt: "ZTE" },
     { src: "images/transcontinent.png", alt: "transcontinent" },
     { src: "images/firstimmo.png", alt: "firstimmo" },
+    { src: "images/minstere.jpg", alt: "minstere" },
   ];
 
   // Split logos into two halves

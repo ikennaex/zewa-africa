@@ -39,7 +39,7 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { href: "https://web.facebook.com/Ewrpm", label: "Facebook", Icon: Facebook },
+    { href: "https://web.facebook.com/profile.php?id=61581901981506&sfnsn=wa&_rdc=1&_rdr#", label: "Facebook", Icon: Facebook },
     {
       href: "https://www.linkedin.com/company/zewa-zero-e-wastes-africa/",
       label: "LinkedIn",
@@ -48,7 +48,7 @@ const Footer = () => {
     { href: "https://www.instagram.com/zewa.261/", label: "Instagram", Icon: Instagram },
     // Add X and YouTube as needed; placeholders used if empty
     { href: "#", label: "X", Icon: FaXTwitter }, // replace Icon & href if you have X icon/link
-    { href: "#", label: "YouTube", Icon: YoutubeIcon }, // replace Icon & href if you have YouTube icon/link
+    { href: "https://www.youtube.com/@zewagroupzeroe-wasteafrica", label: "YouTube", Icon: YoutubeIcon }, // replace Icon & href if you have YouTube icon/link
   ];
 
   return (

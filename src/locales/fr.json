@@ -21,7 +21,7 @@
     "complianceTitle": "Notre conformité et notre engagement",
     "complianceText": "Nos opérations sont conformes aux lois environnementales reconnues au niveau mondial ainsi qu’aux cadres de durabilité, pour lesquels la protection de l’environnement, la santé publique et la conformité réglementaire constituent le fondement de l’engagement de notre groupe. Nos activités sont également alignées avec :",
     "presenceTitle": "Notre présence en Afrique",
-    "presenceText": "Nous opérons dans plusieurs pays africains.",
+    "presenceText": "Nous opérons dans plusieurs pays africains grâce à notre initiative transfrontalière de gestion des déchets, ce qui signifie que nous pouvons être contactés depuis n’importe quelle région d’Afrique sans aucune difficulté",
     "learnMore": "En savoir plus"
   },
   "complianceItems": {
@@ -48,7 +48,7 @@
   },
   "counter": {
     "heading": "Notre impact et notre capacité",
-    "subheading": "Le Groupe ZEWA fournit des solutions durables, innovantes et fiables à travers les 5R — Réparation, Remise à neuf, Recommercialisation, Réutilisation et Recyclage — ainsi que la gestion des ressources. Nous créons un impact environnemental et économique mesurable tout en renforçant les capacités techniques locales. Notre équipe apporte une solide expertise, des processus certifiés et une infrastructure évolutive à chaque projet. Nous sommes dignes de confiance aux yeux de nos clients, portés par l’innovation et guidés par la durabilité.",
+    "subheading": "Depuis sa création, ZEWA Group fournit des solutions durables, innovantes et fiables à travers les 5R Repair, Refurbish, Remarketing, Reuse et Recycling",
     "stats": [
       {
         "label": "Kg de déchets électroniques détournés des décharges",
@@ -383,6 +383,7 @@
   "africaMap": {
     "legendTitle": "Légende",
     "offices": "Pays avec bureaux et installations",
-    "franchise": "Présence de franchise et de partenariat"
+    "franchise": "Présence de franchise et de partenariat",
+    "inview": "Pays Visibles"
   }
 }

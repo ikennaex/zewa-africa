@@ -21,7 +21,7 @@
     "complianceTitle": "Our Compliance & Commitment",
     "complianceText": "Our operations align with globally recognized environmental laws and sustainability frameworks, which environmental protection, public health, and regulatory compliance form the foundation of our group commitment and our activities are also aligned with:",
     "presenceTitle": "Our Presence in Africa",
-    "presenceText": "We operate across multiple African nations.",
+    "presenceText": "We operate across multiple African nations through our cross-border waste-management initiative, which means reaching out to us from any part of Africa is never an issue",
     "learnMore": "...More"
   },
   "complianceItems": {
@@ -48,7 +48,7 @@
   },
   "counter": {
     "heading": "Our Impact and Capacity",
-    "subheading": "ZEWA Group delivers sustainable, innovative, and reliable solutions across 5R - Repair, Refurbish, Remarketing, Reuse & Recycling, and resource management. We create measurable environmental and economic impact while strengthening local technical capacity. Our team brings strong expertise, certified processes, and scalable infrastructure to every project. We are trusted by clients, driven by innovation, and powered by sustainability.",
+    "subheading": "Since Inception ZEWA Group delivers sustainable, innovative, and reliable solutions across 5R - Repair, Refurbish, Remarketing, Reuse, Recycling",
     "stats": [
       {
         "label": "Kg of E-waste Diverted From Landfill",
@@ -412,6 +412,7 @@
   "africaMap": {
     "legendTitle": "Legend",
     "offices": "Countries with Offices & Facilities",
-    "franchise": "Franchise & Partnership Presence"
+    "franchise": "Franchise & Partnership Presence",
+    "inview": "Countries in View"
   }
 }

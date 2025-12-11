@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ComposableMap,
   Geographies,
@@ -101,6 +101,14 @@ const countries = [
 export default function AfricaMap() {
   const { t } = useTranslation();
 
+  // tooltip state
+  const [tooltip, setTooltip] = useState({
+    visible: false,
+    name: "",
+    x: 0,
+    y: 0,
+  });
+
   const handleClick = (country) => {
     if (country?.site) window.open(country.site, "_blank");
   };
@@ -112,9 +120,56 @@ export default function AfricaMap() {
     return "#FFFF";
   };
 
+  // Helpers to extract client coords from mouse or touch events
+  const getClientCoords = (event) => {
+    if (!event) return { x: 0, y: 0 };
+    if (event.touches && event.touches[0]) {
+      return { x: event.touches[0].clientX, y: event.touches[0].clientY };
+    }
+    return { x: event.clientX, y: event.clientY };
+  };
+
+  const handleGeoEnter = (evt, countryName) => {
+    const { x, y } = getClientCoords(evt);
+    setTooltip({ visible: true, name: countryName, x, y });
+  };
+
+  const handleGeoMove = (evt, countryName) => {
+    const { x, y } = getClientCoords(evt);
+    setTooltip((s) => ({ ...s, x, y, name: countryName, visible: true }));
+  };
+
+  const handleGeoLeave = () => {
+    setTooltip({ visible: false, name: "", x: 0, y: 0 });
+  };
+
   return (
     <div className="w-full py-6 flex flex-col items-center">
-      <div className="w-full mb-8 flex flex-col items-center">
+      <div className="w-full mb-8 flex flex-col items-center relative">
+        {/* Tooltip */}
+        {tooltip.visible && (
+          <div
+            style={{
+              position: "fixed",
+              top: tooltip.y + 14,
+              left: tooltip.x + 14,
+              pointerEvents: "none",
+              background: "rgba(255,255,255,0.98)",
+              padding: "6px 9px",
+              borderRadius: 6,
+              boxShadow: "0 6px 18px rgba(0,0,0,0.12)",
+              fontSize: 13,
+              fontWeight: 700,
+              color: "#111827",
+              zIndex: 9999,
+              border: "1px solid rgba(0,0,0,0.06)",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {tooltip.name}
+          </div>
+        )}
+
         {/* Map */}
         <ComposableMap
           projection="geoMercator"
@@ -128,7 +183,6 @@ export default function AfricaMap() {
             {({ geographies }) =>
               geographies.map((geo) => {
                 const countryName = geo.properties.name;
-                console.log(countryName)
                 const shouldStroke =
                   blueCountries.includes(countryName) ||
                   pinkCountries.includes(countryName) ||
@@ -142,9 +196,23 @@ export default function AfricaMap() {
                     stroke={shouldStroke ? "#000" : "none"}
                     strokeWidth={shouldStroke ? 0.5 : 0}
                     style={{
-                      default: { outline: "none" },
-                      hover: { outline: "none" },
+                      default: {
+                        outline: "none",
+                        pointerEvents: "auto", // ensure full-shape interactivity
+                        cursor: shouldStroke ? "pointer" : "default",
+                      },
+                      hover: {
+                        outline: "none",
+                        pointerEvents: "auto",
+                        cursor: shouldStroke ? "pointer" : "default",
+                      },
                     }}
+                    onMouseEnter={(evt) => handleGeoEnter(evt, countryName)}
+                    onMouseMove={(evt) => handleGeoMove(evt, countryName)}
+                    onMouseLeave={handleGeoLeave}
+                    onTouchStart={(evt) => handleGeoEnter(evt, countryName)}
+                    onTouchMove={(evt) => handleGeoMove(evt, countryName)}
+                    onTouchEnd={handleGeoLeave}
                     onClick={() =>
                       handleClick(countries.find((c) => c.name === countryName))
                     }
@@ -206,6 +274,10 @@ export default function AfricaMap() {
             <div className="flex items-center gap-2">
               <span className="w-3 h-3 sm:w-4 sm:h-4 bg-blue-700 rounded-full"></span>
               <span className="text-gray-700">{t("africaMap.franchise")}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-3 h-3 sm:w-4 sm:h-4 bg-[#d4d2d2] rounded-full"></span>
+              <span className="text-gray-700">{t("africaMap.inview")}</span>
             </div>
           </div>
         </div>
