@@ -9,9 +9,11 @@ import {
   FileText,
   ShieldCheck,
   Instagram,
+  YoutubeIcon,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -45,8 +47,8 @@ const Footer = () => {
     },
     { href: "https://www.instagram.com/zewa.261/", label: "Instagram", Icon: Instagram },
     // Add X and YouTube as needed; placeholders used if empty
-    { href: "#", label: "X", Icon: Facebook }, // replace Icon & href if you have X icon/link
-    { href: "#", label: "YouTube", Icon: Facebook }, // replace Icon & href if you have YouTube icon/link
+    { href: "#", label: "X", Icon: FaXTwitter }, // replace Icon & href if you have X icon/link
+    { href: "#", label: "YouTube", Icon: YoutubeIcon }, // replace Icon & href if you have YouTube icon/link
   ];
 
   return (

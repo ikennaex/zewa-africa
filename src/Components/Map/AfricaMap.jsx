@@ -24,7 +24,7 @@ const pinkCountries = [
   "Mozambique",
   "Morocco",
   "Algeria",
-  "DRC",
+  "Dem. Rep. Congo",
   "Gabon",
   "Ethiopia",
   "Uganda",
@@ -36,6 +36,40 @@ const pinkCountries = [
   "Senegal",
   "Sierra Leone",
   "Kenya",
+];
+
+const remainingAfricanCountries = [
+  "Benin",
+  "Burkina Faso",
+  "Burundi",
+  "Cabo Verde",
+  "Cameroon",
+  "Central African Rep.",
+  "Chad",
+  "Congo",
+  "Djibouti",
+  "Equatorial Guinea",
+  "Eritrea",
+  "Eswatini",
+  "Gambia",
+  "Guinea",
+  "Guinea-Bissau",
+  "Côte d'Ivoire",
+  "Lesotho",
+  "Liberia",
+  "Libya",
+  "Malawi",
+  "Mali",
+  "Mauritania",
+  "Mauritius",
+  "Niger",
+  "Rwanda",
+  "Sao Tome and Principe",
+  "Seychelles",
+  "Somalia",
+  "Sudan",
+  "Tunisia",
+  "Zimbabwe",
 ];
 
 const countries = [
@@ -50,7 +84,7 @@ const countries = [
   { name: "Mozambique", coords: [35.5296, -18.6657], site: "" },
   { name: "Morocco", coords: [-7.0926, 31.7917], site: "" },
   { name: "Algeria", coords: [3.0588, 28.0339], site: "" },
-  { name: "DRC", coords: [21.7587, -4.0383], site: "" },
+  { name: "Dem. Rep. Congo", coords: [21.7587, -4.0383], site: "" },
   { name: "Gabon", coords: [11.6094, -0.8037], site: "" },
   { name: "Ethiopia", coords: [40.4897, 9.145], site: "" },
   { name: "Uganda", coords: [32.2903, 1.3733], site: "" },
@@ -74,31 +108,39 @@ export default function AfricaMap() {
   const getCountryColor = (name) => {
     if (blueCountries.includes(name)) return "#38D2CF";
     if (pinkCountries.includes(name)) return "#1D4ED8";
+    if (remainingAfricanCountries.includes(name)) return "#d4d2d2";
     return "#FFFF";
   };
 
   return (
-    <div className="w-full py-16 flex flex-col items-center">
+    <div className="w-full py-6 flex flex-col items-center">
       <div className="w-full mb-8 flex flex-col items-center">
         {/* Map */}
         <ComposableMap
           projection="geoMercator"
-          projectionConfig={{ scale: 290, center: [20, 1] }}
+          projectionConfig={{ scale: 220, center: [20, 1] }}
           width={800}
-          height={600}
+          height={310}
           style={{ width: "100%", height: "auto" }}
-          viewBox="0 0 800 600"
+          viewBox="0 0 800 310"
         >
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geo) => {
                 const countryName = geo.properties.name;
+                console.log(countryName)
+                const shouldStroke =
+                  blueCountries.includes(countryName) ||
+                  pinkCountries.includes(countryName) ||
+                  remainingAfricanCountries.includes(countryName);
+
                 return (
                   <Geography
                     key={geo.rsmKey}
                     geography={geo}
                     fill={getCountryColor(countryName)}
-                    stroke="#0F5132"
+                    stroke={shouldStroke ? "#000" : "none"}
+                    strokeWidth={shouldStroke ? 0.5 : 0}
                     style={{
                       default: { outline: "none" },
                       hover: { outline: "none" },
@@ -112,7 +154,6 @@ export default function AfricaMap() {
             }
           </Geographies>
 
-          {/* Markers with hover text */}
           {countries.map((country) => (
             <Marker key={country.name} coordinates={country.coords}>
               <motion.g
@@ -125,7 +166,6 @@ export default function AfricaMap() {
                 onClick={() => handleClick(country)}
                 style={{ cursor: country.site ? "pointer" : "default" }}
               >
-                {/* Circle marker */}
                 <circle
                   r={5}
                   fill={
@@ -136,7 +176,6 @@ export default function AfricaMap() {
                       : "#000"
                   }
                 />
-                {/* Text appears on hover */}
                 <motion.text
                   textAnchor="middle"
                   y={-10}
@@ -155,7 +194,6 @@ export default function AfricaMap() {
           ))}
         </ComposableMap>
 
-        {/* Legend */}
         <div className="mt-6 sm:mt-0 sm:absolute sm:bottom-4 sm:left-4 bg-white shadow-lg rounded-lg border border-gray-200 p-3 w-full sm:w-56 md:w-64 text-xs sm:text-sm">
           <h4 className="font-semibold text-gray-800 mb-2">
             {t("africaMap.legendTitle")}

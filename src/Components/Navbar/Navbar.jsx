@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between px-6 md:px-12 py-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Logo" className="h-10 md:h-16" />
+          <img src={logo} alt="Logo" className="h-16 md:h-20" />
         </Link>
 
         {/* Desktop Menu */}
@@ -37,7 +37,7 @@ const Navbar = () => {
             <Link
               key={menu.key}
               to={menu.link}
-              className="text-white text-[15px] font-medium hover:text-green-600 transition"
+              className="text-white text-[15px] font-medium transition"
             >
               {t(`menu.${menu.key}`)}
             </Link>
