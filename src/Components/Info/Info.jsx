@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { carbonEmit, epr, protectEnv, training, wasteManage } from "../../imports";
+import { carbonEmit, circular, epr, protectEnv, training, wasteManage } from "../../imports";
 
 const infoData = [
   { video: wasteManage, key: 0 },
@@ -8,7 +8,7 @@ const infoData = [
   { video: carbonEmit, key: 2 },
   { video: epr, key: 3 },
   { video: training, key: 4 },
-  { video: training, key: 5 },
+  { video: circular, key: 5 },
 ];
 
 // Expandable text component
@@ -16,7 +16,7 @@ const ExpandableText = ({ text, moreText }) => {
   const [showMore, setShowMore] = React.useState(false);
 
   return (
-    <div className="text-gray-600 text-sm leading-relaxed ">
+    <div className="text-gray-600 text-sm leading-relaxed cursor-pointer">
       <p>{text}</p>
 
       {!showMore && moreText && (

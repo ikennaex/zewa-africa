@@ -27,6 +27,7 @@ import carbonEmit from "./assets/carbonEmit.mp4"
 import wasteManage from "./assets/wasteManage.mp4"
 import training from "./assets/training.mp4"
 import herovideo from "./assets/herovideo.mp4"
+import circular from "./assets/circular.mp4"
 
 import agent from "./assets/agent.png"
 
@@ -51,5 +52,5 @@ import ltc from "./assets/logos/ltc.png"
 
 
 export {
-    logo, ceo, img1, img2, img3, img4, img5, img6, img7, img8,img9, img10,img12,img13, agent, officeImg, facilityImg, ewasteImg, staffImg, carbonImg, training, wasteManage, carbonEmit, protectEnv, epr, hp, birger, ltc, wfp, unep, gassytour, ingedata, canal, epa, vodafone, bankofafrica, multichoice, samsung, zewawarehouse, herovideo, map, zewastaff
+    logo, ceo, img1, img2, img3, img4, img5, img6, img7, img8,img9, img10,img12,img13, agent, officeImg, facilityImg, ewasteImg, staffImg, carbonImg, training, wasteManage, carbonEmit, protectEnv, epr, hp, birger, ltc, wfp, unep, gassytour, ingedata, canal, epa, vodafone, bankofafrica, multichoice, samsung, zewawarehouse, herovideo, map, zewastaff, circular
 }

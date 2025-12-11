@@ -35,7 +35,22 @@ const categoriesImages = [
   "https://cdn-icons-png.flaticon.com/512/979/979619.png",
   "https://cdn-icons-png.flaticon.com/128/9504/9504100.png",
   "https://cdn-icons-png.flaticon.com/128/3770/3770310.png",
-  "https://cdn-icons-png.flaticon.com/128/3465/3465894.png"
+  "https://cdn-icons-png.flaticon.com/128/3465/3465894.png",
+  "https://cdn-icons-png.flaticon.com/128/3617/3617277.png",
+  "https://cdn-icons-png.flaticon.com/128/4072/4072270.png",
+  "https://cdn-icons-png.flaticon.com/128/2642/2642342.png",
+  "https://cdn-icons-png.flaticon.com/128/2145/2145983.png",
+  "https://cdn-icons-png.flaticon.com/128/5575/5575136.png",
+  "https://cdn-icons-png.flaticon.com/128/6071/6071653.png",
+  "https://cdn-icons-png.flaticon.com/128/2533/2533348.png",
+  "https://cdn-icons-png.flaticon.com/128/5667/5667016.png",
+  "https://cdn-icons-png.flaticon.com/128/4320/4320287.png",
+  "https://cdn-icons-png.flaticon.com/128/3258/3258571.png",
+  "https://cdn-icons-png.flaticon.com/128/14795/14795805.png",
+  "https://cdn-icons-png.flaticon.com/128/8488/8488889.png",
+  "https://cdn-icons-png.flaticon.com/128/1020/1020421.png",
+  "https://cdn-icons-png.flaticon.com/128/2015/2015064.png",
+  "https://cdn-icons-png.flaticon.com/128/2479/2479646.png",
 ];
 
 const Services = () => {
@@ -99,19 +114,23 @@ const Services = () => {
           </div>
 
           {/* Categories */}
-          <div className="bg-gray-50 shadow-sm rounded-2xl p-14 border border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-12">
-              {t("services.categoriesTitle")}
-            </h3>
-            <div className="flex flex-wrap lg:gap-16 gap-10 justify-center">
-              {t("services.categories", { returnObjects: true }).map((cat, i) => (
-                <div key={i} className="flex flex-col items-center justify-center">
-                  <img className="lg:h-24 h-14" src={categoriesImages[i]} alt={cat} />
-                  <p>{cat}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+<div className="bg-gray-50 shadow-sm rounded-2xl p-14 border border-gray-200">
+  <h3 className="text-2xl font-bold text-gray-900 mb-12">
+    {t("services.categoriesTitle")}
+  </h3>
+
+  <div className="flex gap-10 overflow-x-auto scrollbar-hide px-2">
+    {t("services.categories", { returnObjects: true }).map((cat, i) => (
+      <div
+        key={i}
+        className="flex flex-col min-w-[120px] items-center justify-center"
+      >
+        <img className="lg:h-24 h-14" src={categoriesImages[i]} alt={cat} />
+        <p>{cat}</p>
+      </div>
+    ))}
+  </div>
+</div>
 
           {/* Core Services */}
           <div>

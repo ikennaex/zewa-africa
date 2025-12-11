@@ -11,10 +11,11 @@
     "heading": "Building a Cleaner, Greener & Sustainable Future",
     "description": "We are dedicated to responsible recycling, effective waste disposal, and sustainable environmental management for communities and industries.",
     "button": "Do you want to Recycle today?"
-  }, 
+  },
   "about": {
     "title": "About Us",
     "historyTitle": "Our Story",
+    "aboutTitle": "About Us",
     "historyText1": "ZEWA Group began with a simple vision: to protect Africa’s environment by transforming the way electronic waste is managed. What started as a small initiative grew into a national movement for responsible recycling. Today, ZEWA partners with leading companies to recover, process, and recycle e-waste safely and transparently. Each piece of discarded equipment becomes an opportunity to create value, not pollution. Driven by innovation and environmental commitment, we work to build a circular, sustainable future for all.",
     "historyText2": "ZEWA Group (Zero E-Waste Africa) is a leading Waste Electrical and Electronic Equipment (WEEE) management company dedicated to advancing a sustainable circular economy for electronic waste across Africa. Sin inception our mission is to reduce environmental harm, promote responsible recycling and recover valuable materials from discarded electronics through innovative, compliant, and eco-efficient waste management practices. We support SMEs, corporate and government organizations across Africa with seamless collection, pre-processing, and safe disposal of obsolete, damaged, or end-of-life electronics to improve circular economy",
     "complianceTitle": "Our Compliance & Commitment",
@@ -113,15 +114,56 @@
     "description": "We are compelling to delivers sustainable, compliant, and circular e-waste management solutions across the full lifecycle of our operation from collection to recycling and recovery, we help organizations manage electronic waste responsibly and efficiently.",
     "industriesTitle": "Industries We Serve",
     "industries": [
-      "Telecom", "Finance", "Government", "Energy", "Media", "Healthcare", "Education",
-      "Manufacturing", "Retail", "NGOs", "Hospitality", "Logistics", "Shipping",
-      "Aviation", "Public Utilities", "Real Estate", "IT & Software"
+      "Telecom",
+      "Finance",
+      "Government",
+      "Energy",
+      "Media",
+      "Healthcare",
+      "Education",
+      "Manufacturing",
+      "Retail",
+      "NGOs",
+      "Hospitality",
+      "Logistics",
+      "Shipping",
+      "Aviation",
+      "Public Utilities",
+      "Real Estate",
+      "IT & Software"
     ],
     "categoriesTitle": "What We Accept",
     "categories": [
-      "Mobile Phone", "Computer", "Router/Switch", "Cables", "Scanner",
-      "TV", "Radio", "Genset", "Batteries", "Bulb", "Fan", "Network Rack",
-      "Antenna", "Medical Equipment"
+      "Mobile Phone",
+      "Computer",
+      "Router/Switch",
+      "Cables",
+      "Scanner",
+      "TV",
+      "Radio",
+      "Genset",
+      "Batteries",
+      "Bulb",
+      "Fan",
+      "Network Rack",
+      "Antenna",
+      "Medical Equipment",
+      "Cameras",
+      "Vacuum Cleaners",
+      "Electric Kettle",
+      "Toasters",
+      "Solar Panels",
+      "Microchips",
+      "Power Banks",
+      "Signage Boards",
+      "POS systems",
+      "Cash Registers",
+      "X-ray",
+      "Smartwatches",
+      "Vending Machines",
+      "Flash Drives",
+      "Resistors"
+
     ],
     "coreServicesTitle": "Our Core E-Waste Services",
     "servicesList": [
@@ -318,8 +360,9 @@
       "one": "Madagascar Environmental Permit Issued by ONE",
       "nesrea": "Nigeria Environmental Permit Issued by NASERA",
       "epa": "Ghana Environmental Permit Issue by EPA"
-    }},
-    "compliance": {
+    }
+  },
+  "compliance": {
     "title": "Upholding the Highest Standards",
     "description": "Our environmental operations are guided by internationally recognized frameworks and partnerships that ensure transparency, sustainability, and safety across every stage of e-waste management.",
     "items": {

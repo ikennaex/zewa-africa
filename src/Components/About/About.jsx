@@ -59,6 +59,10 @@ const About = () => {
               {t("about.historyText1")}
             </p>
 
+            <p className="text-lg font-bold lg:text-lg leading-relaxed text-gray-700">
+              {t("about.title")}
+            </p>
+
             <p className="text-base lg:text-lg leading-relaxed text-gray-700">
               {t("about.historyText2")}{" "}
               <Link to="/about" className="transition-colors text-customGreen">
