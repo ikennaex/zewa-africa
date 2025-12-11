@@ -125,12 +125,12 @@ const ContactPage = () => {
                   Icon: Instagram,
                 },
                 {
-                  href: "",
+                  href: "https://x.com/ZEWA_Group?t=P5-8vAnKPQGKc7bFl7ES8A&s=08",
                   label: "X",
                   Icon: FaXTwitter,
                 },
                 {
-                  href: "",
+                  href: "https://youtube.com/@zewagroupzeroe-wasteafrica?si=VUIVutFo_45mf6Yu",
                   label: "YouTube",
                   Icon: Youtube,
                 },
@@ -223,9 +223,9 @@ const ContactPage = () => {
           </form>
 
           {/* Small helper text */}
-          <p className="text-xs text-gray-400 mt-3">
+          {/* <p className="text-xs text-gray-400 mt-3">
             {t("contact.form.note") || "We will get back to you within 48 hours."}
-          </p>
+          </p> */}
         </div>
       </div>
     </section>

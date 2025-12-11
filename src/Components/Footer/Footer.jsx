@@ -48,7 +48,7 @@ const Footer = () => {
     },
     { href: "https://www.instagram.com/zewa.261/", label: "Instagram", Icon: Instagram },
     // Add X and YouTube as needed; placeholders used if empty
-    { href: "#", label: "X", Icon: FaXTwitter }, // replace Icon & href if you have X icon/link
+    { href: "https://x.com/ZEWA_Group?t=P5-8vAnKPQGKc7bFl7ES8A&s=08", label: "X", Icon: FaXTwitter }, // replace Icon & href if you have X icon/link
     { href: "https://www.youtube.com/@zewagroupzeroe-wasteafrica", label: "YouTube", Icon: YoutubeIcon }, // replace Icon & href if you have YouTube icon/link
   ];
 
@@ -191,12 +191,12 @@ const Footer = () => {
           <Link to ="/terms&conditions" className="flex items-center gap-2 hover:text-customOrange">
             <FileText className="w-4 h-4" /> {t("footer.terms")}
           </Link>
-          <a href="cookiepolicy" className="flex items-center gap-2 hover:text-customOrange">
+          <Link to="cookiepolicy" className="flex items-center gap-2 hover:text-customOrange">
             <Cookie className="w-4 h-4" /> {t("footer.cookies")}
-          </a>
-          <a href="datapolicy" className="flex items-center gap-2 hover:text-customOrange">
+          </Link>
+          <Link to="datapolicy" className="flex items-center gap-2 hover:text-customOrange">
             <ShieldCheck className="w-4 h-4" /> {t("footer.privacy")}
-          </a>
+          </Link>
         </div>
 
         <p className="mt-4 md:mt-0 text-gray-500 tracking-wide">

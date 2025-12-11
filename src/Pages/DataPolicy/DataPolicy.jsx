@@ -104,7 +104,7 @@ const DataPolicy = () => {
     <FadeIn duration={120}>
       <section className="min-h-screen py-24 px-6 lg:px-20 bg-gray-50">
         <div className="max-w-5xl mx-auto bg-white shadow-xl rounded-3xl p-12 space-y-10">
-          <h1 className="text-3xl lg:text-4sxl font-black text-customGreen text-center mb-12">
+          <h1 className="text-3xl lg:text-4xl font-black text-customGreen text-center mb-12">
             Data Protection Policy
           </h1>
 
