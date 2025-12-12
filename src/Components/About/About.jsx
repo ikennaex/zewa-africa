@@ -60,7 +60,7 @@ const About = () => {
             </p>
 
             <p className="text-lg font-bold lg:text-lg leading-relaxed text-gray-700">
-              {t("about.title")}
+              {t("about.aboutTitle")}
             </p>
 
             <p className="text-base lg:text-lg leading-relaxed text-gray-700">

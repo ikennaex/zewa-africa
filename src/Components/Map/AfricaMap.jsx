@@ -145,6 +145,7 @@ export default function AfricaMap() {
 
   return (
     <div className="w-full py-6 flex flex-col items-center">
+      <video src="/videos/africa.mp4"></video>
       <div className="w-full mb-8 flex flex-col items-center relative">
         {/* Tooltip */}
         {tooltip.visible && (

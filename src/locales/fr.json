@@ -9,15 +9,16 @@
   },
   "hero": {
     "heading": "Construire un avenir plus propre, plus vert et durable",
-    "description": "Nous nous engageons dans le recyclage responsable, l'élimination efficace des déchets et la gestion environnementale durable pour les communautés et les industries.",
+    "description": "Nous nous engageons à assurer une collecte responsable des DEEE, un prétraitement, un recyclage, une récupération efficace et une gestion environnementale durable pour les organisations, les communautés et les industries en Afrique.",
     "button": "Voulez-vous recycler aujourd'hui ?"
   },
   "about": {
     "title": "À propos de nous",
     "historyTitle": "Notre Histoire",
-    "historyText1": "Le groupe ZEWA a commencé avec une vision simple : protéger l'environnement de l'Afrique en transformant la gestion des déchets électroniques. Ce qui a commencé comme une petite initiative est devenu un mouvement national pour le recyclage responsable. Aujourd'hui, ZEWA collabore avec des entreprises de premier plan pour récupérer, traiter et recycler les déchets électroniques de manière sûre et transparente. Chaque équipement mis au rebut devient une opportunité de créer de la valeur, et non de la pollution. Animés par l'innovation et l'engagement environnemental, nous travaillons à construire un avenir circulaire et durable pour tous.",
+    "aboutTitle": "Qui sommes-nous",
+    "historyText1": "ZEWA Group (Zero E-Waste Africa) a commencé avec une mission claire et urgente: protéger l’environnement africain en transformant la manière dont les déchets électroniques sont gérés. Ce qui n’était au départ qu’une initiative modeste est devenu une force à l’échelle du continent, guidant la collecte responsable, le recyclage et la valorisation durable des ressources. Au fil des années, nous avons collaboré avec des organisations de premier plan, des institutions gouvernementales et des acteurs communautaires afin de garantir que les déchets électroniques soient collectés, traités et recyclés en toute sécurité, avec transparence et en pleine conformité avec les normes mondiales DEEE. Pour nous, chaque appareil mis au rebut représente bien plus qu’un déchet. C’est une opportunité de créer de la valeur, de récupérer des ressources essentielles, de protéger la santé publique et de prévenir la pollution de l’environnement. Guidé par l’innovation, l’intégrité et un profond engagement envers la protection de l’environnement, ZEWA Group continue de faire avancer la transition de l’Afrique vers un avenir plus propre, plus vert et pleinement circulaire.",
     "historyText2": "Groupe ZEWA (Zero E-Waste Africa) est une entreprise leader dans la gestion des Déchets d Équipements Électriques et Électroniques (DEEE), dédiée à la promotion d une économie circulaire durable pour les déchets électroniques en Afrique. Depuis sa création, notre mission est de réduire les dommages environnementaux, de promouvoir un recyclage responsable et de récupérer des matériaux précieux à partir des équipements électroniques mis au rebut, grâce à des pratiques innovantes, conformes et éco-efficaces de gestion des déchets. Nous accompagnons les PME, les entreprises et les organisations gouvernementales à travers l Afrique en proposant des solutions fluides de collecte, de prétraitement et d élimination sécurisée des équipements électroniques obsolètes, endommagés ou en fin de vie, afin de renforcer l économie circulaire.",
-    "mission": "Notre mission est de réduire les dommages environnementaux, promouvoir le recyclage responsable et récupérer des matériaux précieux à partir d'équipements électroniques mis au rebut grâce à des pratiques de gestion des déchets innovantes, conformes et écologiquement efficaces. Nous accompagnons les organisations d'entreprise à travers l'Afrique dans la collecte, le pré-traitement et l'élimination sûre des équipements obsolètes, endommagés ou en fin de vie.",
+    "mission": "ZEWA Group (Zero E-Waste Africa) est une entreprise leader dans la gestion des Déchets d’Équipements Électriques et Électroniques (DEEE), engagée à accélérer la transition de l’Afrique vers une économie circulaire durable. Depuis notre création, nous nous concentrons sur la réduction de l’impact environnemental, la promotion d’une collecte responsable, le recyclage, ainsi que la maximisation de la valorisation des ressources grâce à des solutions de gestion des déchets innovantes, conformes et éco-efficientes. Nous accompagnons les PME, les multinationales et les institutions gouvernementales à travers l’Afrique en fournissant des services complets et intégrés, allant de la collecte et du pré-traitement des déchets électroniques à la destruction sécurisée des données, jusqu’à l’élimination écologique des équipements obsolètes ou endommagés. Grâce à nos opérations intégrées, ZEWA Group renforce la circularité, protège l’environnement et aide les organisations à atteindre leurs objectifs de durabilité, de conformité réglementaire et de réduction des émissions carbone. Notre objectif essentiel est d’assurer une gestion responsable des DEEE et de promouvoir la durabilité de l’économie circulaire.",
     "complianceTitle": "Notre conformité et notre engagement",
     "complianceText": "Nos opérations sont conformes aux lois environnementales reconnues au niveau mondial ainsi qu’aux cadres de durabilité, pour lesquels la protection de l’environnement, la santé publique et la conformité réglementaire constituent le fondement de l’engagement de notre groupe. Nos activités sont également alignées avec :",
     "presenceTitle": "Notre présence en Afrique",
@@ -43,7 +44,7 @@
     },
     "circular": {
       "title": "Vision de l'économie circulaire",
-      "text": "Nous transformons les défis liés aux déchets électroniques en Afrique en opportunités, en favorisant une économie circulaire plus verte."
+      "text": "Nous envisageons une Afrique véritablement circulaire où les ressources sont continuellement récupérées, réutilisées et réintégrées dans l’économie. Notre objectif est également d’éliminer les déchets, de réduire la pollution et de construire un avenir résilient et durable pour les communautés et les industries à travers le continent."
     }
   },
   "counter": {
@@ -334,10 +335,12 @@
       "ceWasa": "Certifié CE (e-Wasa)",
       "ceCertus": "Certifié CE (Certus)",
       "ceGoGreen": "Certifié CE (GoGreen)",
-      "lasepa": "LASEPA",
+      "lasepa": "Permis environnemental délivré par le gouvernement de l'État de Lagos via la LASEPA",
       "one": "Permis environnemental de Madagascar délivré par l’ONE",
       "nesrea": "Permis environnemental du Nigeria délivré par la NESREA",
-      "epa": "Permis environnemental du Ghana délivré par l’EPA"
+      "epa": "Permis environnemental du Ghana délivré par l’EPA",
+      "wee": "Permis DEEE délivré par le Ministère de l'Environnement, de la Faune et du Tourisme du Botswana",
+      "baselConvention": "Mouvement transfrontalier certifié de déchets dangereux et DEEE conformément à la Convention de Bâlec"
     }
   },
   "compliance": {
@@ -346,19 +349,19 @@
     "items": {
       "baselConvention": {
         "title": "La Convention de Bâle",
-        "description": "Assurer que toutes les activités impliquant des composants électroniques dangereux sont collectées en toute sécurité, traitées de manière responsable et gérées en pleine conformité légale."
+        "description": "Nous respectons des normes mondiales strictes afin de garantir que le transport et la circulation des matériaux électroniques dangereux soient collectés en toute sécurité, traités de manière responsable et gérés en pleine conformité avec les exigences internationales."
       },
       "sustainabilityPartnerships": {
         "title": "Partenariats durables",
-        "description": "Collaborer avec des organisations pour concevoir des solutions d'économie circulaire — y compris la remise à neuf, la réutilisation et les programmes de sensibilisation — qui prolongent la durée de vie des produits et réduisent les déchets."
+        "description": "Nous continuons de collaborer avec des institutions pour créer des solutions durables et circulaires grâce au reconditionnement, à la réutilisation, au recyclage et à la mise en place de programmes de sensibilisation environnementale qui prolongent la durée de vie des produits et réduisent la production de déchets."
       },
       "localGlobalStandards": {
         "title": "Normes locales et mondiales",
-        "description": "Nous respectons les lois environnementales nationales et les meilleures pratiques mondiales, soutenant les cadres gouvernementaux et nous alignant sur les directives de la directive européenne WEEE."
+        "description": "Nous respectons les lois environnementales nationales et locales ainsi que les meilleures pratiques mondiales, en soutenant les cadres gouvernementaux conformes aux directives de la Directive WEEE mondiale."
       },
       "iso14001": {
-        "title": "Certification ISO 14001",
-        "description": "Dans le cadre du groupe ZEWA Africa, nous détenons la certification ISO 14001 — une certification reconnue internationalement pour les systèmes de gestion environnementale."
+        "title": "Certification ISO mondiale",
+        "description": "ZEWA Africa Group fonctionne selon des systèmes de gestion environnementale certifiés ISO, renforçant notre engagement envers les normes mondiales de responsabilité environnementale et d'amélioration continue."
       }
     }
   },

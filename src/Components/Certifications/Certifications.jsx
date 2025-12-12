@@ -13,6 +13,8 @@ const certificationsData = [
   { key: 'nesrea', image: '/images/nesrea.png' },
   { key: 'epa', image: '/images/epa.jpg' },
   { key: 'lasepa', image: '/images/lasepa.jpg' },
+  { key: 'wee', image: '/images/wee.jpg' },
+  { key: 'baselConvention', image: '/images/baselConvention.jpg' },
 ];
 
 const Certifications = () => {
@@ -34,7 +36,7 @@ const Certifications = () => {
       <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
         {certificationsData.map((cert, index) => (
           <div key={index} className="flex flex-col justify-center">
-            <div className="bg-gray-50 border h-full rounded-2xl shadow-md p-6 flex flex-col items-center hover:shadow-xl transition-shadow">
+            <div className="bg-white border h-full rounded-2xl shadow-md p-6 flex flex-col items-center hover:shadow-xl transition-shadow">
               <img
                 src={cert.image}
                 alt={t(`certifications.items.${cert.key}`)}
