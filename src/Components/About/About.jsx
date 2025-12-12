@@ -111,17 +111,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* MAP */}
-        <div className="max-w-7xl mx-auto mt-28 text-center">
-          <FaGlobeAfrica size={56} className="text-customGreen mx-auto" />
-          <h1 className="text-3xl lg:text-4xl font-bold text-customGreen mt-4">
-            {t("about.presenceTitle")}
-          </h1>
-          <p className="text-gray-600 max-w-3xl mx-auto mt-2">
-            {t("about.presenceText")}
-          </p>
-        </div>
-
         <div className="">
           <AfricaMap />
         </div>
