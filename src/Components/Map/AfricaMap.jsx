@@ -12,13 +12,66 @@ import { FaGlobeAfrica } from "react-icons/fa";
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
 const blueCountries = [
-  "Nigeria", "Ghana", "Botswana", "Madagascar", "Togo", "Namibia", "South Africa", "Comoros",
+  "Nigeria",
+  "Ghana",
+  "Botswana",
+  "Madagascar",
+  "Togo",
+  "Namibia",
+  "South Africa",
+  "Comoros",
 ];
 const pinkCountries = [
-  "Mozambique", "Morocco", "Algeria", "Dem. Rep. Congo", "Gabon", "Ethiopia", "Uganda", "South Sudan", "Tanzania", "Angola", "Egypt", "Zambia", "Senegal", "Sierra Leone", "Kenya",
+  "Mozambique",
+  "Morocco",
+  "Algeria",
+  "Dem. Rep. Congo",
+  "Gabon",
+  "Ethiopia",
+  "Uganda",
+  "South Sudan",
+  "Tanzania",
+  "Angola",
+  "Egypt",
+  "Zambia",
+  "Senegal",
+  "Sierra Leone",
+  "Kenya",
+  "S. Sudan",
 ];
 const remainingAfricanCountries = [
-  "Benin", "Burkina Faso", "Burundi", "Cabo Verde", "Cameroon", "Central African Rep.", "Chad", "Congo", "Djibouti", "Equatorial Guinea", "Eritrea", "Eswatini", "Gambia", "Guinea", "Guinea-Bissau", "Côte d'Ivoire", "Lesotho", "Liberia", "Libya", "Malawi", "Mali", "Mauritania", "Mauritius", "Niger", "Rwanda", "Sao Tome and Principe", "Seychelles", "Somalia", "Sudan", "Tunisia", "Zimbabwe",
+  "Benin",
+  "Burkina Faso",
+  "Burundi",
+  "Cabo Verde",
+  "Cameroon",
+  "Central African Rep.",
+  "Chad",
+  "Congo",
+  "Djibouti",
+  "Equatorial Guinea",
+  "Eritrea",
+  "eSwatini",
+  "Gambia",
+  "Guinea",
+  "Guinea-Bissau",
+  "Côte d'Ivoire",
+  "Lesotho",
+  "Liberia",
+  "Libya",
+  "Malawi",
+  "Mali",
+  "Mauritania",
+  "Mauritius",
+  "Niger",
+  "Rwanda",
+  "Sao Tome and Principe",
+  "Seychelles",
+  "Somalia",
+  "Sudan",
+  "Tunisia",
+  "Zimbabwe",
+  "W. Sahara",
 ];
 
 const countries = [
@@ -49,7 +102,12 @@ const countries = [
 
 export default function AfricaMap() {
   const { t } = useTranslation();
-  const [tooltip, setTooltip] = useState({ visible: false, name: "", x: 0, y: 0 });
+  const [tooltip, setTooltip] = useState({
+    visible: false,
+    name: "",
+    x: 0,
+    y: 0,
+  });
 
   const handleClick = (country) => {
     if (country?.site) window.open(country.site, "_blank");
@@ -64,7 +122,8 @@ export default function AfricaMap() {
 
   const getClientCoords = (event) => {
     if (!event) return { x: 0, y: 0 };
-    if (event.touches && event.touches[0]) return { x: event.touches[0].clientX, y: event.touches[0].clientY };
+    if (event.touches && event.touches[0])
+      return { x: event.touches[0].clientX, y: event.touches[0].clientY };
     return { x: event.clientX, y: event.clientY };
   };
 
@@ -76,21 +135,11 @@ export default function AfricaMap() {
     const { x, y } = getClientCoords(evt);
     setTooltip((s) => ({ ...s, x, y, name: countryName, visible: true }));
   };
-  const handleGeoLeave = () => setTooltip({ visible: false, name: "", x: 0, y: 0 });
+  const handleGeoLeave = () =>
+    setTooltip({ visible: false, name: "", x: 0, y: 0 });
 
   return (
-    <div className="w-full py-6 flex flex-col items-center">
-
-              {/* MAP */}
-              <div className="max-w-7xl mx-auto mt-28 text-center">
-                <FaGlobeAfrica size={56} className="text-customGreen mx-auto" />
-                <h1 className="text-3xl lg:text-4xl font-bold text-customGreen mt-4">
-                  {t("about.presenceTitle")}
-                </h1>
-                <p className="text-gray-600 max-w-3xl mx-auto mt-2">
-                  {t("about.presenceText")}
-                </p>
-              </div>
+    <div className="w-full pt-20 flex flex-col items-center ">
       <div className="relative w-full">
         {/* Dimmed Video */}
         <video
@@ -98,18 +147,35 @@ export default function AfricaMap() {
           autoPlay
           muted
           loop
-          className="w-full h-auto object-cover brightness-50"
+          className="w-full lg:h-auto h-[600px] object-cover brightness-50"
         />
-        <div className="absolute inset-0 bg-customGreen/40 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#113225]/80 to-customGreen/80 pointer-events-none"></div>
 
         {/* Map Overlay */}
-        <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+        <div className="absolute inset-0 flex flex-col justify-center items-center pointer-events-none px-3">
+          <div className="max-w-7xl mx-auto mt-8 text-center">
+            <FaGlobeAfrica size={56} className="text-white mx-auto" />
+            <h1 className="text-3xl lg:text-4xl font-bold text-white mt-4">
+              {t("about.presenceTitle")}
+            </h1>
+            <p className="text-white max-w-3xl mx-auto mt-2">
+              {t("about.presenceText")}
+            </p>
+          </div>
+
           <ComposableMap
             projection="geoMercator"
             projectionConfig={{ scale: 220, center: [20, 1] }}
             width={800}
             height={310}
-            style={{ width: "100%", height: "auto" }}
+            style={{
+              width:
+                typeof window !== "undefined" && window.innerWidth <= 768
+                  ? "500%"
+                  : "100%",
+              height: "auto",
+              pointerEvents: "auto",
+            }}
             viewBox="0 0 800 310"
           >
             <Geographies geography={geoUrl}>
@@ -127,12 +193,17 @@ export default function AfricaMap() {
                       fill={getCountryColor(countryName) || "none"}
                       stroke={shouldStroke ? "#000" : "none"}
                       strokeWidth={shouldStroke ? 0.5 : 0}
-                      style={{ default: { outline: "none" }, hover: { outline: "none" } }}
+                      style={{
+                        default: { outline: "none" },
+                        hover: { outline: "none" },
+                      }}
                       onMouseEnter={(evt) => handleGeoEnter(evt, countryName)}
                       onMouseMove={(evt) => handleGeoMove(evt, countryName)}
                       onMouseLeave={handleGeoLeave}
                       onClick={() =>
-                        handleClick(countries.find((c) => c.name === countryName))
+                        handleClick(
+                          countries.find((c) => c.name === countryName)
+                        )
                       }
                     />
                   );
@@ -146,24 +217,22 @@ export default function AfricaMap() {
                   initial="rest"
                   whileHover="hover"
                   onClick={() => handleClick(country)}
-                  style={{ cursor: country.site ? "pointer" : "default" }}
+                  style={{
+                    cursor: country.site ? "pointer" : "default",
+                    pointerEvents: "auto",
+                  }}
                 >
-                  <circle
-                    r={5}
-                    fill={
-                      blueCountries.includes(country.name)
-                        ? "#38D2CF"
-                        : pinkCountries.includes(country.name)
-                        ? "#1D4ED8"
-                        : "#000"
-                    }
-                  />
+                  {/* no circle at all */}
+
                   <motion.text
                     textAnchor="middle"
                     y={-10}
-                    className="font-semibold lg:text-[9px] sm:text-xs pointer-events-none"
+                    className="font-semibold lg:text-[8px] sm:text-xs"
                     fill="#000"
-                    variants={{ rest: { opacity: 0 }, hover: { opacity: 1, scale: 1.1 } }}
+                    variants={{
+                      rest: { opacity: 0 },
+                      hover: { opacity: 1, scale: 1.1 },
+                    }}
                     transition={{ duration: 0.2 }}
                   >
                     {country.name}
@@ -172,6 +241,28 @@ export default function AfricaMap() {
               </Marker>
             ))}
           </ComposableMap>
+
+          <div className="mt-6 mb-3  sm:mt-0 sm:absolute sm:bottom-4 sm:left-4 bg-white shadow-lg rounded-lg border border-gray-200 p-3 w-full sm:w-56 md:w-64 text-xs sm:text-sm">
+            <h4 className="font-semibold text-gray-800 mb-2">
+              {t("africaMap.legendTitle")}
+            </h4>
+            <div className="flex flex-col gap-1">
+              <div className="flex items-center gap-2">
+                <span className="w-3 h-3 sm:w-4 sm:h-4 bg-[#38D2CF] rounded-full"></span>
+                <span className="text-gray-700">{t("africaMap.offices")}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-3 h-3 sm:w-4 sm:h-4 bg-blue-700 rounded-full"></span>
+                <span className="text-gray-700">
+                  {t("africaMap.franchise")}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-3 h-3 sm:w-4 sm:h-4 bg-[#d4d2d2] rounded-full"></span>
+                <span className="text-gray-700">{t("africaMap.inview")}</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

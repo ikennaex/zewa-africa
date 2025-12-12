@@ -32,7 +32,7 @@ const About = () => {
 
   return (
     <FadeIn duration={120}>
-      <section className="py-24  bg-white text-gray-800">
+      <section className="pt-24 bg-white text-gray-800">
         {/* INTRO */}
         <div className="max-w-7xl px-6 mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div>

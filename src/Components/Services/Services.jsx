@@ -5,20 +5,36 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
 import {
-  FaRecycle, FaTruck, FaShieldAlt, FaCertificate, FaLeaf, FaUsers,
-  FaTools, FaSyncAlt, FaCogs, FaHandsHelping, FaPlane, FaBuilding,
+  FaRecycle,
+  FaTruck,
+  FaShieldAlt,
+  FaCertificate,
+  FaLeaf,
+  FaUsers,
+  FaTools,
+  FaSyncAlt,
+  FaCogs,
+  FaHandsHelping,
+  FaPlane,
+  FaBuilding,
   FaShip,
   FaMonero,
   FaMoneyBill,
-  FaSchool
+  FaSchool,
 } from "react-icons/fa";
 import { MdDevices } from "react-icons/md";
 import FadeIn from "../fadein";
 import { Link } from "react-router";
 
 const servicesData = [
-  FaTruck, FaShieldAlt, FaRecycle, MdDevices, FaTools,
-  FaLeaf, FaUsers, FaCertificate
+  FaTruck,
+  FaShieldAlt,
+  FaRecycle,
+  MdDevices,
+  FaTools,
+  FaLeaf,
+  FaUsers,
+  FaCertificate,
 ];
 
 const categoriesImages = [
@@ -74,63 +90,71 @@ const Services = () => {
           </div>
 
           {/* Industries */}
-          <div className="bg-white shadow-lg border border-gray-100 rounded-3xl p-10">
+          <div className="bg-white shadow-lg border border-gray-100 rounded-3xl lg:p-10 p-5">
             <h3 className="text-2xl font-bold text-gray-800 mb-8">
               {t("services.industriesTitle")}
             </h3>
             <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-              {t("services.industries", { returnObjects: true }).map((ind, i) => {
-                const industryIcons = [
-                  MdDevices,       // Telecom
-                  FaMoneyBill,   // Finance
-                  FaShieldAlt,     // Government
-                  FaLeaf,          // Energy
-                  FaUsers,         // Media
-                  FaHandsHelping,  // Healthcare
-                  FaSchool,         // Education
-                  FaCogs,          // Manufacturing
-                  FaTruck,         // Retail
-                  FaHandsHelping,       // NGOs
-                  FaUsers,         // Hospitality
-                  FaTruck,         // Logistics
-                  FaShip,         // Shipping
-                  FaPlane,         // Aviation
-                  FaCogs,          // Public Utilities
-                  FaBuilding,      // Real Estate
-                  MdDevices        // IT & Software
-                ];
-                const Icon = industryIcons[i];
-                return (
-                  <span
-                    key={i}
-                    className="flex items-center gap-2 px-4 py-2 bg-customGreen/5 text-customGreen rounded-full text-sm font-medium hover:bg-customGreen hover:text-white transition-all duration-200 cursor-pointer"
-                  >
-                    <Icon className="text-lg" />
-                    {ind}
-                  </span>
-                );
-              })}
+              {t("services.industries", { returnObjects: true }).map(
+                (ind, i) => {
+                  const industryIcons = [
+                    MdDevices, // Telecom
+                    FaMoneyBill, // Finance
+                    FaShieldAlt, // Government
+                    FaLeaf, // Energy
+                    FaUsers, // Media
+                    FaHandsHelping, // Healthcare
+                    FaSchool, // Education
+                    FaCogs, // Manufacturing
+                    FaTruck, // Retail
+                    FaHandsHelping, // NGOs
+                    FaUsers, // Hospitality
+                    FaTruck, // Logistics
+                    FaShip, // Shipping
+                    FaPlane, // Aviation
+                    FaCogs, // Public Utilities
+                    FaBuilding, // Real Estate
+                    MdDevices, // IT & Software
+                  ];
+                  const Icon = industryIcons[i];
+                  return (
+                    <span
+                      key={i}
+                      className="flex items-center gap-2 px-4 py-2 bg-customGreen/5 text-customGreen rounded-full text-sm font-medium hover:bg-customGreen hover:text-white transition-all duration-200 cursor-pointer"
+                    >
+                      <Icon className="text-lg" />
+                      {ind}
+                    </span>
+                  );
+                }
+              )}
             </div>
           </div>
 
           {/* Categories */}
-<div className="bg-gray-50 shadow-sm rounded-2xl p-14 border border-gray-200">
-  <h3 className="text-2xl font-bold text-gray-900 mb-12">
-    {t("services.categoriesTitle")}
-  </h3>
+          <div className="bg-gray-50 shadow-sm rounded-2xl lg:p-14 p-5 border border-gray-200">
+            <h3 className="text-2xl font-bold text-gray-900 mb-12">
+              {t("services.categoriesTitle")}
+            </h3>
 
-  <div className="flex gap-10 overflow-x-auto scrollbar-hide px-2">
-    {t("services.categories", { returnObjects: true }).map((cat, i) => (
-      <div
-        key={i}
-        className="flex flex-col min-w-[120px] items-center justify-center"
-      >
-        <img className="lg:h-24 h-14" src={categoriesImages[i]} alt={cat} />
-        <p>{cat}</p>
-      </div>
-    ))}
-  </div>
-</div>
+            <div className="flex gap-10 overflow-x-auto scrollbar-hide px-2">
+              {t("services.categories", { returnObjects: true }).map(
+                (cat, i) => (
+                  <div
+                    key={i}
+                    className="flex flex-col min-w-[120px] items-center justify-center"
+                  >
+                    <img
+                      className="lg:h-24 h-14"
+                      src={categoriesImages[i]}
+                      alt={cat}
+                    />
+                    <p>{cat}</p>
+                  </div>
+                )
+              )}
+            </div>
+          </div>
 
           {/* Core Services */}
           <div>
@@ -138,29 +162,31 @@ const Services = () => {
               {t("services.coreServicesTitle")}
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {t("services.servicesList", { returnObjects: true }).map((service, index) => {
-                const Icon = servicesData[index];
-                return (
-                  <a
-                    key={index}
-                    href="https://wa.me/261388390349?text=Hello%20Zewa%20I%20am%20interested%20in%20your%20services"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="bg-white p-8 rounded-3xl shadow-md border border-gray-100 text-left hover:bg-customGreen group transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-                      <div className="mb-4 inline-flex p-4 rounded-full bg-customGreen/10 group-hover:bg-white text-customGreen transition-all duration-300">
-                        <Icon className="text-4xl" />
+              {t("services.servicesList", { returnObjects: true }).map(
+                (service, index) => {
+                  const Icon = servicesData[index];
+                  return (
+                    <a
+                      key={index}
+                      href="https://wa.me/261388390349?text=Hello%20Zewa%20I%20am%20interested%20in%20your%20services"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="bg-white p-8 rounded-3xl shadow-md border border-gray-100 text-left hover:bg-customGreen group transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                        <div className="mb-4 inline-flex p-4 rounded-full bg-customGreen/10 group-hover:bg-white text-customGreen transition-all duration-300">
+                          <Icon className="text-4xl" />
+                        </div>
+                        <h4 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-white transition-colors">
+                          {service.title}
+                        </h4>
+                        <p className="text-gray-600 group-hover:text-white/90 leading-relaxed">
+                          {service.desc}
+                        </p>
                       </div>
-                      <h4 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-white transition-colors">
-                        {service.title}
-                      </h4>
-                      <p className="text-gray-600 group-hover:text-white/90 leading-relaxed">
-                        {service.desc}
-                      </p>
-                    </div>
-                  </a>
-                );
-              })}
+                    </a>
+                  );
+                }
+              )}
             </div>
           </div>
 
