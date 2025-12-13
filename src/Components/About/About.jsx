@@ -77,7 +77,7 @@ const About = () => {
         </div>
 
         {/* COMPLIANCE */}
-        <div className="max-w-7xl mx-auto mt-28 text-center">
+        <div className="max-w-7xl mx-auto mt-28 text-center px-3">
           <h1 className="text-3xl lg:text-4xl font-bold text-customGreen">
             {t("about.complianceTitle")}
           </h1>

@@ -169,10 +169,7 @@ export default function AfricaMap() {
             width={800}
             height={310}
             style={{
-              width:
-                typeof window !== "undefined" && window.innerWidth <= 768
-                  ? "500%"
-                  : "100%",
+              width: "100%",
               height: "auto",
               pointerEvents: "auto",
             }}

@@ -12,7 +12,7 @@ const Sustainability = () => {
 
   return (
     <section className="bg-gray-50">
-      <div className="relative w-full lg:min-h-[80vh] min-h-[100vh] flex flex-col justify-center items-center text-left px-6 md:px-20">
+      <div className="relative w-full lg:min-h-[80vh] min-h-[130vh] flex flex-col justify-center items-center text-left px-6 md:px-20">
         {/* Video Background */}
         <video
           className="absolute top-0 left-0 w-full h-full object-cover z-0"

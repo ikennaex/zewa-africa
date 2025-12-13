@@ -69,8 +69,8 @@ const TermsandConditions = () => {
 
   return (
     <FadeIn duration={120}>
-      <div className="bg-gray-50 min-h-screen py-24 px-6 lg:px-20">
-        <div className="max-w-5xl mx-auto bg-white shadow-xl rounded-3xl p-12">
+      <div className="bg-gray-50 min-h-screen py-24 px-3 lg:px-20">
+        <div className="max-w-5xl mx-auto bg-white shadow-xl rounded-3xl lg:p-12 p-6">
           <h1 className="text-3xl md:text-4xl font-black text-customGreen text-center mb-12">
             Terms and Conditions of Service
           </h1>
@@ -88,7 +88,9 @@ const TermsandConditions = () => {
                   ))}
                 </ul>
               )}
-              {section.extra && <p className="text-gray-700 mt-2">{section.extra}</p>}
+              {section.extra && (
+                <p className="text-gray-700 mt-2">{section.extra}</p>
+              )}
             </section>
           ))}
 
@@ -99,52 +101,53 @@ const TermsandConditions = () => {
             <p className="leading-relaxed">
               For questions or concerns regarding these Terms, please contact:
             </p>
-<ul className="mt-6 space-y-4">
-  {/* Emails */}
-  <li className="flex items-center gap-3">
-    <div className="w-8 h-8 flex items-center justify-center rounded-full bg-customGreen/20 text-customGreen">
-      <MdEmail className="w-5 h-5" />
-    </div>
-    <div className="text-sm">
-      <span className="font-semibold">Email: </span>
-      <a
-        href="mailto:legal@zewa.africa"
-        className="text-customGreen hover:underline"
-      >
-        legal@zewa.africa
-      </a>{" "}
-      or{" "}
-      <a
-        href="mailto:operations@zewa.africa"
-        className="text-customGreen hover:underline"
-      >
-        operations@zewa.africa
-      </a>
-    </div>
-  </li>
+            <ul className="mt-6 space-y-4">
+              {/* Emails */}
+              <li className="flex items-center gap-3">
+                <div className="w-8 h-8 flex items-center justify-center rounded-full bg-customGreen/20 text-customGreen">
+                  <MdEmail className="w-5 h-5" />
+                </div>
+                <div className="text-sm">
+                  <span className="font-semibold">Email: </span>
+                  <a
+                    href="mailto:legal@zewa.africa"
+                    className="text-customGreen hover:underline"
+                  >
+                    legal@zewa.africa
+                  </a>{" "}
+                  or{" "}
+                  <a
+                    href="mailto:operations@zewa.africa"
+                    className="text-customGreen hover:underline"
+                  >
+                    operations@zewa.africa
+                  </a>
+                </div>
+              </li>
 
-  {/* Organization */}
-  <li className="flex items-center gap-3">
-    <div className="w-8 h-8 flex items-center justify-center rounded-full bg-customGreen/20 text-customGreen">
-      <Globe className="w-5 h-5" />
-    </div>
-    <span className="text-sm">ZEWA Group – Zero Electronics Waste Africa</span>
-  </li>
+              {/* Organization */}
+              <li className="flex items-center gap-3">
+                <div className="w-8 h-8 flex items-center justify-center rounded-full bg-customGreen/20 text-customGreen">
+                  <Globe className="w-5 h-5" />
+                </div>
+                <span className="text-sm">
+                  ZEWA Group – Zero Electronics Waste Africa
+                </span>
+              </li>
 
-  {/* Website */}
-  <li className="flex items-center gap-3">
-    <div className="w-8 h-8 flex items-center justify-center rounded-full bg-customGreen/20 text-customGreen">
-      <Link className="w-5 h-5" />
-    </div>
-    <a
-      href="https://www.zewa.africa"
-      className="text-customGreen text-sm hover:underline"
-    >
-      www.zewa.africa
-    </a>
-  </li>
-</ul>
-
+              {/* Website */}
+              <li className="flex items-center gap-3">
+                <div className="w-8 h-8 flex items-center justify-center rounded-full bg-customGreen/20 text-customGreen">
+                  <Link className="w-5 h-5" />
+                </div>
+                <a
+                  href="https://www.zewa.africa"
+                  className="text-customGreen text-sm hover:underline"
+                >
+                  www.zewa.africa
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
