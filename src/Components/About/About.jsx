@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaGlobeAfrica, FaRecycle, FaHandshake, FaLeaf } from "react-icons/fa";
 import { ShieldCheck, Globe2, InfoIcon } from "lucide-react";
 import { zewastaff } from "../../imports";
@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const [expanded, setExpanded] = useState(false);
   const { t } = useTranslation();
 
   const complianceItems = [
@@ -34,12 +35,12 @@ const About = () => {
     <FadeIn duration={120}>
       <section className="pt-24 bg-white text-gray-800">
         {/* INTRO */}
-        <div className="max-w-7xl px-6 mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <div>
+        <div className="max-w-7xl px-6 mx-auto grid lg:grid-cols-2 gap-16 items-stretch">
+          <div className="h-full">
             <img
               src="/images/staff.jpg"
               alt="ZEWA Waste Management"
-              className="rounded-3xl shadow-xl w-full object-cover h-[420px] lg:h-[520px] border border-gray-100"
+              className="rounded-3xl shadow-xl w-full h-full object-cover border border-gray-100"
             />
           </div>
 
@@ -51,7 +52,7 @@ const About = () => {
               <div className="mt-3 h-1.5 w-32 bg-customGreen rounded-md"></div>
             </div>
 
-            <p className="text-lg font-bold lg:text-lg leading-relaxed text-gray-700">
+            <p className="text-lg font-bold leading-relaxed text-gray-700">
               {t("about.historyTitle")}
             </p>
 
@@ -59,20 +60,29 @@ const About = () => {
               {t("about.historyText1")}
             </p>
 
-            <p className="text-lg font-bold lg:text-lg leading-relaxed text-gray-700">
+            <p className="text-lg font-bold leading-relaxed text-gray-700">
               {t("about.aboutTitle")}
             </p>
 
             <p className="text-base lg:text-lg leading-relaxed text-gray-700">
-              {t("about.historyText2")}{" "}
-              <Link to="/about" className="transition-colors text-customGreen">
+              {expanded
+                ? t("about.historyText2")
+                : `${t("about.historyText2").slice(0, 200)}...`}
+
+              <button
+                type="button"
+                onClick={() => setExpanded(!expanded)}
+                className="ml-2 text-customGreen font-semibold text-base hover:underline"
+              >
+                {expanded ? "" : "More"}
+              </button>
+            {expanded && (
+              <Link to="/about" className="transition-colors text-base text-customGreen font-semibold">
                 {t("about.learnMore")}
               </Link>
+            )}
             </p>
 
-            {/* <p className="text-base lg:text-lg leading-relaxed text-gray-700">
-              {t("about.mission")}
-            </p> */}
           </div>
         </div>
 

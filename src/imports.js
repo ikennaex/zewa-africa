@@ -38,7 +38,7 @@ import samsung from "./assets/logos/samsung.png"
 import multichoice from "./assets/logos/multichoice.svg"
 import bankofafrica from "./assets/logos/bankofafrica.jpg"
 import vodafone from "./assets/logos/vodafone.png"
-import epa from "./assets/logos/epa.png"
+// import epa from "./assets/logos/epa.png"
 import birger from "./assets/logos/birger.jpg"
 import canal from "./assets/logos/canal.png"
 import ingedata from "./assets/logos/ingedata.png"
@@ -52,5 +52,5 @@ import ltc from "./assets/logos/ltc.png"
 
 
 export {
-    logo, ceo, img1, img2, img3, img4, img5, img6, img7, img8,img9, img10,img12,img13, agent, officeImg, facilityImg, ewasteImg, staffImg, carbonImg, training, wasteManage, carbonEmit, protectEnv, epr, hp, birger, ltc, wfp, unep, gassytour, ingedata, canal, epa, vodafone, bankofafrica, multichoice, samsung, zewawarehouse, herovideo, map, zewastaff, circular
+    logo, ceo, img1, img2, img3, img4, img5, img6, img7, img8,img9, img10,img12,img13, agent, officeImg, facilityImg, ewasteImg, staffImg, carbonImg, training, wasteManage, carbonEmit, protectEnv, epr, hp, birger, ltc, wfp, unep, gassytour, ingedata, canal, vodafone, bankofafrica, multichoice, samsung, zewawarehouse, herovideo, map, zewastaff, circular
 }
