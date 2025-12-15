@@ -168,7 +168,7 @@ const Services = () => {
                   return (
                     <a
                       key={index}
-                      href="https://wa.me/261388390349?text=Hello%20Zewa%20I%20am%20interested%20in%20your%20services"
+                      href="https://wa.me/261383696527?text=Hello%20Zewa%20I%20am%20interested%20in%20your%20services"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

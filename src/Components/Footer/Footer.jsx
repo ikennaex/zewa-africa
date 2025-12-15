@@ -179,10 +179,10 @@ const Footer = () => {
         href={`https://wa.me/${t("contact.whatsapp").replace(/\D/g, "")}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 z-50"
+        className="fixed bottom-6 right-6 p-2 hover:animate-slide-up transition-all duration-300 z-50"
         aria-label="WhatsApp"
       >
-        <FaWhatsapp className="w-6 h-6" />
+        <img className="lg:h-16 lg:w-16 h-10 " src="https://cdn-icons-png.flaticon.com/128/5968/5968841.png" alt="" />
       </a>
 
       {/* Bottom Bar */}

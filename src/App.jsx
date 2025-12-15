@@ -18,6 +18,7 @@ import "./i18n";
 import TermsandConditions from './Pages/Terms&Conditions/TermsandConditions'
 import CookiePolicy from './Pages/CookiePolicy/CookiePolicy'
 import DataPolicy from './Pages/DataPolicy/DataPolicy'
+import SingleNews from './Pages/News/SingleNews'
 
 
 const App = () => {
@@ -47,6 +48,7 @@ const App = () => {
         <Route path = "/climate-change"  element = {<ClimatePage />}/>
         <Route path = "/contact"  element = {<ContactPage />}/>
         <Route path = "/news"  element = {<News />}/>
+        <Route path="/news/:slug" element={<SingleNews />} />
         <Route path = "/aboutthecro"  element = {<Ceo />}/>
         <Route path = "/certification"  element = {<Certifications />}/>
         <Route path = "/terms&conditions"  element = {<TermsandConditions />}/>
