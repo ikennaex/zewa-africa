@@ -112,7 +112,7 @@ const SingleNews = () => {
           className="p-2 rounded-full hover:bg-gray-100 transition"
           aria-label="Share on WhatsApp"
         >
-          <MessageCircle className="w-5 h-5 text-green-600" />
+          <MessageCircle className="w-5 h-5 text-customGreen" />
         </a>
 
         <a
@@ -122,7 +122,7 @@ const SingleNews = () => {
           className="p-2 rounded-full hover:bg-gray-100 transition"
           aria-label="Share on Twitter"
         >
-          <Twitter className="w-5 h-5 text-black" />
+          <Twitter className="w-5 h-5 text-customGreen" />
         </a>
 
         <a
@@ -132,7 +132,7 @@ const SingleNews = () => {
           className="p-2 rounded-full hover:bg-gray-100 transition"
           aria-label="Share on Facebook"
         >
-          <Facebook className="w-5 h-5 text-blue-600" />
+          <Facebook className="w-5 h-5 text-customGreen" />
         </a>
 
         <a
@@ -142,7 +142,7 @@ const SingleNews = () => {
           className="p-2 rounded-full hover:bg-gray-100 transition"
           aria-label="Share on LinkedIn"
         >
-          <Linkedin className="w-5 h-5 text-blue-700" />
+          <Linkedin className="w-5 h-5 text-customGreen" />
         </a>
 
         {navigator.share && (
