@@ -1,16 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    font-family: "Inter", sans-serif;
-    background-color: rgb(255, 246, 234);
+  font-family: "Inter", sans-serif;
+  background-color: rgb(255, 246, 234);
+
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+img {
+  pointer-events: none;
 }
 
 h1 {
@@ -23,55 +31,52 @@ h1 {
 }
 
 .testimonials {
-    overflow: auto; /* Ensures scrolling is possible if needed */
-    scrollbar-width: none; /* Hides scrollbar in Firefox */
+  overflow: auto; /* Ensures scrolling is possible if needed */
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
 }
 
 .testimonials::-webkit-scrollbar {
-    display: none; /* Hides scrollbar in WebKit browsers */
+  display: none; /* Hides scrollbar in WebKit browsers */
 }
 
 .fade-in-bottom {
-	-webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
-
 @-webkit-keyframes fade-in-bottom {
-    0% {
-      -webkit-transform: translateY(50px);
-              transform: translateY(50px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      opacity: 1;
-    }
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
   }
-  @keyframes fade-in-bottom {
-    0% {
-      -webkit-transform: translateY(50px);
-              transform: translateY(50px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      opacity: 1;
-    }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
   }
-
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 /* CSS BACKGROUND  */
 .background-polka {
-    background-color: #ffffff;
-    opacity: 0.8;
-    background-image: radial-gradient(#2bbcff 0.5px, #ffffff 0.5px);
-    background-size: 10px 10px;
+  background-color: #ffffff;
+  opacity: 0.8;
+  background-image: radial-gradient(#2bbcff 0.5px, #ffffff 0.5px);
+  background-size: 10px 10px;
 }
-
-
 
 /* swiper js css  */
 .swiper-pagination {
@@ -87,8 +92,6 @@ h1 {
 .swiper-pagination-bullet-active {
   opacity: 1 !important;
 }
-
-
 
 /* // Google Translate Customization */
 
@@ -106,80 +109,75 @@ h1 {
   display: none !important; /* remove globe icon */
 }
 
-
-
 /* animations  */
 
 .slide-in-left {
-	-webkit-animation: slide-in-left 4.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: slide-in-left 4.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-in-left 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .slide-in-bottom {
-	-webkit-animation: slide-in-bottom 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-bottom 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: slide-in-bottom 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-in-bottom 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 /* background animation  */
 .bg-pan-left {
-	-webkit-animation: bg-pan-left 8s both;
-	        animation: bg-pan-left 8s both;
+  -webkit-animation: bg-pan-left 8s both;
+  animation: bg-pan-left 8s both;
 }
-
-
-
-
 
 /* WEBKIT  */
 @-webkit-keyframes slide-in-left {
   0% {
     -webkit-transform: translateX(-1000px);
-            transform: translateX(-1000px);
+    transform: translateX(-1000px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
 @keyframes slide-in-left {
   0% {
     -webkit-transform: translateX(-1000px);
-            transform: translateX(-1000px);
+    transform: translateX(-1000px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
-
 
 /* slide btn  */
 
 @-webkit-keyframes slide-in-bottom {
   0% {
     -webkit-transform: translateY(1000px);
-            transform: translateY(1000px);
+    transform: translateY(1000px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
 @keyframes slide-in-bottom {
   0% {
     -webkit-transform: translateY(1000px);
-            transform: translateY(1000px);
+    transform: translateY(1000px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
